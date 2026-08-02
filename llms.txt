@@ -1,0 +1,31 @@
+# Dr. Supakorn Buasai — Knowledge Portal
+
+> Reading notes, essays, and interactive knowledge by Dr. Supakorn Buasai.
+
+Primary website:
+https://drsupakorn.github.io/
+
+## Current collection
+
+- The Best of Dao
+  https://drsupakorn.github.io/the-best-of-dao/
+
+  A bilingual visual guide to Laozi, Zhuangzi, Wu Wei, and Daoist philosophy.
+
+## Languages
+
+- Thai
+- English
+
+## Main subject areas
+
+- Philosophy
+- Buddhism
+- Education
+- Health and public policy
+- History
+- Artificial intelligence and technology
+
+## Author
+
+Dr. Supakorn Buasai
