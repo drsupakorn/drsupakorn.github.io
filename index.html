@@ -10,7 +10,7 @@
         content="คลังบันทึกการอ่าน บทความ และสื่อความรู้แบบอินเทอร์แอกทีฟ โดย Dr. Supakorn Buasai ครอบคลุมปรัชญา พุทธศาสนา การศึกษา สุขภาพ นโยบาย และปัญญาประดิษฐ์">
 
   <meta name="keywords"
-        content="Supakorn Buasai, Dr. Supakorn, Reading Notes, Knowledge Portal, Essays, Education, Health Policy, Buddhism, Daoism, AI">
+        content="Supakorn Buasai, Dr. Supakorn, Reading Notes, Knowledge Portal, Essays, Education, Health Policy, Buddhism, Buddhist Suttas, Daoism, AI">
 
   <meta name="author" content="Dr. Supakorn Buasai">
   <meta name="robots" content="index, follow">
@@ -20,14 +20,17 @@
   <meta property="og:locale" content="th_TH">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Dr. Supakorn Buasai | Reading Notes & Knowledge Portal">
+  <meta property="og:title"
+        content="Dr. Supakorn Buasai | Reading Notes & Knowledge Portal">
   <meta property="og:description"
         content="คลังบันทึกการอ่าน บทความ และสื่อความรู้เพื่อทำความเข้าใจโลก">
   <meta property="og:url" content="https://drsupakorn.github.io/">
-  <meta property="og:site_name" content="Dr. Supakorn Buasai — Knowledge Portal">
+  <meta property="og:site_name"
+        content="Dr. Supakorn Buasai — Knowledge Portal">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Dr. Supakorn Buasai | Knowledge Portal">
+  <meta name="twitter:title"
+        content="Dr. Supakorn Buasai | Knowledge Portal">
   <meta name="twitter:description"
         content="Reading notes, essays, and interactive knowledge by Dr. Supakorn Buasai">
 
@@ -55,14 +58,37 @@
         "name": "The Best of Dao",
         "url": "https://drsupakorn.github.io/the-best-of-dao/",
         "inLanguage": ["th", "en"],
-        "about": ["Daoism", "Laozi", "Zhuangzi", "Wu Wei"]
+        "about": [
+          "Daoism",
+          "Laozi",
+          "Zhuangzi",
+          "Wu Wei"
+        ]
       },
       {
-        "@type":"CollectionPage",
-        "name":"Buddhist Cosmology",
-        "url":"https://drsupakorn.github.io/buddhist-cosmology/",
-        "inLanguage":["th","en"],
-        "about":["Buddhism","Cosmology","Karma","Meditation"]
+        "@type": "CollectionPage",
+        "name": "The Best of Buddhism",
+        "url": "https://drsupakorn.github.io/the-best-of-buddhism/",
+        "inLanguage": ["th", "en"],
+        "about": [
+          "Buddhism",
+          "Buddhist Suttas",
+          "Pali Canon",
+          "Buddhist Philosophy",
+          "Mahaparinibbana Sutta"
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Buddhist Cosmology",
+        "url": "https://drsupakorn.github.io/buddhist-cosmology/",
+        "inLanguage": ["th", "en"],
+        "about": [
+          "Buddhism",
+          "Cosmology",
+          "Karma",
+          "Meditation"
+        ]
       }
     ]
   }
@@ -80,24 +106,43 @@
       --shadow: 0 18px 55px rgba(37,45,38,.10);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       color: var(--text);
       background:
-        radial-gradient(circle at 8% 0%, rgba(255,255,255,.95), transparent 31rem),
-        radial-gradient(circle at 100% 25%, rgba(222,230,218,.75), transparent 28rem),
+        radial-gradient(
+          circle at 8% 0%,
+          rgba(255,255,255,.95),
+          transparent 31rem
+        ),
+        radial-gradient(
+          circle at 100% 25%,
+          rgba(222,230,218,.75),
+          transparent 28rem
+        ),
         var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Noto Sans Thai", Arial, sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans Thai",
+        Arial,
+        sans-serif;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
     .page {
       width: min(100% - 32px, 1040px);
@@ -173,8 +218,13 @@
     .thai-name {
       display: block;
       margin-top: 18px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Noto Sans Thai", Arial, sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans Thai",
+        Arial,
+        sans-serif;
       font-size: clamp(1.55rem, 4vw, 2.3rem);
       font-weight: 800;
       line-height: 1.25;
@@ -223,10 +273,20 @@
       box-shadow: 0 10px 26px rgba(47,59,49,.18);
     }
 
+    .button:hover,
+    .button:focus {
+      background: #233027;
+    }
+
     .button-secondary {
       border: 1px solid var(--line);
       background: rgba(255,255,255,.45);
       color: var(--deep);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus {
+      background: var(--soft);
     }
 
     .section {
@@ -254,6 +314,11 @@
       color: var(--muted);
       font-size: .93rem;
       text-align: right;
+    }
+
+    .collections-grid {
+      display: grid;
+      gap: 28px;
     }
 
     .collection {
@@ -286,8 +351,13 @@
     .thai-title {
       display: block;
       margin-top: 9px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Noto Sans Thai", Arial, sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans Thai",
+        Arial,
+        sans-serif;
       font-size: 1.38rem;
       font-weight: 800;
     }
@@ -348,7 +418,9 @@
     }
 
     @media (min-width: 760px) {
-      .about-grid { grid-template-columns: repeat(3, 1fr); }
+      .about-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @media (max-width: 620px) {
@@ -357,20 +429,28 @@
         flex-direction: column;
       }
 
-      .topnav { justify-content: flex-start; }
+      .topnav {
+        justify-content: flex-start;
+      }
 
       .section-head {
         align-items: flex-start;
         flex-direction: column;
       }
 
-      .section-note { text-align: left; }
+      .section-note {
+        text-align: left;
+      }
 
-      .hero-actions a { width: 100%; }
+      .hero-actions a {
+        width: 100%;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
@@ -379,17 +459,33 @@
   <main class="page">
 
     <div class="topbar">
-      <a class="brand" href="https://drsupakorn.github.io/">Dr. Supakorn Buasai</a>
+      <a class="brand"
+         href="https://drsupakorn.github.io/">
+        Dr. Supakorn Buasai
+      </a>
+
       <nav class="topnav" aria-label="Main navigation">
         <a href="#collections">Collections</a>
         <a href="#about">About</a>
-        <a href="https://drsupakorn.github.io/the-best-of-dao/">The Best of Dao</a>
-        <a href="https://drsupakorn.github.io/buddhist-cosmology/">Buddhist Cosmology</a>
+
+        <a href="https://drsupakorn.github.io/the-best-of-dao/">
+          The Best of Dao
+        </a>
+
+        <a href="https://drsupakorn.github.io/the-best-of-buddhism/">
+          The Best of Buddhism
+        </a>
+
+        <a href="https://drsupakorn.github.io/buddhist-cosmology/">
+          Buddhist Cosmology
+        </a>
       </nav>
     </div>
 
     <header class="hero">
-      <p class="eyebrow">Reading Notes · Essays · Interactive Knowledge</p>
+      <p class="eyebrow">
+        Reading Notes · Essays · Interactive Knowledge
+      </p>
 
       <h1>
         Dr. Supakorn Buasai
@@ -402,103 +498,198 @@
       </p>
 
       <p class="lead-en">
-        A growing collection of reading notes, essays, and interactive knowledge
-        across philosophy, history, education, health, public policy, and technology.
+        A growing collection of reading notes, essays, and interactive
+        knowledge across philosophy, history, education, health,
+        public policy, and technology.
       </p>
 
       <div class="hero-actions">
-        <a class="button" href="#collections">สำรวจคอลเลกชัน →</a>
+        <a class="button" href="#collections">
+          สำรวจคอลเลกชัน →
+        </a>
+
         <a class="button-secondary"
            href="https://drsupakorn.github.io/the-best-of-dao/">
           เปิด The Best of Dao
         </a>
-              <a class="button-secondary"
+
+        <a class="button-secondary"
+           href="https://drsupakorn.github.io/the-best-of-buddhism/">
+          เปิด The Best of Buddhism
+        </a>
+
+        <a class="button-secondary"
            href="https://drsupakorn.github.io/buddhist-cosmology/">
           เปิด Buddhist Cosmology
         </a>
       </div>
     </header>
 
-    <section class="section" id="collections" aria-labelledby="collections-title">
+    <section class="section"
+             id="collections"
+             aria-labelledby="collections-title">
+
       <div class="section-head">
-        <h2 id="collections-title">Current Collection</h2>
-        <p class="section-note">คอลเลกชันแรกของคลังความรู้ และจะขยายต่อไปในอนาคต</p>
+        <h2 id="collections-title">Current Collections</h2>
+
+        <p class="section-note">
+          คอลเลกชันความรู้ที่กำลังพัฒนาและขยายต่อเนื่อง
+        </p>
       </div>
 
-      <article class="collection">
-        <div>
-          <p class="collection-label">Featured Collection</p>
+      <div class="collections-grid">
 
-          <h3>
-            The Best of Dao
-            <span class="thai-title">ปัญญาแห่งเต๋า</span>
-          </h3>
+        <article class="collection">
+          <div>
+            <p class="collection-label">Featured Collection</p>
 
-          <p>
-            สำรวจแนวคิดสำคัญของเหล่าจื่อ จวงจื่อ และอู๋เว่ย
-            ผ่านบทความภาพสองภาษาและฉบับอินเทอร์แอกทีฟ
-          </p>
+            <h3>
+              The Best of Dao
+              <span class="thai-title">ปัญญาแห่งเต๋า</span>
+            </h3>
 
-          <p lang="en">
-            A bilingual visual guide to Laozi, Zhuangzi, Wu Wei,
-            and the enduring wisdom of Daoist philosophy.
-          </p>
+            <p>
+              สำรวจแนวคิดสำคัญของเหล่าจื่อ จวงจื่อ และอู๋เว่ย
+              ผ่านบทความภาพสองภาษาและฉบับอินเทอร์แอกทีฟ
+            </p>
 
-          <ul class="topics" aria-label="หัวข้อในคอลเลกชัน">
-            <li>เหล่าจื่อ · Laozi</li>
-            <li>จวงจื่อ · Zhuangzi</li>
-            <li>อู๋เว่ย · Wu Wei</li>
-            <li>Chinese Philosophy</li>
-          </ul>
+            <p lang="en">
+              A bilingual visual guide to Laozi, Zhuangzi, Wu Wei,
+              and the enduring wisdom of Daoist philosophy.
+            </p>
 
-          <div class="hero-actions">
-            <a class="button"
-               href="https://drsupakorn.github.io/the-best-of-dao/">
-              เปิดคอลเลกชัน →
-            </a>
+            <ul class="topics"
+                aria-label="หัวข้อในคอลเลกชัน The Best of Dao">
+              <li>เหล่าจื่อ · Laozi</li>
+              <li>จวงจื่อ · Zhuangzi</li>
+              <li>อู๋เว่ย · Wu Wei</li>
+              <li>Chinese Philosophy</li>
+            </ul>
+
+            <div class="hero-actions">
+              <a class="button"
+                 href="https://drsupakorn.github.io/the-best-of-dao/">
+                เปิดคอลเลกชัน →
+              </a>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="collection">
-        <div>
-          <p class="collection-label">Featured Collection</p>
-          <h3>Buddhist Cosmology
-            <span class="thai-title">จักรวาลในสายตาพุทธ</span>
-          </h3>
-          <p>สำรวจจักรวาลวิทยาพุทธในฐานะแผนที่ของกรรม จิต และความตื่นรู้</p>
-          <p lang="en">A visual guide to Buddhist cosmology.</p>
-          <ul class="topics">
-            <li>Buddhism</li><li>Cosmology</li><li>Karma</li><li>Meditation</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="button" href="https://drsupakorn.github.io/buddhist-cosmology/">เปิดคอลเลกชัน →</a>
+        <article class="collection">
+          <div>
+            <p class="collection-label">Featured Collection</p>
+
+            <h3>
+              The Best of Buddhism
+              <span class="thai-title">
+                พระสูตรและพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย
+              </span>
+            </h3>
+
+            <p>
+              คลังความรู้พระพุทธศาสนาในรูปแบบร่วมสมัย
+              อธิบายพระสูตรสำคัญ พระไตรปิฎก
+              ประวัติศาสตร์พุทธศาสนา และพุทธปรัชญา
+              ด้วยภาษาที่เข้าใจง่าย
+              โดยอ้างอิงคัมภีร์และรักษาความเป็นกลางทางวิชาการ
+            </p>
+
+            <p lang="en">
+              A growing digital collection of Buddhist suttas,
+              history, and philosophy presented for contemporary readers.
+            </p>
+
+            <ul class="topics"
+                aria-label="หัวข้อในคอลเลกชัน The Best of Buddhism">
+              <li>พระสูตร · Buddhist Suttas</li>
+              <li>พระไตรปิฎก · Pali Canon</li>
+              <li>พุทธปรัชญา</li>
+              <li>ประวัติศาสตร์พุทธศาสนา</li>
+            </ul>
+
+            <div class="hero-actions">
+              <a class="button"
+                 href="https://drsupakorn.github.io/the-best-of-buddhism/">
+                เปิดคอลเลกชัน →
+              </a>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
+        <article class="collection">
+          <div>
+            <p class="collection-label">Featured Collection</p>
+
+            <h3>
+              Buddhist Cosmology
+              <span class="thai-title">
+                จักรวาลในสายตาพุทธ
+              </span>
+            </h3>
+
+            <p>
+              สำรวจจักรวาลวิทยาพุทธในฐานะแผนที่ของกรรม
+              จิต และความตื่นรู้
+            </p>
+
+            <p lang="en">
+              A visual guide to Buddhist cosmology.
+            </p>
+
+            <ul class="topics"
+                aria-label="หัวข้อในคอลเลกชัน Buddhist Cosmology">
+              <li>Buddhism</li>
+              <li>Cosmology</li>
+              <li>Karma</li>
+              <li>Meditation</li>
+            </ul>
+
+            <div class="hero-actions">
+              <a class="button"
+                 href="https://drsupakorn.github.io/buddhist-cosmology/">
+                เปิดคอลเลกชัน →
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </section>
 
-    <section class="section" id="about" aria-labelledby="about-title">
+    <section class="section"
+             id="about"
+             aria-labelledby="about-title">
+
       <div class="section-head">
         <h2 id="about-title">About this portal</h2>
       </div>
 
       <div class="about-grid">
+
         <article class="about-card">
           <h3>Readable</h3>
-          <p>เรียบเรียงเนื้อหาซับซ้อนให้อ่านง่าย โดยไม่ละทิ้งสาระสำคัญ</p>
+          <p>
+            เรียบเรียงเนื้อหาซับซ้อนให้อ่านง่าย
+            โดยไม่ละทิ้งสาระสำคัญ
+          </p>
         </article>
 
         <article class="about-card">
           <h3>Bilingual</h3>
-          <p>เผยแพร่เนื้อหาไทยและอังกฤษตามความเหมาะสมของแต่ละโครงการ</p>
+          <p>
+            เผยแพร่เนื้อหาไทยและอังกฤษ
+            ตามความเหมาะสมของแต่ละโครงการ
+          </p>
         </article>
 
         <article class="about-card">
           <h3>Growing archive</h3>
-          <p>เพิ่มคอลเลกชันใหม่ได้ในอนาคต โดยใช้หน้าเว็บนี้เป็นศูนย์กลาง</p>
+          <p>
+            เพิ่มคอลเลกชันใหม่ได้ในอนาคต
+            โดยใช้หน้าเว็บนี้เป็นศูนย์กลาง
+          </p>
         </article>
+
       </div>
     </section>
 
