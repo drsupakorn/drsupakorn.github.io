@@ -1,31 +1,44 @@
-# Dr. Supakorn Buasai — Knowledge Portal
+# Dr. Supakorn Buasai — Reading Notes & Knowledge Projects
 
-> Reading notes, essays, and interactive knowledge by Dr. Supakorn Buasai.
+Author: Dr. Supakorn Buasai
+Primary language: Thai
+Supporting language: English
+Website launched: August 2026
+Homepage: https://drsupakorn.github.io/
+About: https://drsupakorn.github.io/about/
 
-Primary website:
-https://drsupakorn.github.io/
+## Purpose
 
-## Current collection
+This website began as personal reading notes after retirement and gradually developed into a public collection of essays and knowledge projects.
+
+The primary audience is Thai general readers. English titles, key terms, and concise summaries are provided where useful. Selected sections may become fully bilingual in the future.
+
+The editorial aim is to make complex subjects more accessible while preserving context, accuracy, and respect for different traditions.
+
+## Main collections
 
 - The Best of Dao
   https://drsupakorn.github.io/the-best-of-dao/
 
-  A bilingual visual guide to Laozi, Zhuangzi, Wu Wei, and Daoist philosophy.
+- The Best of Buddhism
+  https://drsupakorn.github.io/the-best-of-buddhism/
 
-## Languages
+- Mahaparinibbana Sutta
+  https://drsupakorn.github.io/the-best-of-buddhism/maha-parinibbana-sutta/
 
-- Thai
-- English
+- Buddhist Cosmology
+  https://drsupakorn.github.io/buddhist-cosmology/
 
-## Main subject areas
+## Subjects
 
-- Philosophy
-- Buddhism
-- Education
-- Health and public policy
-- History
-- Artificial intelligence and technology
+Buddhism, Daoism, philosophy, health, education, spiritual well-being, public policy, technology, photography, personal development, and lifelong learning.
 
-## Author
+## Editorial approach
 
-Dr. Supakorn Buasai
+- Accuracy before speed
+- Evidence before opinion
+- Clear language for general readers
+- Respect for different traditions
+- Willingness to revise when better evidence becomes available
+
+Modern digital tools, including artificial intelligence, may assist parts of the research and editorial process. Source evaluation, interpretation, verification, and publication decisions remain the author's responsibility.
