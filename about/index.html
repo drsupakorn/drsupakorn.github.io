@@ -3,110 +3,786 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>เกี่ยวกับเว็บไซต์และผู้จัดทำ | Dr. Supakorn Buasai</title>
-  <meta name="description" content="ที่มาของเว็บไซต์บันทึกการอ่านและโครงการความรู้ โดย ดร.สุภกร บัวสาย อดีตแพทย์ชนบท ผู้สนใจการเรียนรู้ตลอดชีวิต สุขภาพ การศึกษา สุขภาวะทางปัญญา นโยบายสาธารณะ การถ่ายภาพ และการพัฒนาตนเอง">
+  <meta name="description"
+        content="ที่มาของ Learning Journeys โดย ดร.สุภกร บัวสาย เว็บไซต์สำหรับผู้ที่ยังสนุกกับการอ่าน การตั้งคำถาม และการเรียนรู้ตลอดชีวิต">
   <meta name="author" content="Dr. Supakorn Buasai">
   <meta name="robots" content="index, follow">
+
   <link rel="canonical" href="https://drsupakorn.github.io/about/">
-  <link rel="stylesheet" href="https://drsupakorn.github.io/styles.css">
+
   <meta property="og:locale" content="th_TH">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="เกี่ยวกับเว็บไซต์และผู้จัดทำ | Dr. Supakorn Buasai">
-  <meta property="og:description" content="เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่เรียนรู้ในวัยเกษียณ และค่อย ๆ เติบโตเป็นพื้นที่แบ่งปันความรู้สำหรับผู้สนใจทั่วไป">
+  <meta property="og:title" content="About This Website | Dr. Supakorn Buasai">
+  <meta property="og:description"
+        content="A place for curious minds—built from reading, reflection, practice, and lifelong learning.">
   <meta property="og:url" content="https://drsupakorn.github.io/about/">
-  <meta property="og:site_name" content="Dr. Supakorn Buasai — Reading Notes & Knowledge Projects">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="About the Website | Dr. Supakorn Buasai">
-  <meta name="twitter:description" content="The story behind a Thai-first knowledge website with English support, launched in August 2026.">
+  <meta property="og:site_name" content="Dr. Supakorn Buasai — Learning Journeys">
+  <meta property="og:image"
+        content="https://drsupakorn.github.io/images/about-bridge.jpg">
+  <meta property="og:image:alt"
+        content="Dr. Supakorn Buasai standing on a suspension bridge">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About This Website | Dr. Supakorn Buasai">
+  <meta name="twitter:description"
+        content="The story behind Learning Journeys: a place for curious minds.">
+  <meta name="twitter:image"
+        content="https://drsupakorn.github.io/images/about-bridge.jpg">
+
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"AboutPage",
-    "name":"เกี่ยวกับเว็บไซต์และผู้จัดทำ",
-    "alternateName":"About the Website and Author",
-    "url":"https://drsupakorn.github.io/about/",
-    "inLanguage":["th","en"],
-    "dateCreated":"2026-08-03",
-    "isPartOf":{"@type":"WebSite","name":"Dr. Supakorn Buasai — Reading Notes & Knowledge Projects","url":"https://drsupakorn.github.io/"},
-    "about":{"@type":"Person","name":"Dr. Supakorn Buasai","alternateName":"ดร.สุภกร บัวสาย","description":"A former rural physician who later worked in health-system development and education reform in Thailand, and now devotes time to reading, research, writing, and photography."}
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "เกี่ยวกับเว็บไซต์และผู้จัดทำ",
+    "alternateName": "About This Website",
+    "url": "https://drsupakorn.github.io/about/",
+    "inLanguage": ["th", "en"],
+    "dateCreated": "2026-08-03",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Dr. Supakorn Buasai — Learning Journeys",
+      "url": "https://drsupakorn.github.io/"
+    },
+    "about": {
+      "@type": "Person",
+      "name": "Dr. Supakorn Buasai",
+      "alternateName": "ดร.สุภกร บัวสาย",
+      "description": "Doctor and policy analyst; former rural physician; lifelong learner interested in health, education, spiritual well-being, public policy, photography, and personal development."
+    }
   }
   </script>
+
+  <style>
+    :root {
+      --bg: #f5f1e7;
+      --paper: rgba(255,255,255,.82);
+      --text: #243027;
+      --muted: #667066;
+      --deep: #304534;
+      --deep2: #223126;
+      --soft: #e4eadf;
+      --line: #cbd1c6;
+      --shadow: 0 18px 54px rgba(35,48,39,.10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(255,255,255,.96), transparent 30rem),
+        radial-gradient(circle at 100% 28%, rgba(220,230,214,.72), transparent 30rem),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Noto Sans Thai", Arial, sans-serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .page {
+      width: min(100% - 32px, 1140px);
+      margin: 0 auto;
+      padding: 24px 0 60px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 4px 2px 20px;
+    }
+
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .topnav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .topnav a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .87rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .topnav a:hover,
+    .topnav a:focus {
+      background: var(--soft);
+      color: var(--deep);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 590px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      background: #dbe4d5;
+    }
+
+    .hero img {
+      width: 100%;
+      min-height: 590px;
+      object-fit: cover;
+      object-position: center 42%;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(18,30,22,.80) 0%,
+        rgba(18,30,22,.42) 48%,
+        rgba(18,30,22,.06) 75%,
+        transparent 100%);
+    }
+
+    .hero-copy {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      display: flex;
+      max-width: 690px;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(34px, 6vw, 72px);
+      color: white;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      font-size: .78rem;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      opacity: .86;
+    }
+
+    h1, h2, h3 { text-wrap: balance; }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.1rem, 7vw, 6rem);
+      font-weight: 500;
+      line-height: .98;
+      letter-spacing: -.04em;
+    }
+
+    .hero-tag {
+      margin: 16px 0 0;
+      color: #edf2d2;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    .lead-th {
+      margin: 25px 0 8px;
+      max-width: 620px;
+      font-size: clamp(1.04rem, 2.3vw, 1.28rem);
+      font-weight: 650;
+    }
+
+    .lead-en {
+      margin: 0;
+      max-width: 620px;
+      font-family: Georgia, "Times New Roman", serif;
+      opacity: .88;
+    }
+
+    .section { padding: 72px 4px 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.08;
+    }
+
+    .heading-th {
+      display: block;
+      margin-bottom: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Noto Sans Thai", Arial, sans-serif;
+      font-size: .62em;
+      font-weight: 850;
+    }
+
+    .heading-en { display: block; }
+
+    .section-note {
+      margin: 0;
+      max-width: 440px;
+      color: var(--muted);
+      font-size: .92rem;
+      text-align: right;
+    }
+
+    .content-card,
+    .figure-card,
+    .note-card,
+    .invitation {
+      padding: clamp(26px, 5vw, 44px);
+      border: 1px solid rgba(255,255,255,.92);
+      border-radius: 24px;
+      background: rgba(255,255,255,.66);
+      box-shadow: var(--shadow);
+    }
+
+    .content-card p,
+    .note-card p {
+      margin: 0 0 15px;
+    }
+
+    .content-card p:last-child,
+    .note-card p:last-child { margin-bottom: 0; }
+
+    .english-copy {
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .figure-card { padding: clamp(14px, 3vw, 26px); }
+    .figure-card figure { margin: 0; }
+    .figure-card img { width: 100%; border-radius: 16px; }
+
+    figcaption {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    .topic-grid,
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .topic,
+    .practice {
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.92);
+      border-radius: 19px;
+      background: rgba(255,255,255,.60);
+    }
+
+    .topic h3,
+    .practice h3 {
+      margin: 0 0 7px;
+      font-size: 1.05rem;
+    }
+
+    .topic p,
+    .practice p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .learner-card {
+      display: grid;
+      grid-template-columns: .65fr 1.35fr;
+      overflow: hidden;
+      border-radius: 24px;
+      background: rgba(255,255,255,.66);
+      box-shadow: var(--shadow);
+    }
+
+    .learner-aside {
+      padding: clamp(27px, 5vw, 44px);
+      background: var(--deep);
+      color: white;
+    }
+
+    .learner-aside h3 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    .learner-aside p {
+      margin: 0 0 13px;
+      color: rgba(255,255,255,.85);
+    }
+
+    .quote {
+      margin-top: 20px;
+      padding-left: 17px;
+      border-left: 4px solid #c7d7bb;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+    }
+
+    .learner-body {
+      padding: clamp(27px, 5vw, 44px);
+    }
+
+    .learner-body p {
+      margin: 0 0 15px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 18px;
+      border-radius: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button {
+      background: var(--deep);
+      color: white;
+      box-shadow: 0 10px 26px rgba(47,61,49,.18);
+    }
+
+    .button:hover,
+    .button:focus { background: var(--deep2); }
+
+    .button-secondary {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.52);
+      color: var(--deep);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus { background: var(--soft); }
+
+    .invitation {
+      margin-top: 72px;
+      text-align: center;
+    }
+
+    .invitation strong {
+      display: block;
+      margin-bottom: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 62px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    @media (max-width: 920px) {
+      .topic-grid,
+      .practice-grid { grid-template-columns: repeat(2, 1fr); }
+      .learner-card { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topnav { justify-content: flex-start; }
+
+      .hero,
+      .hero img { min-height: 650px; }
+
+      .hero::after {
+        background: linear-gradient(180deg,
+          rgba(18,30,22,.25) 0%,
+          rgba(18,30,22,.76) 55%,
+          rgba(18,30,22,.92) 100%);
+      }
+
+      .hero-copy { justify-content: flex-end; }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .section-note { text-align: left; }
+
+      .topic-grid,
+      .practice-grid { grid-template-columns: 1fr; }
+
+      .actions a { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
+
 <body>
-<main class="page narrow">
-  <div class="topbar">
-    <a class="brand" href="https://drsupakorn.github.io/">Dr. Supakorn Buasai</a>
-    <nav class="topnav" aria-label="เมนูหลัก / Main navigation">
-      <a href="https://drsupakorn.github.io/">หน้าแรก · Home</a>
-      <a href="#website">เว็บไซต์ · Website</a>
-      <a href="#author">ผู้จัดทำ · Author</a>
-      <a href="#principles">หลักการ · Principles</a>
-    </nav>
-  </div>
+  <main class="page">
 
-  <header class="hero">
-    <p class="eyebrow">About · Launched August 2026</p>
-    <h1>About This Website<span class="thai-name">เกี่ยวกับเว็บไซต์และผู้จัดทำ</span></h1>
-    <p class="lead-th">เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่เรียนรู้ในวัยเกษียณ และค่อย ๆ เติบโตเป็นพื้นที่แบ่งปันความรู้ สำหรับผู้ที่ยังรักการอ่านและการเรียนรู้</p>
-    <p class="lead-en" lang="en">What began as personal reading notes after retirement has gradually grown into a place for sharing knowledge with anyone who still enjoys reading and learning.</p>
-  </header>
+    <div class="topbar">
+      <a class="brand" href="https://drsupakorn.github.io/">
+        Dr. Supakorn Buasai
+      </a>
 
-  <section class="section" id="website">
-    <div class="section-head"><h2><span class="heading-th">เกี่ยวกับเว็บไซต์</span><span class="heading-en">About This Website</span></h2></div>
-    <div class="content-card">
-      <p>เว็บไซต์นี้เริ่มต้นจากบันทึกการอ่านส่วนตัวหลังเกษียณ เมื่อมีเวลาอ่านหนังสือมากขึ้น ผู้เขียนเริ่มจดบันทึกสิ่งที่ได้เรียนรู้เพื่อทบทวนความเข้าใจของตนเอง ต่อมาพบว่าหลายเรื่องอาจเป็นประโยชน์กับผู้อื่น จึงค่อย ๆ พัฒนาเป็นเว็บไซต์แห่งนี้</p>
-      <p>ความรู้จำนวนมากไม่ได้ยากเพราะเนื้อหาเพียงอย่างเดียว แต่อาจยากเพราะวิธีอธิบาย เว็บไซต์นี้จึงพยายามเรียบเรียงหัวข้อที่ซับซ้อนให้เข้าใจง่ายขึ้น โดยยังคงรักษาบริบท ความถูกต้อง และเปิดทางให้ผู้อ่านค้นคว้าต่อ</p>
-      <p>เนื้อหาส่วนใหญ่สะท้อนเรื่องที่ผู้เขียนกำลังสนใจและศึกษา เช่น พระพุทธศาสนา ปรัชญา สุขภาพ การศึกษา สุขภาวะทางปัญญา นโยบายสาธารณะ เทคโนโลยี การถ่ายภาพ และการพัฒนาตนเอง</p>
-      <p>เว็บไซต์เริ่มเผยแพร่ในเดือนสิงหาคม ๒๕๖๙ และยังอยู่ระหว่างการพัฒนาอย่างต่อเนื่อง เนื้อหาภาษาไทยเป็นหลัก โดยมีชื่อเรื่อง ศัพท์สำคัญ และบทสรุปภาษาอังกฤษ เพื่อช่วยให้ผู้อ่านต่างชาติ เครื่องมือค้นหา และระบบปัญญาประดิษฐ์เข้าใจเนื้อหาได้ดีขึ้น ในอนาคตบางส่วนอาจพัฒนาเป็นสองภาษาเต็มรูปแบบ</p>
-      <p class="english-copy" lang="en">This website began as a personal collection of reading notes after retirement. With more time to read, the author started writing summaries to deepen his own understanding. Some notes seemed potentially useful to others, and the collection gradually evolved into this website.</p>
-      <p class="english-copy" lang="en">The site is primarily in Thai, supported by English titles, key terms, and concise summaries. Selected sections may gradually become fully bilingual in the future.</p>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="https://drsupakorn.github.io/">Home</a>
+        <a href="#website">Why</a>
+        <a href="#process">How Ideas Grow</a>
+        <a href="#learner">About the Learner</a>
+        <a href="#principles">My Approach</a>
+      </nav>
     </div>
-  </section>
 
-  <section class="section" id="author">
-    <div class="section-head"><h2><span class="heading-th">เกี่ยวกับผู้จัดทำ</span><span class="heading-en">About the Author</span></h2></div>
-    <div class="content-card">
-      <p>นพ.สุภกร บัวสาย เป็นอดีตแพทย์ชนบท ผู้เคยทำงานด้านการพัฒนาระบบสุขภาพและการปฏิรูปการศึกษาในประเทศไทย ก่อนเกษียณอายุ</p>
-      <p>ปัจจุบันใช้เวลาส่วนใหญ่กับการอ่าน การค้นคว้า การเขียน และการถ่ายภาพ โดยมีความสนใจด้านสุขภาพ การศึกษา สุขภาวะทางปัญญา นโยบายสาธารณะ พระพุทธศาสนา ปรัชญา การพัฒนาตนเอง และการเรียนรู้ตลอดชีวิต</p>
-      <p>เว็บไซต์นี้มิได้มุ่งนำเสนอคำตอบสุดท้าย แต่เป็นบันทึกการเรียนรู้ที่เปิดให้ผู้อ่านร่วมคิด ตั้งคำถาม และค้นคว้าต่อไป</p>
-      <p class="english-copy" lang="en">Dr. Supakorn Buasai is a former rural physician who later worked in health-system development and education reform in Thailand.</p>
-      <p class="english-copy" lang="en">Since retirement, he has devoted much of his time to reading, research, writing, and photography. His interests include health, education, spiritual well-being, public policy, Buddhism, philosophy, personal development, and lifelong learning.</p>
-    </div>
-  </section>
+    <header class="hero">
+      <img src="../images/about-bridge.jpg"
+           alt="Dr. Supakorn Buasai standing on a suspension bridge">
 
-  <section class="section" id="principles">
-    <div class="section-head"><h2><span class="heading-th">หลักการเรียบเรียง</span><span class="heading-en">Editorial Principles</span></h2></div>
-    <ul class="principles">
-      <li><strong>ความถูกต้องก่อนความรวดเร็ว · Accuracy before speed</strong>ตรวจสอบข้อมูลและแยกสิ่งที่ทราบออกจากสิ่งที่ยังไม่แน่นอน</li>
-      <li><strong>หลักฐานก่อนความเห็น · Evidence before opinion</strong>ใช้แหล่งข้อมูลที่น่าเชื่อถือ และทำให้ข้อคิดเห็นของผู้เขียนเห็นได้ชัด</li>
-      <li><strong>ทำเรื่องยากให้อ่านง่าย · Make complexity accessible</strong>ลดความยากของภาษาโดยไม่ลดทอนสาระสำคัญ</li>
-      <li><strong>เคารพความหลากหลาย · Respect different traditions</strong>อธิบายความแตกต่างอย่างเป็นธรรม โดยไม่เร่งตัดสินว่าฝ่ายใดถูกหรือผิด</li>
-      <li><strong>การเรียนรู้ไม่มีวันสิ้นสุด · Lifelong learning</strong>เปิดรับข้อมูลใหม่ การทบทวน และการแก้ไขเมื่อพบหลักฐานที่ดีกว่า</li>
-    </ul>
-  </section>
+      <div class="hero-copy">
+        <p class="eyebrow">About · Learning Journeys</p>
+        <h1>About This Website</h1>
+        <p class="hero-tag">Learning Never Retires.</p>
 
-  <section class="section">
-    <div class="section-head"><h2><span class="heading-th">เครื่องมือดิจิทัล</span><span class="heading-en">Digital Tools</span></h2></div>
-    <div class="note">
-      <p>เนื้อหาบางชิ้นจัดทำโดยอาศัยเครื่องมือดิจิทัลสมัยใหม่ รวมถึงปัญญาประดิษฐ์ในบางขั้นตอนของการค้นคว้า ตรวจสอบ และเรียบเรียง อย่างไรก็ตาม การเลือกหัวข้อ การประเมินแหล่งข้อมูล การตีความ และการตัดสินใจเผยแพร่ ยังคงเป็นความรับผิดชอบของผู้เขียน</p>
-      <p class="english-copy" lang="en">Some materials are prepared with the assistance of modern digital tools, including artificial intelligence during parts of the research and editorial process. Topic selection, source evaluation, interpretation, and publication decisions remain the author's responsibility.</p>
-    </div>
-  </section>
+        <p class="lead-th">
+          เว็บไซต์นี้เริ่มจากบันทึกการเรียนรู้ส่วนตัว
+          และค่อย ๆ เติบโตเป็นพื้นที่สำหรับผู้ที่ยังสนุกกับการอ่าน
+          การตั้งคำถาม และการทำความเข้าใจโลก
+        </p>
 
-  <section class="section">
-    <div class="content-card">
-      <p>หวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นประโยชน์แก่ผู้ที่รักการเรียนรู้ ไม่มากก็น้อย</p>
-      <p class="english-copy" lang="en">I hope this small website will be useful, in some measure, to anyone who enjoys learning.</p>
-      <div class="actions">
-        <a class="button" href="https://drsupakorn.github.io/">กลับหน้าแรก · Return home</a>
-        <a class="button-secondary" href="https://drsupakorn.github.io/the-best-of-buddhism/">The Best of Buddhism</a>
-        <a class="button-secondary" href="https://drsupakorn.github.io/the-best-of-dao/">The Best of Dao</a>
+        <p class="lead-en" lang="en">
+          What began as personal learning notes has gradually grown
+          into a place for curious minds.
+        </p>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <footer>© Dr. Supakorn Buasai · Reading Notes & Knowledge Projects<br>เว็บไซต์เริ่มเผยแพร่ สิงหาคม ๒๕๖๙ · Launched August 2026</footer>
-</main>
+    <section class="section" id="website">
+      <div class="section-head">
+        <h2>
+          <span class="heading-th">ทำไมจึงมีเว็บไซต์นี้</span>
+          <span class="heading-en">Why This Website?</span>
+        </h2>
+      </div>
+
+      <article class="content-card">
+        <p>
+          เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมอ่านและเรียนรู้หลังเกษียณ
+          เมื่อมีเวลาอ่านมากขึ้น ผมเริ่มจดบันทึกเพื่อทบทวนความเข้าใจของตนเอง
+          ต่อมาพบว่าหลายเรื่องอาจเป็นประโยชน์กับผู้อื่น
+          จึงค่อย ๆ พัฒนาเป็นเว็บไซต์แห่งนี้
+        </p>
+
+        <p>
+          ผมเชื่อว่าความรู้จำนวนมากไม่ได้ยากเพราะเนื้อหาเพียงอย่างเดียว
+          แต่อาจยากเพราะวิธีอธิบาย
+          เว็บไซต์นี้จึงพยายามเรียบเรียงเรื่องซับซ้อนให้เข้าใจง่ายขึ้น
+          โดยยังรักษาบริบท ความถูกต้อง และเปิดทางให้ผู้อ่านค้นคว้าต่อ
+        </p>
+
+        <p>
+          เว็บไซต์เริ่มเผยแพร่ในเดือนสิงหาคม ๒๕๖๙
+          เนื้อหาภาษาไทยเป็นหลัก
+          โดยมีชื่อเรื่อง ศัพท์สำคัญ และบทสรุปภาษาอังกฤษช่วยอธิบาย
+          เมื่อมีเนื้อหาพร้อมมากขึ้น บางส่วนอาจพัฒนาเป็นสองภาษาเต็มรูปแบบ
+        </p>
+
+        <p class="english-copy" lang="en">
+          The website is primarily in Thai, supported by English titles,
+          key terms, and concise summaries. Selected work may gradually
+          become fully bilingual as the collection grows.
+        </p>
+      </article>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-head">
+        <h2>
+          <span class="heading-th">จากความสงสัยสู่การแบ่งปัน</span>
+          <span class="heading-en">How Ideas Become Articles</span>
+        </h2>
+
+        <p class="section-note">
+          A visual summary of the learning process behind the website.
+        </p>
+      </div>
+
+      <div class="figure-card">
+        <figure>
+          <img src="../images/how-ideas-become-articles.svg"
+               alt="Infographic showing a five-step learning cycle, AI as a learning companion, reading interests, and working habits">
+          <figcaption lang="en">
+            Curiosity leads. Evidence informs. Reflection deepens.
+            Practice gives learning meaning.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>
+          <span class="heading-th">เรื่องที่กำลังเรียนรู้</span>
+          <span class="heading-en">What You’ll Find Here</span>
+        </h2>
+
+        <p class="section-note">
+          เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อหัวข้อใหม่ตกผลึก
+        </p>
+      </div>
+
+      <div class="topic-grid">
+        <article class="topic">
+          <h3>พระพุทธศาสนา · Buddhism</h3>
+          <p>พระสูตร ประวัติศาสตร์ และพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย</p>
+        </article>
+
+        <article class="topic">
+          <h3>เต๋า · Daoism</h3>
+          <p>เหล่าจื่อ จวงจื่อ อู๋เว่ย และปัญญาจีนโบราณ</p>
+        </article>
+
+        <article class="topic">
+          <h3>สุขภาพ · Health</h3>
+          <p>การดูแลสุขภาพ การออกกำลังกาย การนอน และการพัฒนานิสัย</p>
+        </article>
+
+        <article class="topic">
+          <h3>การศึกษา · Education</h3>
+          <p>การเรียนรู้ ความเสมอภาค และการปฏิรูประบบการศึกษา</p>
+        </article>
+
+        <article class="topic">
+          <h3>นโยบายสาธารณะ · Public Policy</h3>
+          <p>ระบบสุขภาพ การศึกษา และประเด็นสังคมร่วมสมัย</p>
+        </article>
+
+        <article class="topic">
+          <h3>ข่าวต่างประเทศ · International News</h3>
+          <p>เหตุการณ์สำคัญของโลกที่ควรทำความเข้าใจให้ลึกกว่าพาดหัวข่าว</p>
+        </article>
+
+        <article class="topic">
+          <h3>สุขภาวะทางปัญญา · Spiritual Well-being</h3>
+          <p>ความหมาย การใคร่ครวญ และการเติบโตภายใน</p>
+        </article>
+
+        <article class="topic">
+          <h3>การถ่ายภาพ · Photography</h3>
+          <p>การสังเกตโลกผ่านภาพ การเดินทาง และชีวิตประจำวัน</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="learner">
+      <div class="section-head">
+        <h2>
+          <span class="heading-th">รู้จักผู้ร่วมเดินทาง</span>
+          <span class="heading-en">About the Learner</span>
+        </h2>
+      </div>
+
+      <div class="learner-card">
+        <aside class="learner-aside">
+          <h3>Dr. Supakorn Buasai</h3>
+          <p>Doctor and policy analyst</p>
+          <p>Former rural physician</p>
+          <p>Lifelong learner</p>
+
+          <p class="quote">
+            Curiosity leads. AI supports. Judgment remains mine.
+          </p>
+        </aside>
+
+        <article class="learner-body">
+          <p>
+            ผมเป็นอดีตแพทย์ชนบท
+            และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ
+            และการปฏิรูปการศึกษาของประเทศไทย
+          </p>
+
+          <p>
+            ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ
+            การเดินออกกำลังกาย การทำสวน การถ่ายภาพ
+            การเรียนรู้เรื่องใหม่ ๆ
+            และการแลกเปลี่ยนความคิดกับเพื่อนฝูง
+          </p>
+
+          <p>
+            ระหว่างทาง AI ได้กลายเป็นทั้งเครื่องมือและเพื่อนร่วมทาง
+            ที่ช่วยให้การค้นคว้า การเชื่อมโยงความคิด
+            และการเขียนมีประสิทธิภาพยิ่งขึ้น
+            แต่สิ่งที่ทำให้การเดินทางครั้งนี้ยังน่าตื่นเต้นอยู่เสมอ
+            คือความอยากรู้อยากเห็นและความสุขของการได้เรียนรู้
+          </p>
+
+          <p>
+            ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทาง
+            ของผู้ที่เชื่อว่า <strong>“การเรียนรู้ไม่มีวันเกษียณ”</strong>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="principles">
+      <div class="section-head">
+        <h2>
+          <span class="heading-th">วิธีทำงานและหลักการเรียบเรียง</span>
+          <span class="heading-en">My Approach</span>
+        </h2>
+      </div>
+
+      <div class="practice-grid">
+        <article class="practice">
+          <h3>Read widely</h3>
+          <p>อ่านต้นฉบับ งานวิจัย และมุมมองที่แตกต่างกัน</p>
+        </article>
+
+        <article class="practice">
+          <h3>Think deeply</h3>
+          <p>แยกข้อเท็จจริง การตีความ และสิ่งที่ยังไม่แน่นอน</p>
+        </article>
+
+        <article class="practice">
+          <h3>Experiment</h3>
+          <p>ทดลองนำสิ่งที่เหมาะสมไปใช้ และเรียนรู้จากผลลัพธ์จริง</p>
+        </article>
+
+        <article class="practice">
+          <h3>Build habits</h3>
+          <p>ฝึกสิ่งที่ได้ผลให้ค่อย ๆ กลายเป็นส่วนหนึ่งของชีวิต</p>
+        </article>
+
+        <article class="practice">
+          <h3>Share what helps</h3>
+          <p>เรียบเรียงให้เข้าใจง่าย และแบ่งปันเมื่อเนื้อหาตกผลึก</p>
+        </article>
+
+        <article class="practice">
+          <h3>Revise when needed</h3>
+          <p>พร้อมทบทวนและแก้ไข เมื่อพบข้อมูลหรือหลักฐานที่ดีกว่า</p>
+        </article>
+      </div>
+
+      <div class="note-card" style="margin-top:18px;">
+        <p>
+          ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ
+          สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน
+          แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ
+        </p>
+
+        <p class="english-copy" lang="en">
+          I believe knowledge becomes meaningful when it is connected
+          with practice. For health-related topics, I usually try things
+          myself before sharing what appears both useful in my own experience
+          and supported by evidence.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="note-card">
+        <h2 style="font-size:1.8rem; margin-bottom:12px;">
+          AI as Learning Companion
+        </h2>
+
+        <p>
+          เครื่องมือดิจิทัลสมัยใหม่ รวมถึง AI
+          ช่วยสนับสนุนบางขั้นตอนของการค้นคว้า การเชื่อมโยงความคิด
+          และการเรียบเรียง แต่การเลือกหัวข้อ การประเมินแหล่งข้อมูล
+          การตีความ และการตัดสินใจเผยแพร่
+          ยังคงเป็นความรับผิดชอบของผู้เขียน
+        </p>
+
+        <p class="english-copy" lang="en">
+          Modern digital tools, including AI, support parts of the research
+          and writing process. Topic selection, source evaluation,
+          interpretation, judgment, and publication decisions remain my own.
+        </p>
+      </div>
+    </section>
+
+    <section class="invitation">
+      <strong>Learning Never Retires.</strong>
+
+      <p>
+        หากเว็บไซต์นี้ช่วยให้คุณค้นพบแนวคิดใหม่หนึ่งเรื่อง
+        ตั้งคำถามได้ดีขึ้นหนึ่งข้อ
+        หรือมองเรื่องที่คุ้นเคยจากมุมใหม่
+        เว็บไซต์นี้ก็ได้ทำหน้าที่ของมันแล้ว
+      </p>
+
+      <p class="english-copy" lang="en" style="margin-top:12px;">
+        If this website helps you discover one new idea,
+        ask one better question, or see a familiar topic
+        from a different perspective, it has already served its purpose.
+      </p>
+
+      <div class="actions" style="justify-content:center;">
+        <a class="button" href="https://drsupakorn.github.io/">
+          Home
+        </a>
+        <a class="button-secondary"
+           href="https://drsupakorn.github.io/the-best-of-dao/">
+          The Best of Dao
+        </a>
+        <a class="button-secondary"
+           href="https://drsupakorn.github.io/the-best-of-buddhism/">
+          The Best of Buddhism
+        </a>
+        <a class="button-secondary"
+           href="https://drsupakorn.github.io/buddhist-cosmology/">
+          Buddhist Cosmology
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <strong>Learning never retires.</strong><br>
+      A place for curious minds · Started in August 2026.<br>
+      © 2026 Dr. Supakorn Buasai
+    </footer>
+
+  </main>
 </body>
 </html>
