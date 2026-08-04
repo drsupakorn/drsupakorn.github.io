@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">How I Learn — From Knowledge to Wisdom</title>
+  <desc id="desc">A six-part learning cycle: Explore, Question and Verify, Understand, Connect, Apply and Reflect, and Share and Learn. The cycle is guided by curiosity, humility, and integrity.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fdfbf7"/><stop offset="1" stop-color="#eef3ed"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#23392c" flood-opacity=".11"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#667b64"/></marker>
+    <style>
+      .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Arial,sans-serif}.serif{font-family:Georgia,'Times New Roman',serif}.deep{fill:#174d3a}.muted{fill:#607068}.navy{fill:#2f4662}.card{fill:#fff;stroke:#e3e8df;stroke-width:2}.step{font-size:24px;font-weight:800}.body{font-size:18px}.small{font-size:16px}.center{text-anchor:middle}.arrow{fill:none;stroke:#667b64;stroke-width:5;stroke-linecap:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" rx="34" fill="url(#bg)"/>
+  <g class="sans center">
+    <text x="800" y="78" class="deep" font-size="58" font-weight="900" letter-spacing="1">HOW I LEARN</text>
+    <text x="800" y="119" class="muted" font-size="20" font-weight="700" letter-spacing="7">READ • THINK • LIVE • SHARE</text>
+  </g>
+  <g>
+    <rect x="180" y="150" width="1240" height="112" rx="20" fill="#f1f3ef"/>
+    <rect x="180" y="150" width="7" height="112" rx="3" fill="#174d3a"/>
+    <text x="230" y="196" class="serif navy" font-size="27" font-style="italic">“I learn not to know more, but to understand better,</text>
+    <text x="230" y="233" class="serif navy" font-size="27" font-style="italic">live wisely, and contribute to others.”</text>
+  </g>
+  <text x="800" y="316" class="sans deep center" font-size="30" font-weight="900" letter-spacing="1">FROM KNOWLEDGE TO WISDOM</text>
+
+  <!-- arrows behind cards -->
+  <path d="M800 392 C1010 392 1100 445 1175 520" class="arrow"/>
+  <path d="M1240 590 C1250 700 1150 770 1035 800" class="arrow"/>
+  <path d="M925 835 C825 900 690 900 590 835" class="arrow"/>
+  <path d="M470 800 C350 770 275 700 285 590" class="arrow"/>
+  <path d="M350 520 C425 440 540 395 685 392" class="arrow"/>
+
+  <!-- cards -->
+  <g filter="url(#shadow)" class="sans">
+    <g transform="translate(610 345)"><rect width="380" height="150" rx="24" class="card"/><circle cx="58" cy="75" r="40" fill="#edf2e8"/><text x="58" y="86" font-size="44" text-anchor="middle">⌕</text><text x="115" y="58" class="deep step">1 · EXPLORE</text><text x="115" y="88" class="muted body">Read widely and stay curious</text><text x="115" y="113" class="muted body">across disciplines.</text></g>
+    <g transform="translate(1050 500)"><rect width="430" height="155" rx="24" class="card"/><circle cx="62" cy="78" r="40" fill="#edf2e8"/><text x="62" y="91" font-size="44" text-anchor="middle">?</text><text x="120" y="58" class="deep step">2 · QUESTION &amp; VERIFY</text><text x="120" y="88" class="muted body">Question assumptions and</text><text x="120" y="113" class="muted body">examine the evidence.</text></g>
+    <g transform="translate(970 730)"><rect width="430" height="155" rx="24" class="card"/><circle cx="62" cy="78" r="40" fill="#edf2e8"/><text x="62" y="91" font-size="39" text-anchor="middle">◉</text><text x="120" y="58" class="deep step">3 · UNDERSTAND</text><text x="120" y="88" class="muted body">Think deeply and seek clarity.</text></g>
+    <g transform="translate(585 815)"><rect width="430" height="145" rx="24" class="card"/><circle cx="62" cy="73" r="40" fill="#edf2e8"/><text x="62" y="85" font-size="38" text-anchor="middle">∞</text><text x="120" y="55" class="deep step">4 · CONNECT</text><text x="120" y="84" class="muted body">Connect ideas without forcing</text><text x="120" y="109" class="muted body">the connections.</text></g>
+    <g transform="translate(195 730)"><rect width="430" height="155" rx="24" class="card"/><circle cx="62" cy="78" r="40" fill="#edf2e8"/><text x="62" y="91" font-size="39" text-anchor="middle">↻</text><text x="120" y="58" class="deep step">5 · APPLY &amp; REFLECT</text><text x="120" y="88" class="muted body">Test ideas in life and learn</text><text x="120" y="113" class="muted body">from the results.</text></g>
+    <g transform="translate(120 500)"><rect width="430" height="155" rx="24" class="card"/><circle cx="62" cy="78" r="40" fill="#edf2e8"/><text x="62" y="90" font-size="38" text-anchor="middle">↔</text><text x="120" y="58" class="deep step">6 · SHARE &amp; LEARN</text><text x="120" y="88" class="muted body">Write, discuss, teach, and keep</text><text x="120" y="113" class="muted body">learning from others.</text></g>
+  </g>
+
+  <!-- center -->
+  <g class="sans center">
+    <circle cx="800" cy="625" r="124" fill="#174d3a"/>
+    <text x="800" y="577" fill="#dce8d7" font-size="18" letter-spacing="3">GUIDED BY</text>
+    <text x="800" y="615" fill="#fff" font-size="26" font-weight="850">CURIOSITY</text>
+    <text x="800" y="651" fill="#fff" font-size="26" font-weight="850">HUMILITY</text>
+    <text x="800" y="687" fill="#fff" font-size="26" font-weight="850">INTEGRITY</text>
+  </g>
+
+  <g class="sans">
+    <rect x="120" y="920" width="1360" height="58" rx="18" fill="#174d3a"/>
+    <text x="165" y="957" fill="#fff" font-size="19">AI expands my thinking. Judgment and responsibility remain mine.</text>
+    <text x="1438" y="957" fill="#fff" font-size="19" font-weight="800" text-anchor="end">Dr. Supakorn Buasai</text>
+  </g>
+</svg>
