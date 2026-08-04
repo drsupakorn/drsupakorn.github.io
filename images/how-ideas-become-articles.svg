@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .bg{fill:#fbf8f0}
+      .panel{fill:#ffffff;stroke:#d9ddcf;stroke-width:2}
+      .soft{fill:#e7ecdf}
+      .soft2{fill:#e7edf3}
+      .soft3{fill:#f0e5c9}
+      .deep{fill:#314735}
+      .navy{fill:#23456a}
+      .gold{fill:#b38a3f}
+      .title{font-family:Georgia,serif;font-size:44px;font-weight:700;fill:#243d2a}
+      .section{font-family:Arial,sans-serif;font-size:24px;font-weight:700;fill:#243d2a;letter-spacing:1px}
+      .label{font-family:Arial,sans-serif;font-size:20px;font-weight:700;fill:#243d2a}
+      .body{font-family:Arial,sans-serif;font-size:18px;fill:#39443b}
+      .small{font-family:Arial,sans-serif;font-size:16px;fill:#526058}
+      .tiny{font-family:Arial,sans-serif;font-size:14px;fill:#526058}
+      .center{text-anchor:middle}
+      .arrow{stroke:#61775f;stroke-width:4;fill:none;marker-end:url(#arrowhead)}
+      .line{stroke:#d2d8cc;stroke-width:2}
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#61775f"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="900" rx="34"/>
+  <text x="800" y="70" class="title center">How Ideas Become Articles</text>
+  <text x="800" y="108" class="small center">A learning process shaped by curiosity, evidence, reflection, practice, and sharing</text>
+
+  <!-- Learning cycle -->
+  <rect x="42" y="145" width="930" height="690" rx="28" class="panel"/>
+  <text x="507" y="190" class="section center">MY LEARNING CYCLE</text>
+
+  <circle cx="507" cy="470" r="95" class="deep"/>
+  <text x="507" y="440" class="label center" fill="#ffffff">Curiosity</text>
+  <text x="507" y="470" class="label center" fill="#ffffff">Purpose</text>
+  <text x="507" y="500" class="label center" fill="#ffffff">Wisdom</text>
+
+  <!-- 5 steps -->
+  <g>
+    <circle cx="507" cy="275" r="76" class="soft"/>
+    <text x="507" y="258" class="label center">1. EXPLORE</text>
+    <text x="507" y="288" class="small center">Stay curious.</text>
+    <text x="507" y="312" class="small center">Read broadly.</text>
+
+    <circle cx="720" cy="390" r="76" class="soft2"/>
+    <text x="720" y="373" class="label center">2. UNDERSTAND</text>
+    <text x="720" y="403" class="small center">Study deeply.</text>
+    <text x="720" y="427" class="small center">Ask better questions.</text>
+
+    <circle cx="650" cy="635" r="76" class="soft3"/>
+    <text x="650" y="618" class="label center">3. CONNECT</text>
+    <text x="650" y="648" class="small center">Link ideas.</text>
+    <text x="650" y="672" class="small center">See patterns.</text>
+
+    <circle cx="364" cy="635" r="76" class="soft"/>
+    <text x="364" y="618" class="label center">4. REFLECT</text>
+    <text x="364" y="648" class="small center">Think critically.</text>
+    <text x="364" y="672" class="small center">Revise honestly.</text>
+
+    <circle cx="294" cy="390" r="76" class="soft2"/>
+    <text x="294" y="360" class="label center">5. APPLY</text>
+    <text x="294" y="386" class="label center">&amp; SHARE</text>
+    <text x="294" y="418" class="small center">Practice in life.</text>
+    <text x="294" y="442" class="small center">Share what helps.</text>
+  </g>
+
+  <!-- arrows -->
+  <path d="M555 320 C620 320,660 340,680 360" class="arrow"/>
+  <path d="M738 455 C750 520,720 575,690 600" class="arrow"/>
+  <path d="M575 688 C500 725,430 715,405 690" class="arrow"/>
+  <path d="M316 585 C250 545,245 480,258 450" class="arrow"/>
+  <path d="M320 325 C380 280,445 262,468 266" class="arrow"/>
+
+  <text x="507" y="770" class="label center">Curiosity leads the cycle. Practice gives learning meaning.</text>
+  <text x="507" y="800" class="small center">Then the journey begins again.</text>
+
+  <!-- Right panels -->
+  <rect x="1002" y="145" width="556" height="215" rx="26" class="panel"/>
+  <text x="1280" y="190" class="section center">AI AS LEARNING COMPANION</text>
+  <circle cx="1070" cy="250" r="46" class="soft2"/>
+  <text x="1070" y="258" class="label center">AI</text>
+  <text x="1145" y="225" class="body">• Explore questions</text>
+  <text x="1145" y="255" class="body">• Connect ideas</text>
+  <text x="1145" y="285" class="body">• Organize knowledge</text>
+  <text x="1145" y="315" class="body">• Improve writing</text>
+  <text x="1280" y="345" class="small center" font-style="italic">Curiosity leads. AI supports. Judgment remains mine.</text>
+
+  <rect x="1002" y="382" width="270" height="453" rx="26" class="panel"/>
+  <text x="1137" y="425" class="section center">WHAT I READ</text>
+  <line x1="1030" y1="445" x2="1244" y2="445" class="line"/>
+  <text x="1040" y="485" class="body">• Buddhism</text>
+  <text x="1040" y="520" class="body">• Daoism</text>
+  <text x="1040" y="555" class="body">• Health &amp; Medicine</text>
+  <text x="1040" y="590" class="body">• Education</text>
+  <text x="1040" y="625" class="body">• Public Policy</text>
+  <text x="1040" y="660" class="body">• History</text>
+  <text x="1040" y="695" class="body">• International News</text>
+  <text x="1040" y="730" class="body">• Personal Growth</text>
+
+  <rect x="1288" y="382" width="270" height="453" rx="26" class="panel"/>
+  <text x="1423" y="425" class="section center">HOW I WORK</text>
+  <line x1="1316" y1="445" x2="1530" y2="445" class="line"/>
+  <text x="1423" y="490" class="label center">Read widely</text>
+  <text x="1423" y="527" class="small center">↓</text>
+  <text x="1423" y="565" class="label center">Think deeply</text>
+  <text x="1423" y="602" class="small center">↓</text>
+  <text x="1423" y="640" class="label center">Experiment</text>
+  <text x="1423" y="677" class="small center">↓</text>
+  <text x="1423" y="715" class="label center">Build habits</text>
+  <text x="1423" y="752" class="small center">↓</text>
+  <text x="1423" y="790" class="label center">Share what works</text>
+</svg>
