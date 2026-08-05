@@ -88,6 +88,7 @@
     }
 
     a { color: inherit; }
+    button { font: inherit; }
     img { display: block; max-width: 100%; }
 
     .page {
@@ -109,6 +110,14 @@
       font-size: 1.08rem;
       font-weight: 700;
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-area {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
     }
 
     .topnav {
@@ -128,9 +137,43 @@
     }
 
     .topnav a:hover,
-    .topnav a:focus {
+    .topnav a:focus-visible {
       background: var(--soft);
       color: var(--deep);
+      outline: none;
+    }
+
+    .instant-language {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.68);
+    }
+
+    .instant-language button {
+      min-height: 32px;
+      padding: 6px 11px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .instant-language button:hover,
+    .instant-language button:focus-visible {
+      color: var(--deep);
+      outline: none;
+    }
+
+    .instant-language button[aria-pressed="true"] {
+      background: var(--deep);
+      color: white;
     }
 
     .hero {
@@ -384,7 +427,7 @@
     }
 
     .button:hover,
-    .button:focus { background: var(--deep2); }
+    .button:focus-visible { background: var(--deep2); }
 
     .button-secondary {
       border: 1px solid var(--line);
@@ -393,7 +436,20 @@
     }
 
     .button-secondary:hover,
-    .button-secondary:focus { background: var(--soft); }
+    .button-secondary:focus-visible { background: var(--soft); }
+
+    .language-note {
+      margin-top: 18px;
+      padding: 20px 22px;
+      border-left: 5px solid var(--deep);
+      border-radius: 14px;
+      background: var(--soft);
+    }
+
+    .language-note strong {
+      display: block;
+      margin-bottom: 6px;
+    }
 
     .invitation {
       margin-top: 72px;
@@ -407,8 +463,6 @@
       font-size: clamp(2rem, 4.5vw, 3.2rem);
       font-weight: 500;
     }
-
-
 
     .publishing-ecosystem {
       margin-top: 72px;
@@ -462,7 +516,7 @@
     }
 
     .channel-card .channel-link:hover,
-    .channel-card .channel-link:focus {
+    .channel-card .channel-link:focus-visible {
       text-decoration: underline;
       text-underline-offset: 4px;
     }
@@ -483,6 +537,14 @@
       font-size: .88rem;
     }
 
+    @media (max-width: 1060px) {
+      .topbar { align-items: flex-start; }
+      .nav-area {
+        align-items: flex-end;
+        flex-direction: column;
+      }
+    }
+
     @media (max-width: 920px) {
       .topic-grid,
       .practice-grid { grid-template-columns: repeat(2, 1fr); }
@@ -490,14 +552,22 @@
       .learner-card { grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 620px) {
+    @media (max-width: 720px) {
       .topbar {
         align-items: flex-start;
         flex-direction: column;
       }
 
-      .topnav { justify-content: flex-start; }
+      .nav-area {
+        width: 100%;
+        align-items: flex-start;
+      }
 
+      .topnav { justify-content: flex-start; }
+      .instant-language { align-self: flex-start; }
+    }
+
+    @media (max-width: 620px) {
       .hero,
       .hero img { min-height: 650px; }
 
@@ -537,14 +607,39 @@
         Dr. Supakorn Buasai
       </a>
 
-      <nav class="topnav" aria-label="Main navigation">
-        <a href="https://drsupakorn.github.io/">Home</a>
-        <a href="#website">Why</a>
-        <a href="#process">How I Learn</a>
-        <a href="#learner">About the Learner</a>
-        <a href="#principles">My Approach</a>
-        <a href="#follow">Facebook</a>
-      </nav>
+      <div class="nav-area">
+        <nav class="topnav" aria-label="Main navigation">
+          <a href="https://drsupakorn.github.io/"
+             data-th-html="หน้าแรก"
+             data-en-html="Home">หน้าแรก</a>
+          <a href="#website"
+             data-th-html="ที่มา"
+             data-en-html="Why">ที่มา</a>
+          <a href="#process"
+             data-th-html="วิธีเรียนรู้"
+             data-en-html="How I Learn">วิธีเรียนรู้</a>
+          <a href="#learner"
+             data-th-html="ผู้จัดทำ"
+             data-en-html="About the Learner">ผู้จัดทำ</a>
+          <a href="#principles"
+             data-th-html="หลักการ"
+             data-en-html="My Approach">หลักการ</a>
+          <a href="#follow"
+             data-th-html="Facebook"
+             data-en-html="Facebook">Facebook</a>
+        </nav>
+
+        <div class="instant-language"
+             role="group"
+             aria-label="Switch website language">
+          <button type="button"
+                  data-site-language="th"
+                  aria-pressed="true">ไทย</button>
+          <button type="button"
+                  data-site-language="en"
+                  aria-pressed="false">English</button>
+        </div>
+      </div>
     </div>
 
     <header class="hero">
@@ -553,16 +648,23 @@
 
       <div class="hero-copy">
         <p class="eyebrow">About · Learning Journeys</p>
-        <h1>About This Website</h1>
+
+        <h1 data-th-html="เกี่ยวกับเว็บไซต์นี้"
+            data-en-html="About This Website">เกี่ยวกับเว็บไซต์นี้</h1>
+
         <p class="hero-tag">Learning Never Retires.</p>
 
-        <p class="lead-th">
+        <p class="lead-th"
+           data-th-html="เว็บไซต์นี้เริ่มจากบันทึกการเรียนรู้ส่วนตัว และค่อย ๆ เติบโตเป็นพื้นที่สำหรับผู้ที่ยังสนุกกับการอ่าน การตั้งคำถาม และการทำความเข้าใจโลก"
+           data-en-html="This website began as a collection of personal learning notes and gradually grew into a place for people who still enjoy reading, asking questions, and making sense of the world.">
           เว็บไซต์นี้เริ่มจากบันทึกการเรียนรู้ส่วนตัว
           และค่อย ๆ เติบโตเป็นพื้นที่สำหรับผู้ที่ยังสนุกกับการอ่าน
           การตั้งคำถาม และการทำความเข้าใจโลก
         </p>
 
-        <p class="lead-en" lang="en">
+        <p class="lead-en"
+           data-th-html="What began as personal learning notes has gradually grown into a place for curious minds."
+           data-en-html="What began as personal learning notes has gradually grown into a place for curious minds.">
           What began as personal learning notes has gradually grown
           into a place for curious minds.
         </p>
@@ -571,50 +673,67 @@
 
     <section class="section" id="website">
       <div class="section-head">
-        <h2>
+        <h2 data-th-html="<span class='heading-th'>ทำไมจึงมีเว็บไซต์นี้</span><span class='heading-en'>Why This Website?</span>"
+            data-en-html="Why This Website?">
           <span class="heading-th">ทำไมจึงมีเว็บไซต์นี้</span>
           <span class="heading-en">Why This Website?</span>
         </h2>
       </div>
 
       <article class="content-card">
-        <p>
+        <p data-th-html="เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมอ่านและเรียนรู้หลังเกษียณ เมื่อมีเวลาอ่านมากขึ้น ผมเริ่มจดบันทึกเพื่อทบทวนความเข้าใจของตนเอง ต่อมาพบว่าหลายเรื่องอาจเป็นประโยชน์กับผู้อื่น จึงค่อย ๆ พัฒนาเป็นเว็บไซต์แห่งนี้"
+           data-en-html="This website began with notes on what I was reading and learning after retirement. As I had more time to read, I started writing to examine my own understanding. I later realized that some of these ideas might also be useful to others, and the notes gradually developed into this website.">
           เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมอ่านและเรียนรู้หลังเกษียณ
           เมื่อมีเวลาอ่านมากขึ้น ผมเริ่มจดบันทึกเพื่อทบทวนความเข้าใจของตนเอง
           ต่อมาพบว่าหลายเรื่องอาจเป็นประโยชน์กับผู้อื่น
           จึงค่อย ๆ พัฒนาเป็นเว็บไซต์แห่งนี้
         </p>
 
-        <p>
+        <p data-th-html="ผมเชื่อว่าความรู้จำนวนมากไม่ได้ยากเพราะเนื้อหาเพียงอย่างเดียว แต่อาจยากเพราะวิธีอธิบาย เว็บไซต์นี้จึงพยายามเรียบเรียงเรื่องซับซ้อนให้เข้าใจง่ายขึ้น โดยยังรักษาบริบท ความถูกต้อง และเปิดทางให้ผู้อ่านค้นคว้าต่อ"
+           data-en-html="I believe many subjects are difficult not only because of their content, but also because of the way they are explained. This website therefore tries to make complex ideas easier to understand while preserving context, accuracy, and opportunities for further exploration.">
           ผมเชื่อว่าความรู้จำนวนมากไม่ได้ยากเพราะเนื้อหาเพียงอย่างเดียว
           แต่อาจยากเพราะวิธีอธิบาย
           เว็บไซต์นี้จึงพยายามเรียบเรียงเรื่องซับซ้อนให้เข้าใจง่ายขึ้น
           โดยยังรักษาบริบท ความถูกต้อง และเปิดทางให้ผู้อ่านค้นคว้าต่อ
         </p>
 
-        <p>
+        <p data-th-html="เว็บไซต์เริ่มเผยแพร่ในเดือนสิงหาคม ๒๕๖๙ โดยใช้ภาษาไทยเป็นหลัก และค่อย ๆ เพิ่มเนื้อหาภาษาอังกฤษเมื่อพร้อม"
+           data-en-html="The website was launched in August 2026. It is primarily written in Thai, with English content added as each section becomes ready.">
           เว็บไซต์เริ่มเผยแพร่ในเดือนสิงหาคม ๒๕๖๙
-          เนื้อหาภาษาไทยเป็นหลัก
-          โดยมีชื่อเรื่อง ศัพท์สำคัญ และบทสรุปภาษาอังกฤษช่วยอธิบาย
-          เมื่อมีเนื้อหาพร้อมมากขึ้น บางส่วนอาจพัฒนาเป็นสองภาษาเต็มรูปแบบ
+          โดยใช้ภาษาไทยเป็นหลัก และค่อย ๆ เพิ่มเนื้อหาภาษาอังกฤษเมื่อพร้อม
         </p>
 
-        <p class="english-copy" lang="en">
-          The website is primarily in Thai, supported by English titles,
-          key terms, and concise summaries. Selected work may gradually
-          become fully bilingual as the collection grows.
+        <p class="english-copy"
+           data-th-html="The website is primarily in Thai, with English content added progressively as the collection grows."
+           data-en-html="The website is primarily in Thai, with English content added progressively as the collection grows.">
+          The website is primarily in Thai, with English content added progressively as the collection grows.
         </p>
       </article>
+
+      <div class="language-note">
+        <strong data-th-html="ภาษาและการแปล"
+                data-en-html="Language and Translation">ภาษาและการแปล</strong>
+
+        <span data-th-html="ปุ่ม ไทย | English ด้านบนสลับเนื้อหาหลักของหน้านี้ได้ทันที โดยใช้คำแปลที่ฝังอยู่ในเว็บไซต์ สำหรับภาษาอื่น โปรดใช้ระบบ Translate ของเบราว์เซอร์ ทั้งนี้ การแปลอัตโนมัติอาจคลาดเคลื่อนในศัพท์เฉพาะ"
+              data-en-html="Use the Thai | English switch above to change the main content instantly using translations built into this page. For other languages, please use your browser’s Translate feature. Automatic translation may be less precise for specialized terms.">
+          ปุ่ม ไทย | English ด้านบนสลับเนื้อหาหลักของหน้านี้ได้ทันที
+          โดยใช้คำแปลที่ฝังอยู่ในเว็บไซต์ สำหรับภาษาอื่น โปรดใช้ระบบ Translate
+          ของเบราว์เซอร์ ทั้งนี้ การแปลอัตโนมัติอาจคลาดเคลื่อนในศัพท์เฉพาะ
+        </span>
+      </div>
     </section>
 
     <section class="section" id="process">
       <div class="section-head">
-        <h2>
+        <h2 data-th-html="<span class='heading-th'>จากความรู้สู่ปัญญา</span><span class='heading-en'>From Knowledge to Wisdom</span>"
+            data-en-html="From Knowledge to Wisdom">
           <span class="heading-th">จากความรู้สู่ปัญญา</span>
           <span class="heading-en">From Knowledge to Wisdom</span>
         </h2>
 
-        <p class="section-note">
+        <p class="section-note"
+           data-th-html="วิธีที่ผมสำรวจ ตั้งคำถาม ตรวจสอบ เชื่อมโยง ทดลอง และแบ่งปันสิ่งที่เรียนรู้"
+           data-en-html="How I explore, question, verify, connect, test, and share what I learn.">
           วิธีที่ผมสำรวจ ตั้งคำถาม ตรวจสอบ เชื่อมโยง ทดลอง
           และแบ่งปันสิ่งที่เรียนรู้
         </p>
@@ -626,9 +745,10 @@
                alt="Infographic showing Dr. Supakorn Buasai's six-part learning cycle: Explore, Question and Verify, Understand, Connect, Apply and Reflect, and Share and Learn"
                loading="lazy"
                decoding="async">
-          <figcaption>
-            <span lang="th">การเรียนรู้ไม่ใช่ลำดับตายตัว แต่เป็นวงจรที่เริ่มต้นใหม่ได้จากทุกขั้น</span><br>
-            <span class="english-copy" lang="en">Learning is not a rigid sequence. Any step can begin the next cycle.</span>
+
+          <figcaption data-th-html="การเรียนรู้ไม่ใช่ลำดับตายตัว แต่เป็นวงจรที่เริ่มต้นใหม่ได้จากทุกขั้น"
+                      data-en-html="Learning is not a rigid sequence. Any step can begin the next cycle.">
+            การเรียนรู้ไม่ใช่ลำดับตายตัว แต่เป็นวงจรที่เริ่มต้นใหม่ได้จากทุกขั้น
           </figcaption>
         </figure>
       </div>
@@ -636,62 +756,98 @@
 
     <section class="section">
       <div class="section-head">
-        <h2>
+        <h2 data-th-html="<span class='heading-th'>เรื่องที่กำลังเรียนรู้</span><span class='heading-en'>What You’ll Find Here</span>"
+            data-en-html="What You’ll Find Here">
           <span class="heading-th">เรื่องที่กำลังเรียนรู้</span>
           <span class="heading-en">What You’ll Find Here</span>
         </h2>
 
-        <p class="section-note">
+        <p class="section-note"
+           data-th-html="เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อหัวข้อใหม่ตกผลึก"
+           data-en-html="Beginning with completed work and expanding as new topics mature.">
           เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อหัวข้อใหม่ตกผลึก
         </p>
       </div>
 
       <div class="topic-grid">
         <article class="topic">
-          <h3>พระพุทธศาสนา · Buddhism</h3>
-          <p>พระสูตร ประวัติศาสตร์ และพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย</p>
+          <h3 data-th-html="พระพุทธศาสนา · Buddhism"
+              data-en-html="Buddhism">พระพุทธศาสนา · Buddhism</h3>
+          <p data-th-html="พระสูตร ประวัติศาสตร์ และพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย"
+             data-en-html="Buddhist texts, history, and philosophy for contemporary readers.">
+            พระสูตร ประวัติศาสตร์ และพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย
+          </p>
         </article>
 
         <article class="topic">
-          <h3>เต๋า · Daoism</h3>
-          <p>เหล่าจื่อ จวงจื่อ อู๋เว่ย และปัญญาจีนโบราณ</p>
+          <h3 data-th-html="เต๋า · Daoism"
+              data-en-html="Daoism">เต๋า · Daoism</h3>
+          <p data-th-html="เหล่าจื่อ จวงจื่อ อู๋เว่ย และปัญญาจีนโบราณ"
+             data-en-html="Laozi, Zhuangzi, Wu Wei, and ancient Chinese wisdom.">
+            เหล่าจื่อ จวงจื่อ อู๋เว่ย และปัญญาจีนโบราณ
+          </p>
         </article>
 
         <article class="topic">
-          <h3>สุขภาพ · Health</h3>
-          <p>การดูแลสุขภาพ การออกกำลังกาย การนอน และการพัฒนานิสัย</p>
+          <h3 data-th-html="สุขภาพ · Health"
+              data-en-html="Health">สุขภาพ · Health</h3>
+          <p data-th-html="การดูแลสุขภาพ การออกกำลังกาย การนอน และการพัฒนานิสัย"
+             data-en-html="Health, exercise, sleep, and habit development.">
+            การดูแลสุขภาพ การออกกำลังกาย การนอน และการพัฒนานิสัย
+          </p>
         </article>
 
         <article class="topic">
-          <h3>การศึกษา · Education</h3>
-          <p>การเรียนรู้ ความเสมอภาค และการปฏิรูประบบการศึกษา</p>
+          <h3 data-th-html="การศึกษา · Education"
+              data-en-html="Education">การศึกษา · Education</h3>
+          <p data-th-html="การเรียนรู้ ความเสมอภาค และการปฏิรูประบบการศึกษา"
+             data-en-html="Learning, equity, and education-system reform.">
+            การเรียนรู้ ความเสมอภาค และการปฏิรูประบบการศึกษา
+          </p>
         </article>
 
         <article class="topic">
-          <h3>นโยบายสาธารณะ · Public Policy</h3>
-          <p>ระบบสุขภาพ การศึกษา และประเด็นสังคมร่วมสมัย</p>
+          <h3 data-th-html="นโยบายสาธารณะ · Public Policy"
+              data-en-html="Public Policy">นโยบายสาธารณะ · Public Policy</h3>
+          <p data-th-html="ระบบสุขภาพ การศึกษา และประเด็นสังคมร่วมสมัย"
+             data-en-html="Health systems, education, and contemporary social issues.">
+            ระบบสุขภาพ การศึกษา และประเด็นสังคมร่วมสมัย
+          </p>
         </article>
 
         <article class="topic">
-          <h3>ข่าวต่างประเทศ · International News</h3>
-          <p>เหตุการณ์สำคัญของโลกที่ควรทำความเข้าใจให้ลึกกว่าพาดหัวข่าว</p>
+          <h3 data-th-html="ข่าวต่างประเทศ · International News"
+              data-en-html="International News">ข่าวต่างประเทศ · International News</h3>
+          <p data-th-html="เหตุการณ์สำคัญของโลกที่ควรทำความเข้าใจให้ลึกกว่าพาดหัวข่าว"
+             data-en-html="Important world events examined beyond the headlines.">
+            เหตุการณ์สำคัญของโลกที่ควรทำความเข้าใจให้ลึกกว่าพาดหัวข่าว
+          </p>
         </article>
 
         <article class="topic">
-          <h3>สุขภาวะทางปัญญา · Spiritual Well-being</h3>
-          <p>ความหมาย การใคร่ครวญ และการเติบโตภายใน</p>
+          <h3 data-th-html="สุขภาวะทางปัญญา · Spiritual Well-being"
+              data-en-html="Spiritual Well-being">สุขภาวะทางปัญญา · Spiritual Well-being</h3>
+          <p data-th-html="ความหมาย การใคร่ครวญ และการเติบโตภายใน"
+             data-en-html="Meaning, reflection, and inner growth.">
+            ความหมาย การใคร่ครวญ และการเติบโตภายใน
+          </p>
         </article>
 
         <article class="topic">
-          <h3>การถ่ายภาพ · Photography</h3>
-          <p>การสังเกตโลกผ่านภาพ การเดินทาง และชีวิตประจำวัน</p>
+          <h3 data-th-html="การถ่ายภาพ · Photography"
+              data-en-html="Photography">การถ่ายภาพ · Photography</h3>
+          <p data-th-html="การสังเกตโลกผ่านภาพ การเดินทาง และชีวิตประจำวัน"
+             data-en-html="Observing the world through images, travel, and everyday life.">
+            การสังเกตโลกผ่านภาพ การเดินทาง และชีวิตประจำวัน
+          </p>
         </article>
       </div>
     </section>
 
     <section class="section" id="learner">
       <div class="section-head">
-        <h2>
+        <h2 data-th-html="<span class='heading-th'>รู้จักผู้ร่วมเดินทาง</span><span class='heading-en'>About the Learner</span>"
+            data-en-html="About the Learner">
           <span class="heading-th">รู้จักผู้ร่วมเดินทาง</span>
           <span class="heading-en">About the Learner</span>
         </h2>
@@ -711,27 +867,31 @@
         </aside>
 
         <article class="learner-body">
-          <p>
+          <p data-th-html="ผมเป็นอดีตแพทย์ชนบท และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ และการปฏิรูปการศึกษาของประเทศไทย"
+             data-en-html="I am a former rural physician who later had the opportunity to work on health-system development and education reform in Thailand.">
             ผมเป็นอดีตแพทย์ชนบท
             และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ
             และการปฏิรูปการศึกษาของประเทศไทย
           </p>
 
-          <p>
+          <p data-th-html="ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ การเดินออกกำลังกาย การทำสวน การถ่ายภาพ การเรียนรู้เรื่องใหม่ ๆ และการแลกเปลี่ยนความคิดกับเพื่อนฝูง"
+             data-en-html="Today, I spend much of my time reading, walking for exercise, gardening, taking photographs, learning new subjects, and exchanging ideas with friends.">
             ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ
             การเดินออกกำลังกาย การทำสวน การถ่ายภาพ
             การเรียนรู้เรื่องใหม่ ๆ
             และการแลกเปลี่ยนความคิดกับเพื่อนฝูง
           </p>
 
-          <p>
+          <p data-th-html="ระหว่างทาง เครื่องมือดิจิทัลและ AI ช่วยให้ผมสำรวจข้อมูล เปรียบเทียบมุมมอง เชื่อมโยงความคิด และเรียบเรียงงานได้มีประสิทธิภาพขึ้น อย่างไรก็ตาม การประเมินหลักฐาน การตีความ การตัดสินใจ และความรับผิดชอบต่อสิ่งที่เผยแพร่ ยังคงเป็นของผู้เขียน"
+             data-en-html="Digital tools and AI help me explore information, compare perspectives, connect ideas, and write more effectively. The evaluation of evidence, interpretation, judgment, and responsibility for what is published remain my own.">
             ระหว่างทาง เครื่องมือดิจิทัลและ AI ช่วยให้ผมสำรวจข้อมูล
             เปรียบเทียบมุมมอง เชื่อมโยงความคิด และเรียบเรียงงานได้มีประสิทธิภาพขึ้น
             อย่างไรก็ตาม การประเมินหลักฐาน การตีความ การตัดสินใจ
             และความรับผิดชอบต่อสิ่งที่เผยแพร่ ยังคงเป็นของผู้เขียน
           </p>
 
-          <p>
+          <p data-th-html="ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทางของผู้ที่เชื่อว่า <strong>“การเรียนรู้ไม่มีวันเกษียณ”</strong>"
+             data-en-html="I hope this small website can accompany others who believe that <strong>“learning never retires.”</strong>">
             ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทาง
             ของผู้ที่เชื่อว่า <strong>“การเรียนรู้ไม่มีวันเกษียณ”</strong>
           </p>
@@ -741,7 +901,8 @@
 
     <section class="section" id="principles">
       <div class="section-head">
-        <h2>
+        <h2 data-th-html="<span class='heading-th'>วิธีทำงานและหลักการเรียบเรียง</span><span class='heading-en'>My Approach</span>"
+            data-en-html="My Approach">
           <span class="heading-th">วิธีทำงานและหลักการเรียบเรียง</span>
           <span class="heading-en">My Approach</span>
         </h2>
@@ -750,57 +911,75 @@
       <div class="practice-grid">
         <article class="practice">
           <h3>Explore widely</h3>
-          <p>อ่านข้ามศาสตร์อย่างใคร่รู้ โดยไม่จำกัดตนเองอยู่กับกรอบความคิดเดิม</p>
+          <p data-th-html="อ่านข้ามศาสตร์อย่างใคร่รู้ โดยไม่จำกัดตนเองอยู่กับกรอบความคิดเดิม"
+             data-en-html="Read across disciplines with curiosity, without being confined by familiar frameworks.">
+            อ่านข้ามศาสตร์อย่างใคร่รู้ โดยไม่จำกัดตนเองอยู่กับกรอบความคิดเดิม
+          </p>
         </article>
 
         <article class="practice">
           <h3>Question assumptions</h3>
-          <p>ไม่รับข้อสรุปทันที แต่ตรวจสอบหลักฐานและมองหาข้อมูลที่อาจขัดแย้ง</p>
+          <p data-th-html="ไม่รับข้อสรุปทันที แต่ตรวจสอบหลักฐานและมองหาข้อมูลที่อาจขัดแย้ง"
+             data-en-html="Do not accept conclusions immediately; examine the evidence and look for information that may challenge them.">
+            ไม่รับข้อสรุปทันที แต่ตรวจสอบหลักฐานและมองหาข้อมูลที่อาจขัดแย้ง
+          </p>
         </article>
 
         <article class="practice">
           <h3>Seek clarity</h3>
-          <p>แยกข้อเท็จจริง การตีความ และสิ่งที่ยังไม่แน่นอนออกจากกัน</p>
+          <p data-th-html="แยกข้อเท็จจริง การตีความ และสิ่งที่ยังไม่แน่นอนออกจากกัน"
+             data-en-html="Distinguish facts, interpretations, and remaining uncertainties.">
+            แยกข้อเท็จจริง การตีความ และสิ่งที่ยังไม่แน่นอนออกจากกัน
+          </p>
         </article>
 
         <article class="practice">
           <h3>Connect with humility</h3>
-          <p>เชื่อมโยงแนวคิดข้ามศาสตร์ โดยไม่ฝืนให้ทุกอย่างเข้ากับภาพที่ตนต้องการ</p>
+          <p data-th-html="เชื่อมโยงแนวคิดข้ามศาสตร์ โดยไม่ฝืนให้ทุกอย่างเข้ากับภาพที่ตนต้องการ"
+             data-en-html="Connect ideas across disciplines without forcing everything to fit a preferred narrative.">
+            เชื่อมโยงแนวคิดข้ามศาสตร์ โดยไม่ฝืนให้ทุกอย่างเข้ากับภาพที่ตนต้องการ
+          </p>
         </article>
 
         <article class="practice">
           <h3>Test and reflect</h3>
-          <p>ทดลองสิ่งที่เหมาะสม สังเกตผล และเรียนรู้ทั้งจากสิ่งที่ได้ผลและไม่ได้ผล</p>
+          <p data-th-html="ทดลองสิ่งที่เหมาะสม สังเกตผล และเรียนรู้ทั้งจากสิ่งที่ได้ผลและไม่ได้ผล"
+             data-en-html="Test what is appropriate, observe the results, and learn from both success and failure.">
+            ทดลองสิ่งที่เหมาะสม สังเกตผล และเรียนรู้ทั้งจากสิ่งที่ได้ผลและไม่ได้ผล
+          </p>
         </article>
 
         <article class="practice">
           <h3>Share and learn</h3>
-          <p>เขียน สนทนา และแบ่งปัน พร้อมเรียนรู้ต่อจากคำทักท้วงและข้อเสนอแนะ</p>
+          <p data-th-html="เขียน สนทนา และแบ่งปัน พร้อมเรียนรู้ต่อจากคำทักท้วงและข้อเสนอแนะ"
+             data-en-html="Write, discuss, and share while continuing to learn from criticism and suggestions.">
+            เขียน สนทนา และแบ่งปัน พร้อมเรียนรู้ต่อจากคำทักท้วงและข้อเสนอแนะ
+          </p>
         </article>
 
         <article class="practice">
           <h3>Revise when needed</h3>
-          <p>พร้อมทบทวน ละทิ้ง หรือแก้ไขความเข้าใจเดิม เมื่อพบหลักฐานที่ดีกว่า</p>
+          <p data-th-html="พร้อมทบทวน ละทิ้ง หรือแก้ไขความเข้าใจเดิม เมื่อพบหลักฐานที่ดีกว่า"
+             data-en-html="Be ready to reconsider, abandon, or revise earlier views when better evidence appears.">
+            พร้อมทบทวน ละทิ้ง หรือแก้ไขความเข้าใจเดิม เมื่อพบหลักฐานที่ดีกว่า
+          </p>
         </article>
 
         <article class="practice">
           <h3>Take responsibility</h3>
-          <p>รับผิดชอบต่อการตีความ การตัดสินใจ และสิ่งที่เลือกเผยแพร่</p>
+          <p data-th-html="รับผิดชอบต่อการตีความ การตัดสินใจ และสิ่งที่เลือกเผยแพร่"
+             data-en-html="Take responsibility for interpretation, judgment, and what is chosen for publication.">
+            รับผิดชอบต่อการตีความ การตัดสินใจ และสิ่งที่เลือกเผยแพร่
+          </p>
         </article>
       </div>
 
       <div class="note-card" style="margin-top:18px;">
-        <p>
+        <p data-th-html="ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ"
+           data-en-html="I believe knowledge becomes meaningful when it is connected with practice. For health-related topics, I usually try things myself before sharing what appears both useful in my own experience and supported by evidence.">
           ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ
           สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน
           แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ
-        </p>
-
-        <p class="english-copy" lang="en">
-          I believe knowledge becomes meaningful when it is connected
-          with practice. For health-related topics, I usually try things
-          myself before sharing what appears both useful in my own experience
-          and supported by evidence.
         </p>
       </div>
     </section>
@@ -811,32 +990,30 @@
           AI as Learning Companion
         </h2>
 
-        <p>
+        <p data-th-html="เครื่องมือดิจิทัลสมัยใหม่ รวมถึง AI ช่วยขยายขอบเขตการสำรวจ เปรียบเทียบมุมมอง เชื่อมโยงความคิด และช่วยในการเรียบเรียง แต่การเลือกหัวข้อ การประเมินแหล่งข้อมูล การตีความ การตัดสินใจ และความรับผิดชอบต่อการเผยแพร่ ยังคงเป็นของผู้เขียน"
+           data-en-html="Modern digital tools, including AI, broaden exploration, help compare perspectives, connect ideas, and support writing. Topic selection, source evaluation, interpretation, judgment, and responsibility for publication remain my own.">
           เครื่องมือดิจิทัลสมัยใหม่ รวมถึง AI
           ช่วยขยายขอบเขตการสำรวจ เปรียบเทียบมุมมอง เชื่อมโยงความคิด
           และช่วยในการเรียบเรียง แต่การเลือกหัวข้อ การประเมินแหล่งข้อมูล
           การตีความ การตัดสินใจ และความรับผิดชอบต่อการเผยแพร่
           ยังคงเป็นของผู้เขียน
         </p>
-
-        <p class="english-copy" lang="en">
-          Modern digital tools, including AI, broaden exploration, help compare
-          perspectives, connect ideas, and support writing. Source evaluation,
-          interpretation, judgment, and responsibility for publication remain my own.
-        </p>
       </div>
     </section>
 
-
     <section class="publishing-ecosystem" id="follow">
       <div class="section-head">
-        <h2>
+        <h2 data-th-html="<span class='heading-th'>สองพื้นที่สำหรับความคิด</span><span class='heading-en'>Two Spaces for Ideas</span>"
+            data-en-html="Two Spaces for Ideas">
           <span class="heading-th">สองพื้นที่สำหรับความคิด</span>
           <span class="heading-en">Two Spaces for Ideas</span>
         </h2>
 
-        <p class="section-note">
-          งานที่ผ่านการเรียบเรียงแล้วอยู่ที่นี่ ส่วนความคิดที่กำลังเคลื่อนไหวอยู่บน Facebook
+        <p class="section-note"
+           data-th-html="งานที่ผ่านการเรียบเรียงแล้วอยู่ที่นี่ ส่วนความคิดที่กำลังเคลื่อนไหวอยู่บน Facebook"
+           data-en-html="Refined work lives here; developing ideas and current reflections appear on Facebook.">
+          งานที่ผ่านการเรียบเรียงแล้วอยู่ที่นี่
+          ส่วนความคิดที่กำลังเคลื่อนไหวอยู่บน Facebook
         </p>
       </div>
 
@@ -844,7 +1021,8 @@
         <article class="channel-card">
           <h3>🌐 Website</h3>
           <p class="channel-kicker">A curated knowledge library.</p>
-          <p>
+          <p data-th-html="งานที่ผ่านการคัดเลือก เรียบเรียง ตรวจทาน และจัดหมวดหมู่แล้ว เพื่อเก็บรักษาแนวคิดที่ยังมีคุณค่าเหนือกาลเวลา"
+             data-en-html="Selected, edited, reviewed, and organized work intended to preserve ideas with lasting value.">
             งานที่ผ่านการคัดเลือก เรียบเรียง ตรวจทาน และจัดหมวดหมู่แล้ว
             เพื่อเก็บรักษาแนวคิดที่ยังมีคุณค่าเหนือกาลเวลา
           </p>
@@ -856,7 +1034,8 @@
         <article class="channel-card">
           <h3>📘 Facebook</h3>
           <p class="channel-kicker">A living journal of ideas.</p>
-          <p>
+          <p data-th-html="บันทึกการอ่าน ความคิด และบทวิเคราะห์ข่าวต่างประเทศ ตลอดจนเหตุการณ์ร่วมสมัยที่กำลังคลี่คลายไปพร้อมกับโลก"
+             data-en-html="Reading notes, reflections, international-news analysis, and contemporary events as they unfold.">
             บันทึกการอ่าน ความคิด และบทวิเคราะห์ข่าวต่างประเทศ
             ตลอดจนเหตุการณ์ร่วมสมัยที่กำลังคลี่คลายไปพร้อมกับโลก
           </p>
@@ -869,35 +1048,25 @@
         </article>
       </div>
 
-      <p class="ecosystem-summary">
+      <p class="ecosystem-summary"
+         data-th-html="<strong>Website</strong> คือพื้นที่สำหรับงานที่ได้รับการเรียบเรียงและจัดหมวดหมู่แล้ว ส่วน <strong>Facebook</strong> คือบันทึกที่ยังมีชีวิตสำหรับความคิด บันทึกการอ่าน และการวิเคราะห์เหตุการณ์ที่กำลังเกิดขึ้น—พื้นที่หนึ่งเก็บรักษา enduring wisdom อีกพื้นที่ติดตาม emerging ideas."
+         data-en-html="<strong>Website</strong> is the home of refined and organized work. <strong>Facebook</strong> is a living journal for ideas, reading notes, and analysis of events as they unfold—one preserves enduring wisdom, while the other follows emerging ideas.">
         <strong>Website</strong> คือพื้นที่สำหรับงานที่ได้รับการเรียบเรียงและจัดหมวดหมู่แล้ว
         ส่วน <strong>Facebook</strong> คือบันทึกที่ยังมีชีวิตสำหรับความคิด
         บันทึกการอ่าน และการวิเคราะห์เหตุการณ์ที่กำลังเกิดขึ้น—พื้นที่หนึ่งเก็บรักษา
         enduring wisdom อีกพื้นที่ติดตาม emerging ideas.
-      </p>
-
-      <p class="english-copy ecosystem-summary" lang="en">
-        This website is my curated knowledge library—a place for timeless ideas,
-        carefully organized and refined over time. Facebook is my living journal,
-        where I share reading notes, reflections, and analysis of current events
-        as the world changes. Together, they document both enduring wisdom and emerging ideas.
       </p>
     </section>
 
     <section class="invitation">
       <strong>Learning Never Retires.</strong>
 
-      <p>
+      <p data-th-html="หากเว็บไซต์นี้ช่วยให้คุณค้นพบแนวคิดใหม่หนึ่งเรื่อง ตั้งคำถามได้ดีขึ้นหนึ่งข้อ หรือมองเรื่องที่คุ้นเคยจากมุมใหม่ เว็บไซต์นี้ก็ได้ทำหน้าที่ของมันแล้ว"
+         data-en-html="If this website helps you discover one new idea, ask one better question, or see a familiar topic from a different perspective, it has already served its purpose.">
         หากเว็บไซต์นี้ช่วยให้คุณค้นพบแนวคิดใหม่หนึ่งเรื่อง
         ตั้งคำถามได้ดีขึ้นหนึ่งข้อ
         หรือมองเรื่องที่คุ้นเคยจากมุมใหม่
         เว็บไซต์นี้ก็ได้ทำหน้าที่ของมันแล้ว
-      </p>
-
-      <p class="english-copy" lang="en" style="margin-top:12px;">
-        If this website helps you discover one new idea,
-        ask one better question, or see a familiar topic
-        from a different perspective, it has already served its purpose.
       </p>
 
       <div class="actions" style="justify-content:center;">
@@ -932,5 +1101,55 @@
     </footer>
 
   </main>
+
+  <script>
+    (() => {
+      const STORAGE_KEY = "siteLanguage";
+      const languageButtons = document.querySelectorAll("[data-site-language]");
+      const translatableElements =
+        document.querySelectorAll("[data-th-html][data-en-html]");
+
+      let siteLanguage = localStorage.getItem(STORAGE_KEY);
+
+      if (siteLanguage !== "en" && siteLanguage !== "th") {
+        siteLanguage = "th";
+      }
+
+      function applyLanguage(language) {
+        siteLanguage = language === "en" ? "en" : "th";
+        localStorage.setItem(STORAGE_KEY, siteLanguage);
+
+        document.documentElement.lang = siteLanguage;
+        document.documentElement.dataset.siteLanguage = siteLanguage;
+
+        translatableElements.forEach((element) => {
+          element.innerHTML =
+            siteLanguage === "en"
+              ? element.dataset.enHtml
+              : element.dataset.thHtml;
+        });
+
+        languageButtons.forEach((button) => {
+          button.setAttribute(
+            "aria-pressed",
+            String(button.dataset.siteLanguage === siteLanguage)
+          );
+        });
+
+        document.title =
+          siteLanguage === "en"
+            ? "About This Website | Dr. Supakorn Buasai"
+            : "เกี่ยวกับเว็บไซต์และผู้จัดทำ | Dr. Supakorn Buasai";
+      }
+
+      languageButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          applyLanguage(button.dataset.siteLanguage);
+        });
+      });
+
+      applyLanguage(siteLanguage);
+    })();
+  </script>
 </body>
 </html>
