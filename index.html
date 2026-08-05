@@ -1,31 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Learning Never Retires | Dr. Supakorn Buasai</title>
-  <meta name="description" content="A place for curious minds. พื้นที่สำหรับผู้ที่ยังสนุกกับการเรียนรู้ ผ่านการอ่าน ค้นคว้า ใคร่ครวญ เขียน แบ่งปัน และลงมือปฏิบัติ">
-  <meta name="author" content="Dr. Supakorn Buasai">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://drsupakorn.github.io/">
-
-  <meta property="og:locale" content="th_TH">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Learning Never Retires | A Place for Curious Minds">
-  <meta property="og:description" content="พื้นที่สำหรับผู้ที่ยังสนุกกับการเรียนรู้ และอยากทำความเข้าใจโลกผ่านการอ่าน การคิด การตั้งคำถาม และการลงมือปฏิบัติ">
-  <meta property="og:url" content="https://drsupakorn.github.io/">
-  <meta property="og:site_name" content="Dr. Supakorn Buasai — Learning Journeys">
-  <meta property="og:image" content="https://drsupakorn.github.io/images/social-preview.jpg">
-  <meta property="og:image:alt" content="ดร.สุภกร บัวสาย เดินออกกำลังกายกับสุนัข">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Learning Never Retires | A Place for Curious Minds">
-  <meta name="twitter:description" content="A Thai-first learning website with English support.">
-  <meta name="twitter:image" content="https://drsupakorn.github.io/images/social-preview.jpg">
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Learning Never Retires | Dr. Supakorn Buasai</title>
+<meta content="A place for curious minds. พื้นที่สำหรับผู้ที่ยังสนุกกับการเรียนรู้ ผ่านการอ่าน ค้นคว้า ใคร่ครวญ เขียน แบ่งปัน และลงมือปฏิบัติ" name="description"/>
+<meta content="Dr. Supakorn Buasai" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://drsupakorn.github.io/" rel="canonical"/>
+<meta content="th_TH" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Learning Never Retires | A Place for Curious Minds" property="og:title"/>
+<meta content="พื้นที่สำหรับผู้ที่ยังสนุกกับการเรียนรู้ และอยากทำความเข้าใจโลกผ่านการอ่าน การคิด การตั้งคำถาม และการลงมือปฏิบัติ" property="og:description"/>
+<meta content="https://drsupakorn.github.io/" property="og:url"/>
+<meta content="Dr. Supakorn Buasai — Learning Journeys" property="og:site_name"/>
+<meta content="https://drsupakorn.github.io/images/social-preview.jpg" property="og:image"/>
+<meta content="ดร.สุภกร บัวสาย เดินออกกำลังกายกับสุนัข" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Learning Never Retires | A Place for Curious Minds" name="twitter:title"/>
+<meta content="A Thai-first learning website with English support." name="twitter:description"/>
+<meta content="https://drsupakorn.github.io/images/social-preview.jpg" name="twitter:image"/>
+<script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebSite",
@@ -72,8 +69,7 @@
     ]
   }
   </script>
-
-  <style>
+<style>
     :root{
       --bg:#f4f1e9;
       --paper:rgba(255,255,255,.80);
@@ -718,272 +714,291 @@
       .copy-row{flex-direction:column}
       .copy-button{width:100%}
     }
-  </style>
-</head>
+  
 
+    /* Reliable instant Thai/English switch: both languages are embedded in this file */
+    .instant-language{
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+      padding:4px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.68);
+    }
+
+    .instant-language button{
+      min-height:32px;
+      padding:6px 11px;
+      border:0;
+      border-radius:999px;
+      background:transparent;
+      color:var(--muted);
+      font-size:.82rem;
+      font-weight:850;
+      cursor:pointer;
+    }
+
+    .instant-language button:hover,
+    .instant-language button:focus-visible{
+      color:var(--deep);
+      outline:none;
+    }
+
+    .instant-language button[aria-pressed="true"]{
+      background:var(--deep);
+      color:#fff;
+    }
+
+    .language-help-label{
+      white-space:nowrap;
+    }
+
+    @media(max-width:720px){
+      .instant-language{align-self:flex-start}
+    }
+</style>
+</head>
 <body>
 <main class="page">
-
-  <div class="topbar">
-    <a class="brand" href="https://drsupakorn.github.io/">Dr. Supakorn Buasai</a>
-
-    <div class="nav-area">
-      <nav class="topnav" aria-label="เมนูหลัก / Main navigation">
-        <a href="#why">ที่มา · Why</a>
-        <a href="#journeys">เส้นทาง · Journeys</a>
-        <a href="#learn">วิธีเรียนรู้ · How I Learn</a>
-        <a href="#learner">ผู้ร่วมเดินทาง · Meet the Learner</a>
-        <a href="https://drsupakorn.github.io/about/">About</a>
-      </nav>
-
-      <details class="language-menu">
-        <summary aria-label="คำแนะนำการแปลภาษา">🌐 ภาษา · Language</summary>
-
-        <div class="language-panel">
-          <h2>Translate this website · แปลเว็บไซต์นี้</h2>
-
-          <p class="language-intro" lang="en">
+<div class="topbar">
+<a class="brand" href="https://drsupakorn.github.io/">Dr. Supakorn Buasai</a>
+<div class="nav-area">
+<nav aria-label="เมนูหลัก / Main navigation" class="topnav">
+<a data-en-html="Why" data-th-html="ที่มา · Why" href="#why">ที่มา · Why</a>
+<a data-en-html="Journeys" data-th-html="เส้นทาง · Journeys" href="#journeys">เส้นทาง · Journeys</a>
+<a data-en-html="How I Learn" data-th-html="วิธีเรียนรู้ · How I Learn" href="#learn">วิธีเรียนรู้ · How I Learn</a>
+<a data-en-html="Meet the Learner" data-th-html="ผู้ร่วมเดินทาง · Meet the Learner" href="#learner">ผู้ร่วมเดินทาง · Meet the Learner</a>
+<a href="https://drsupakorn.github.io/about/">About</a>
+</nav>
+<div aria-label="Switch website language" class="instant-language" role="group"><button aria-pressed="true" data-site-language="th" id="lang-th" type="button">ไทย</button><button aria-pressed="false" data-site-language="en" id="lang-en" type="button">English</button></div><details class="language-menu">
+<summary aria-label="Translation help and other languages">🌐 <span class="language-help-label">Other languages / Help</span></summary>
+<div class="language-panel">
+<h2>Translate this website · แปลเว็บไซต์นี้</h2>
+<p class="language-intro" data-en-html="For languages other than Thai or English, please use your browser’s built-in translation feature." data-th-html="เว็บไซต์นี้เขียนเป็นภาษาไทยเป็นหลัก หากต้องการภาษาอื่นนอกจากไทยหรืออังกฤษ โปรดใช้ระบบแปลภาษาที่มีอยู่ในเบราว์เซอร์ของคุณ" lang="en">
             This website is primarily written in Thai. To read it in another language,
             please use your browser’s built-in translation feature.
           </p>
-
-          <p class="language-intro">
+<p class="language-intro">
             เว็บไซต์นี้เขียนเป็นภาษาไทยเป็นหลัก หากต้องการอ่านภาษาอื่น โปรดใช้ระบบแปลภาษาที่มีอยู่ในเบราว์เซอร์ของคุณ
           </p>
-
-          <ul class="browser-list">
-            <li>
-              <strong>Chrome</strong>
-              <span lang="en">Open the browser menu <b>⋮</b>, choose <b>Translate</b>, then select your preferred language.</span><br>
+<ul class="browser-list">
+<li>
+<strong>Chrome</strong>
+<span lang="en">Open the browser menu <b>⋮</b>, choose <b>Translate</b>, then select your preferred language.</span><br/>
               เปิดเมนู <b>⋮</b> เลือก <b>Translate</b> แล้วเลือกภาษาที่ต้องการ
             </li>
-
-            <li>
-              <strong>Safari on iPhone or iPad</strong>
-              <span lang="en">Tap the page menu in the address bar, then choose <b>Translate Website</b>.</span><br>
+<li>
+<strong>Safari on iPhone or iPad</strong>
+<span lang="en">Tap the page menu in the address bar, then choose <b>Translate Website</b>.</span><br/>
               แตะเมนูหน้าเว็บในแถบที่อยู่ แล้วเลือก <b>Translate Website</b>
-            </li>
-
-            <li>
-              <strong>Microsoft Edge</strong>
-              <span lang="en">Open the browser menu and choose <b>Translate</b>, or tap the translation icon in the address bar.</span><br>
+</li>
+<li>
+<strong>Microsoft Edge</strong>
+<span lang="en">Open the browser menu and choose <b>Translate</b>, or tap the translation icon in the address bar.</span><br/>
               เปิดเมนูของเบราว์เซอร์แล้วเลือก <b>Translate</b> หรือแตะไอคอนแปลภาษาในแถบที่อยู่
             </li>
-          </ul>
-
-          <div class="copy-row">
-            <input
-              class="page-url"
-              id="page-url"
-              type="text"
-              aria-label="Current page address"
-              readonly
-            >
-            <button class="copy-button" id="copy-url" type="button">
+</ul>
+<div class="copy-row">
+<input aria-label="Current page address" class="page-url" id="page-url" readonly="" type="text"/>
+<button class="copy-button" id="copy-url" type="button">
               Copy URL
             </button>
-          </div>
-
-          <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
-
-          <p class="translation-note">
-            <strong>Note · หมายเหตุ:</strong><br>
-            <span lang="en">
+</div>
+<p aria-live="polite" class="copy-status" id="copy-status" role="status"></p>
+<p class="translation-note">
+<strong>Note · หมายเหตุ:</strong><br/>
+<span lang="en">
               Automatic translation may not fully preserve the meaning of Buddhist,
               philosophical, educational, or other specialized terms. Please refer to
               the original Thai text when precision matters.
-            </span><br>
+            </span><br/>
             การแปลอัตโนมัติอาจไม่ถ่ายทอดความหมายของศัพท์ทางพุทธศาสนา ปรัชญา การศึกษา
             หรือศัพท์เฉพาะได้ครบถ้วน โปรดอ้างอิงข้อความต้นฉบับภาษาไทยเมื่อความหมายมีความสำคัญ
           </p>
-        </div>
-      </details>
-    </div>
-  </div>
-
-  <header class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">Reading · Thinking · Living</p>
-
-      <h1>
-        <span class="title-th">การเรียนรู้ไม่มีวันเกษียณ</span>
-        <span class="title-en">Learning Never Retires</span>
-      </h1>
-
-      <p class="tagline">
-        A place for curious minds.
-        <span class="tagline-th">พื้นที่สำหรับผู้ที่ยังสนุกกับการเรียนรู้</span>
-      </p>
-
-      <p class="lead-th">
-        โลกเต็มไปด้วยข้อมูล แต่ความเข้าใจยังต้องอาศัยการอ่าน การคิด การตั้งคำถาม และการแลกเปลี่ยนมุมมอง เว็บไซต์นี้ชวนคุณร่วมสำรวจเรื่องซับซ้อน ผ่านบันทึกและโครงการความรู้ที่ค่อย ๆ ตกผลึก
-      </p>
-
-      <p class="lead-en" lang="en">
-        A growing collection of learning journeys that connects careful reading, evidence, reflection, and practice to make complex ideas more accessible.
-      </p>
-
-      <div class="actions">
-        <a class="button" href="#journeys">สำรวจเส้นทางการเรียนรู้ · Explore →</a>
-        <a class="button2" href="#why">ทำไมจึงมีเว็บไซต์นี้ · Why?</a>
-      </div>
-    </div>
-
-    <figure class="hero-media">
-      <img src="images/hero-walk.jpg" alt="ดร.สุภกร บัวสาย เดินออกกำลังกายกับสุนัข">
-      <figcaption class="caption">
-        การเรียนรู้เป็นการเดินทางตลอดชีวิต · Learning is a lifelong journey
-      </figcaption>
-    </figure>
-  </header>
-
-  <section class="section" id="why">
-    <div class="head">
-      <h2><span class="th">ทำไมจึงมีเว็บไซต์นี้</span>Why This Website?</h2>
-    </div>
-
-    <article class="card">
-      <p>โลกทุกวันนี้เต็มไปด้วยข้อมูล ข่าวสาร และความคิดเห็น แต่ความเข้าใจต้องอาศัยเวลา การอ่านอย่างรอบคอบ และการคิดอย่างมีวิจารณญาณ</p>
-      <p>เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมเรียนรู้หลังเกษียณ แล้วค่อย ๆ เติบโตเป็นพื้นที่แบ่งปันความรู้ โดยพยายามอธิบายเรื่องซับซ้อนให้เข้าใจง่าย เคารพข้อมูลต้นฉบับ เปิดรับมุมมองที่หลากหลาย และพร้อมปรับปรุงเมื่อพบหลักฐานที่ดีกว่า</p>
-      <p>ผมไม่ได้พยายามรวบรวมทุกคำตอบ แต่พยายามตั้งคำถามที่ดี เชื่อมโยงความรู้จากหลายศาสตร์ และเผยแพร่เมื่อเนื้อหาได้ตกผลึกในระดับที่พร้อมแบ่งปัน</p>
-      <p class="english" lang="en">This is not a library of final answers. It is a living notebook of learning—developed slowly, carefully, and openly to revision.</p>
-    </article>
-  </section>
-
-  <section class="section" id="journeys">
-    <div class="head">
-      <h2><span class="th">เส้นทางการเรียนรู้</span>Learning Journeys</h2>
-      <p class="note">
-        เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อโครงการใหม่พร้อมเผยแพร่<br>
-        <span lang="en">Beginning with completed work and expanding as new projects mature.</span>
-      </p>
-    </div>
-
-    <div class="journeys">
-      <article class="journey">
-        <div>
-          <div class="meta">Journey 01 <span class="status">Published</span></div>
-          <h3>The Best of Dao<span>ปัญญาแห่งเต๋า</span></h3>
-          <p>แนวคิดสำคัญของเหล่าจื่อ จวงจื่อ และอู๋เว่ย ผ่านบทความภาพและสื่ออินเทอร์แอกทีฟสำหรับผู้อ่านร่วมสมัย</p>
-          <p class="english" lang="en">Ancient Chinese wisdom made accessible for modern readers.</p>
-        </div>
-        <a class="open" href="https://drsupakorn.github.io/the-best-of-dao/">เปิดเส้นทางนี้ · Open →</a>
-      </article>
-
-      <article class="journey">
-        <div>
-          <div class="meta">Journey 02 <span class="status">Growing</span></div>
-          <h3>The Best of Buddhism<span>พระสูตรและพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย</span></h3>
-          <p>พระสูตร ประวัติศาสตร์ และพุทธปรัชญา เรียบเรียงด้วยภาษาที่เข้าใจง่าย โดยรักษาบริบทและความเป็นกลางทางวิชาการ</p>
-          <p class="english" lang="en">Buddhist texts and ideas presented for today’s readers.</p>
-        </div>
-        <a class="open" href="https://drsupakorn.github.io/the-best-of-buddhism/">เปิดเส้นทางนี้ · Open →</a>
-      </article>
-
-      <article class="journey">
-        <div>
-          <div class="meta">Journey 03 <span class="status">Published</span></div>
-          <h3>Buddhist Cosmology<span>จักรวาลในสายตาพุทธ</span></h3>
-          <p>จักรวาลวิทยาพุทธในฐานะแผนที่ของกรรม สภาวะจิต การเวียนว่ายตายเกิด และหนทางแห่งความตื่นรู้</p>
-          <p class="english" lang="en">A visual exploration of karma, rebirth, meditation, and awakening.</p>
-        </div>
-        <a class="open" href="https://drsupakorn.github.io/buddhist-cosmology/">เปิดเส้นทางนี้ · Open →</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="learn">
-    <div class="head">
-      <h2><span class="th">ผมเรียนรู้อย่างไร</span>How I Learn</h2>
-      <p class="note">
-        การเรียนรู้เป็นวงจร ไม่ใช่เส้นตรง<br>
-        <span lang="en">Learning is a cycle, not a straight line.</span>
-      </p>
-    </div>
-
-    <div class="cycle">
-      <article class="step">
-        <span class="num">1</span>
-        <h3>อ่าน · Read</h3>
-        <p>หนังสือ งานวิจัย พระไตรปิฎก สารคดี บทสัมภาษณ์ และประสบการณ์ของผู้คน</p>
-      </article>
-
-      <article class="step">
-        <span class="num">2</span>
-        <h3>ค้นคว้า · Research</h3>
-        <p>เปรียบเทียบแหล่งข้อมูล ตรวจสอบข้อเท็จจริง และมองประเด็นจากหลายมุม</p>
-      </article>
-
-      <article class="step">
-        <span class="num">3</span>
-        <h3>ใคร่ครวญและสนทนา · Reflect &amp; Discuss</h3>
-        <p>ทบทวนเหตุผล แลกเปลี่ยนกับเพื่อนฝูง และใช้ AI เป็นเครื่องมือและเพื่อนร่วมทางในการเรียนรู้</p>
-      </article>
-
-      <article class="step">
-        <span class="num">4</span>
-        <h3>เขียนและแบ่งปัน · Write &amp; Share</h3>
-        <p>เรียบเรียงสิ่งที่เข้าใจให้คนทั่วไปอ่านได้ และใช้การเขียนทบทวนความคิดของตนเอง</p>
-      </article>
-
-      <article class="step">
-        <span class="num">5</span>
-        <h3>ปฏิบัติและเติบโต · Practice &amp; Grow</h3>
-        <p>นำสิ่งที่เหมาะสมไปทดลองในชีวิตจริง ฝึกสิ่งที่ได้ผลให้ค่อย ๆ กลายเป็นนิสัย</p>
-      </article>
-    </div>
-
-    <div class="practice">
-      ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ
-    </div>
-  </section>
-
-  <section class="section" id="learner">
-    <div class="head">
-      <h2><span class="th">รู้จักผู้ร่วมเดินทาง</span>Meet the Learner</h2>
-    </div>
-
-    <div class="author">
-      <div class="author-photo">
-        <img src="images/author-bhutan.jpg" alt="ดร.สุภกร บัวสาย ระหว่างการเดินทางที่ประเทศภูฏาน">
-      </div>
-
-      <article class="author-text">
-        <h3>Dr. Supakorn Buasai</h3>
-        <p>ผมเป็นอดีตแพทย์ชนบท และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ และการปฏิรูปการศึกษาของประเทศไทย</p>
-        <p>ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ การดูแลสุขภาพ การทำสวน การถ่ายภาพ การเรียนรู้เรื่องใหม่ ๆ และการแลกเปลี่ยนความคิดกับเพื่อนฝูง</p>
-        <p>ระหว่างทาง AI ได้กลายเป็นทั้งเครื่องมือและเพื่อนร่วมทาง ที่ช่วยให้การค้นคว้า การเชื่อมโยงความคิด และการเขียนมีประสิทธิภาพยิ่งขึ้น</p>
-        <p>แต่สิ่งที่ทำให้การเดินทางครั้งนี้ยังน่าตื่นเต้นอยู่เสมอ คือความอยากรู้อยากเห็นและความสุขของการได้เรียนรู้</p>
-        <p>ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทางของผู้ที่เชื่อว่า <strong>“การเรียนรู้ไม่มีวันเกษียณ”</strong></p>
-        <p class="english" lang="en">Former rural physician. Reader. Photographer. A lifelong learner connecting ideas across disciplines.</p>
-
-        <div class="actions">
-          <a class="button2" href="https://drsupakorn.github.io/about/">อ่านเพิ่มเติม · Read more →</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <div class="closing">
-    <p>ความเข้าใจเริ่มต้นจากความอยากรู้อยากเห็น</p>
-    <span lang="en">Understanding begins with curiosity.</span>
-  </div>
-
-  <footer>
-    <strong>Learning never retires.</strong><br>
-    A place for curious minds · Started in August 2026 · Still learning.<br>
+</div>
+</details>
+</div>
+</div>
+<header class="hero">
+<div class="hero-copy">
+<p class="eyebrow">Reading · Thinking · Living</p>
+<h1>
+<span class="title-th" data-en-html="Learning Never Retires" data-th-html="การเรียนรู้ไม่มีวันเกษียณ">การเรียนรู้ไม่มีวันเกษียณ</span>
+<span class="title-en" data-en-html="A Place for Curious Minds" data-th-html="Learning Never Retires">Learning Never Retires</span>
+</h1>
+<p class="tagline" data-en-html='A place for curious minds.&lt;span class="tagline-th"&gt;For people who still enjoy learning.&lt;/span&gt;' data-th-html='A place for curious minds.&lt;span class="tagline-th"&gt;พื้นที่สำหรับผู้ที่ยังสนุกกับการเรียนรู้&lt;/span&gt;'>A place for curious minds.<span class="tagline-th">พื้นที่สำหรับผู้ที่ยังสนุกกับการเรียนรู้</span></p>
+<p class="lead-th" data-en-html="The world is full of information, but understanding still requires careful reading, reflection, good questions, and the exchange of perspectives. This website invites you to explore complex ideas through notes and knowledge projects that have gradually taken shape." data-th-html="โลกเต็มไปด้วยข้อมูล แต่ความเข้าใจยังต้องอาศัยการอ่าน การคิด การตั้งคำถาม และการแลกเปลี่ยนมุมมอง เว็บไซต์นี้ชวนคุณร่วมสำรวจเรื่องซับซ้อน ผ่านบันทึกและโครงการความรู้ที่ค่อย ๆ ตกผลึก">โลกเต็มไปด้วยข้อมูล แต่ความเข้าใจยังต้องอาศัยการอ่าน การคิด การตั้งคำถาม และการแลกเปลี่ยนมุมมอง เว็บไซต์นี้ชวนคุณร่วมสำรวจเรื่องซับซ้อน ผ่านบันทึกและโครงการความรู้ที่ค่อย ๆ ตกผลึก</p>
+<p class="lead-en" data-en-html="A growing collection of learning journeys connecting careful reading, evidence, reflection, and practice." data-th-html="A growing collection of learning journeys that connects careful reading, evidence, reflection, and practice to make complex ideas more accessible." lang="en">A growing collection of learning journeys that connects careful reading, evidence, reflection, and practice to make complex ideas more accessible.</p>
+<div class="actions">
+<a class="button" data-en-html="Explore the learning journeys →" data-th-html="สำรวจเส้นทางการเรียนรู้ · Explore →" href="#journeys">สำรวจเส้นทางการเรียนรู้ · Explore →</a>
+<a class="button2" data-en-html="Why this website?" data-th-html="ทำไมจึงมีเว็บไซต์นี้ · Why?" href="#why">ทำไมจึงมีเว็บไซต์นี้ · Why?</a>
+</div>
+</div>
+<figure class="hero-media">
+<img alt="ดร.สุภกร บัวสาย เดินออกกำลังกายกับสุนัข" src="images/hero-walk.jpg"/>
+<figcaption class="caption" data-en-html="Learning is a lifelong journey." data-th-html="การเรียนรู้เป็นการเดินทางตลอดชีวิต · Learning is a lifelong journey">การเรียนรู้เป็นการเดินทางตลอดชีวิต · Learning is a lifelong journey</figcaption>
+</figure>
+</header>
+<section class="section" id="why">
+<div class="head">
+<h2 data-en-html="Why This Website?" data-th-html='&lt;span class="th"&gt;ทำไมจึงมีเว็บไซต์นี้&lt;/span&gt;Why This Website?'><span class="th">ทำไมจึงมีเว็บไซต์นี้</span>Why This Website?</h2>
+</div>
+<article class="card">
+<p data-en-html="Today’s world is overflowing with information, news, and opinions. Genuine understanding, however, still requires time, careful reading, and critical thinking." data-th-html="โลกทุกวันนี้เต็มไปด้วยข้อมูล ข่าวสาร และความคิดเห็น แต่ความเข้าใจต้องอาศัยเวลา การอ่านอย่างรอบคอบ และการคิดอย่างมีวิจารณญาณ">โลกทุกวันนี้เต็มไปด้วยข้อมูล ข่าวสาร และความคิดเห็น แต่ความเข้าใจต้องอาศัยเวลา การอ่านอย่างรอบคอบ และการคิดอย่างมีวิจารณญาณ</p>
+<p data-en-html="This website began as notes on what I was learning after retirement. It gradually grew into a space for sharing knowledge—explaining complex subjects in accessible language, respecting original sources, welcoming different perspectives, and remaining open to revision when better evidence appears." data-th-html="เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมเรียนรู้หลังเกษียณ แล้วค่อย ๆ เติบโตเป็นพื้นที่แบ่งปันความรู้ โดยพยายามอธิบายเรื่องซับซ้อนให้เข้าใจง่าย เคารพข้อมูลต้นฉบับ เปิดรับมุมมองที่หลากหลาย และพร้อมปรับปรุงเมื่อพบหลักฐานที่ดีกว่า">เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมเรียนรู้หลังเกษียณ แล้วค่อย ๆ เติบโตเป็นพื้นที่แบ่งปันความรู้ โดยพยายามอธิบายเรื่องซับซ้อนให้เข้าใจง่าย เคารพข้อมูลต้นฉบับ เปิดรับมุมมองที่หลากหลาย และพร้อมปรับปรุงเมื่อพบหลักฐานที่ดีกว่า</p>
+<p data-en-html="I am not trying to collect every answer. I try to ask better questions, connect knowledge across disciplines, and publish only when an idea has matured enough to be shared." data-th-html="ผมไม่ได้พยายามรวบรวมทุกคำตอบ แต่พยายามตั้งคำถามที่ดี เชื่อมโยงความรู้จากหลายศาสตร์ และเผยแพร่เมื่อเนื้อหาได้ตกผลึกในระดับที่พร้อมแบ่งปัน">ผมไม่ได้พยายามรวบรวมทุกคำตอบ แต่พยายามตั้งคำถามที่ดี เชื่อมโยงความรู้จากหลายศาสตร์ และเผยแพร่เมื่อเนื้อหาได้ตกผลึกในระดับที่พร้อมแบ่งปัน</p>
+<p class="english" data-en-html="This is not a library of final answers. It is a living notebook of learning—developed slowly, carefully, and openly to revision." data-th-html="This is not a library of final answers. It is a living notebook of learning—developed slowly, carefully, and openly to revision." lang="en">This is not a library of final answers. It is a living notebook of learning—developed slowly, carefully, and openly to revision.</p>
+</article>
+</section>
+<section class="section" id="journeys">
+<div class="head">
+<h2 data-en-html="Learning Journeys" data-th-html='&lt;span class="th"&gt;เส้นทางการเรียนรู้&lt;/span&gt;Learning Journeys'><span class="th">เส้นทางการเรียนรู้</span>Learning Journeys</h2>
+<p class="note" data-en-html="Beginning with completed work and expanding as new projects mature." data-th-html='เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อโครงการใหม่พร้อมเผยแพร่&lt;br&gt;&lt;span lang="en"&gt;Beginning with completed work and expanding as new projects mature.&lt;/span&gt;'>เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อโครงการใหม่พร้อมเผยแพร่<br/><span lang="en">Beginning with completed work and expanding as new projects mature.</span></p>
+</div>
+<div class="journeys">
+<article class="journey">
+<div>
+<div class="meta">Journey 01 <span class="status">Published</span></div>
+<h3 data-en-html="The Best of Dao&lt;span&gt;Wisdom of the Dao&lt;/span&gt;" data-th-html="The Best of Dao&lt;span&gt;ปัญญาแห่งเต๋า&lt;/span&gt;">The Best of Dao<span>ปัญญาแห่งเต๋า</span></h3>
+<p data-en-html="Key ideas from Laozi, Zhuangzi, and Wu Wei, presented through visual essays and interactive media for contemporary readers." data-th-html="แนวคิดสำคัญของเหล่าจื่อ จวงจื่อ และอู๋เว่ย ผ่านบทความภาพและสื่ออินเทอร์แอกทีฟสำหรับผู้อ่านร่วมสมัย">แนวคิดสำคัญของเหล่าจื่อ จวงจื่อ และอู๋เว่ย ผ่านบทความภาพและสื่ออินเทอร์แอกทีฟสำหรับผู้อ่านร่วมสมัย</p>
+<p class="english" data-en-html="Ancient Chinese wisdom made accessible for modern readers." data-th-html="Ancient Chinese wisdom made accessible for modern readers." lang="en">Ancient Chinese wisdom made accessible for modern readers.</p>
+</div>
+<a class="open" data-en-html="Open this journey →" data-th-html="เปิดเส้นทางนี้ · Open →" href="https://drsupakorn.github.io/the-best-of-dao/">เปิดเส้นทางนี้ · Open →</a>
+</article>
+<article class="journey">
+<div>
+<div class="meta">Journey 02 <span class="status">Growing</span></div>
+<h3 data-en-html="The Best of Buddhism&lt;span&gt;Buddhist texts and philosophy for contemporary readers&lt;/span&gt;" data-th-html="The Best of Buddhism&lt;span&gt;พระสูตรและพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย&lt;/span&gt;">The Best of Buddhism<span>พระสูตรและพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย</span></h3>
+<p data-en-html="Buddhist texts, history, and philosophy presented in accessible language while preserving context and academic balance." data-th-html="พระสูตร ประวัติศาสตร์ และพุทธปรัชญา เรียบเรียงด้วยภาษาที่เข้าใจง่าย โดยรักษาบริบทและความเป็นกลางทางวิชาการ">พระสูตร ประวัติศาสตร์ และพุทธปรัชญา เรียบเรียงด้วยภาษาที่เข้าใจง่าย โดยรักษาบริบทและความเป็นกลางทางวิชาการ</p>
+<p class="english" data-en-html="Buddhist texts and ideas presented for today’s readers." data-th-html="Buddhist texts and ideas presented for today’s readers." lang="en">Buddhist texts and ideas presented for today’s readers.</p>
+</div>
+<a class="open" data-en-html="Open this journey →" data-th-html="เปิดเส้นทางนี้ · Open →" href="https://drsupakorn.github.io/the-best-of-buddhism/">เปิดเส้นทางนี้ · Open →</a>
+</article>
+<article class="journey">
+<div>
+<div class="meta">Journey 03 <span class="status">Published</span></div>
+<h3 data-en-html="Buddhist Cosmology&lt;span&gt;The universe through a Buddhist lens&lt;/span&gt;" data-th-html="Buddhist Cosmology&lt;span&gt;จักรวาลในสายตาพุทธ&lt;/span&gt;">Buddhist Cosmology<span>จักรวาลในสายตาพุทธ</span></h3>
+<p data-en-html="Buddhist cosmology explored as a map of karma, states of mind, rebirth, and the path toward awakening." data-th-html="จักรวาลวิทยาพุทธในฐานะแผนที่ของกรรม สภาวะจิต การเวียนว่ายตายเกิด และหนทางแห่งความตื่นรู้">จักรวาลวิทยาพุทธในฐานะแผนที่ของกรรม สภาวะจิต การเวียนว่ายตายเกิด และหนทางแห่งความตื่นรู้</p>
+<p class="english" data-en-html="A visual exploration of karma, rebirth, meditation, and awakening." data-th-html="A visual exploration of karma, rebirth, meditation, and awakening." lang="en">A visual exploration of karma, rebirth, meditation, and awakening.</p>
+</div>
+<a class="open" data-en-html="Open this journey →" data-th-html="เปิดเส้นทางนี้ · Open →" href="https://drsupakorn.github.io/buddhist-cosmology/">เปิดเส้นทางนี้ · Open →</a>
+</article>
+</div>
+</section>
+<section class="section" id="learn">
+<div class="head">
+<h2 data-en-html="How I Learn" data-th-html='&lt;span class="th"&gt;ผมเรียนรู้อย่างไร&lt;/span&gt;How I Learn'><span class="th">ผมเรียนรู้อย่างไร</span>How I Learn</h2>
+<p class="note" data-en-html="Learning is a cycle, not a straight line." data-th-html='การเรียนรู้เป็นวงจร ไม่ใช่เส้นตรง&lt;br&gt;&lt;span lang="en"&gt;Learning is a cycle, not a straight line.&lt;/span&gt;'>การเรียนรู้เป็นวงจร ไม่ใช่เส้นตรง<br/><span lang="en">Learning is a cycle, not a straight line.</span></p>
+</div>
+<div class="cycle">
+<article class="step">
+<span class="num">1</span>
+<h3 data-en-html="Read" data-th-html="อ่าน · Read">อ่าน · Read</h3>
+<p data-en-html="Books, research papers, Buddhist scriptures, documentaries, interviews, and people’s lived experience." data-th-html="หนังสือ งานวิจัย พระไตรปิฎก สารคดี บทสัมภาษณ์ และประสบการณ์ของผู้คน">หนังสือ งานวิจัย พระไตรปิฎก สารคดี บทสัมภาษณ์ และประสบการณ์ของผู้คน</p>
+</article>
+<article class="step">
+<span class="num">2</span>
+<h3 data-en-html="Research" data-th-html="ค้นคว้า · Research">ค้นคว้า · Research</h3>
+<p data-en-html="Compare sources, verify facts, and examine each issue from multiple perspectives." data-th-html="เปรียบเทียบแหล่งข้อมูล ตรวจสอบข้อเท็จจริง และมองประเด็นจากหลายมุม">เปรียบเทียบแหล่งข้อมูล ตรวจสอบข้อเท็จจริง และมองประเด็นจากหลายมุม</p>
+</article>
+<article class="step">
+<span class="num">3</span>
+<h3 data-en-html="Reflect &amp;amp; Discuss" data-th-html="ใคร่ครวญและสนทนา · Reflect &amp;amp; Discuss">ใคร่ครวญและสนทนา · Reflect &amp; Discuss</h3>
+<p data-en-html="Review the reasoning, exchange ideas with friends, and use AI as both a tool and a companion in learning." data-th-html="ทบทวนเหตุผล แลกเปลี่ยนกับเพื่อนฝูง และใช้ AI เป็นเครื่องมือและเพื่อนร่วมทางในการเรียนรู้">ทบทวนเหตุผล แลกเปลี่ยนกับเพื่อนฝูง และใช้ AI เป็นเครื่องมือและเพื่อนร่วมทางในการเรียนรู้</p>
+</article>
+<article class="step">
+<span class="num">4</span>
+<h3 data-en-html="Write &amp;amp; Share" data-th-html="เขียนและแบ่งปัน · Write &amp;amp; Share">เขียนและแบ่งปัน · Write &amp; Share</h3>
+<p data-en-html="Turn what I understand into language that general readers can follow, while using writing to examine my own thinking." data-th-html="เรียบเรียงสิ่งที่เข้าใจให้คนทั่วไปอ่านได้ และใช้การเขียนทบทวนความคิดของตนเอง">เรียบเรียงสิ่งที่เข้าใจให้คนทั่วไปอ่านได้ และใช้การเขียนทบทวนความคิดของตนเอง</p>
+</article>
+<article class="step">
+<span class="num">5</span>
+<h3 data-en-html="Practice &amp;amp; Grow" data-th-html="ปฏิบัติและเติบโต · Practice &amp;amp; Grow">ปฏิบัติและเติบโต · Practice &amp; Grow</h3>
+<p data-en-html="Test suitable ideas in real life and gradually turn what works into lasting habits." data-th-html="นำสิ่งที่เหมาะสมไปทดลองในชีวิตจริง ฝึกสิ่งที่ได้ผลให้ค่อย ๆ กลายเป็นนิสัย">นำสิ่งที่เหมาะสมไปทดลองในชีวิตจริง ฝึกสิ่งที่ได้ผลให้ค่อย ๆ กลายเป็นนิสัย</p>
+</article>
+</div>
+<div class="practice" data-en-html="I believe knowledge becomes valuable when it is connected with practice. In matters of health, I often experiment carefully on myself first, then share only what has worked for me and is also supported by evidence." data-th-html="ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ">ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ</div>
+</section>
+<section class="section" id="learner">
+<div class="head">
+<h2 data-en-html="Meet the Learner" data-th-html='&lt;span class="th"&gt;รู้จักผู้ร่วมเดินทาง&lt;/span&gt;Meet the Learner'><span class="th">รู้จักผู้ร่วมเดินทาง</span>Meet the Learner</h2>
+</div>
+<div class="author">
+<div class="author-photo">
+<img alt="ดร.สุภกร บัวสาย ระหว่างการเดินทางที่ประเทศภูฏาน" src="images/author-bhutan.jpg"/>
+</div>
+<article class="author-text">
+<h3>Dr. Supakorn Buasai</h3>
+<p data-en-html="I am a former rural physician who later had the opportunity to work on health-system development and education reform in Thailand." data-th-html="ผมเป็นอดีตแพทย์ชนบท และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ และการปฏิรูปการศึกษาของประเทศไทย">ผมเป็นอดีตแพทย์ชนบท และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ และการปฏิรูปการศึกษาของประเทศไทย</p>
+<p data-en-html="Today, I spend much of my time reading, caring for my health, gardening, taking photographs, learning new subjects, and exchanging ideas with friends." data-th-html="ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ การดูแลสุขภาพ การทำสวน การถ่ายภาพ การเรียนรู้เรื่องใหม่ ๆ และการแลกเปลี่ยนความคิดกับเพื่อนฝูง">ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ การดูแลสุขภาพ การทำสวน การถ่ายภาพ การเรียนรู้เรื่องใหม่ ๆ และการแลกเปลี่ยนความคิดกับเพื่อนฝูง</p>
+<p data-en-html="Along the way, AI has become both a tool and a learning companion, helping me research, connect ideas, and write more effectively." data-th-html="ระหว่างทาง AI ได้กลายเป็นทั้งเครื่องมือและเพื่อนร่วมทาง ที่ช่วยให้การค้นคว้า การเชื่อมโยงความคิด และการเขียนมีประสิทธิภาพยิ่งขึ้น">ระหว่างทาง AI ได้กลายเป็นทั้งเครื่องมือและเพื่อนร่วมทาง ที่ช่วยให้การค้นคว้า การเชื่อมโยงความคิด และการเขียนมีประสิทธิภาพยิ่งขึ้น</p>
+<p data-en-html="What keeps this journey exciting is curiosity itself—and the pleasure of continuing to learn." data-th-html="แต่สิ่งที่ทำให้การเดินทางครั้งนี้ยังน่าตื่นเต้นอยู่เสมอ คือความอยากรู้อยากเห็นและความสุขของการได้เรียนรู้">แต่สิ่งที่ทำให้การเดินทางครั้งนี้ยังน่าตื่นเต้นอยู่เสมอ คือความอยากรู้อยากเห็นและความสุขของการได้เรียนรู้</p>
+<p data-en-html="I hope this small website can accompany others who believe that &lt;strong&gt;“learning never retires.”&lt;/strong&gt;" data-th-html="ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทางของผู้ที่เชื่อว่า &lt;strong&gt;“การเรียนรู้ไม่มีวันเกษียณ”&lt;/strong&gt;">ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทางของผู้ที่เชื่อว่า <strong>“การเรียนรู้ไม่มีวันเกษียณ”</strong></p>
+<p class="english" data-en-html="Former rural physician. Reader. Photographer. A lifelong learner connecting ideas across disciplines." data-th-html="Former rural physician. Reader. Photographer. A lifelong learner connecting ideas across disciplines." lang="en">Former rural physician. Reader. Photographer. A lifelong learner connecting ideas across disciplines.</p>
+<div class="actions">
+<a class="button2" data-en-html="Read more →" data-th-html="อ่านเพิ่มเติม · Read more →" href="https://drsupakorn.github.io/about/">อ่านเพิ่มเติม · Read more →</a>
+</div>
+</article>
+</div>
+</section>
+<div class="closing">
+<p data-en-html="Understanding begins with curiosity." data-th-html="ความเข้าใจเริ่มต้นจากความอยากรู้อยากเห็น">ความเข้าใจเริ่มต้นจากความอยากรู้อยากเห็น</p>
+<span data-en-html="Curiosity is where understanding begins." data-th-html="Understanding begins with curiosity." lang="en">Understanding begins with curiosity.</span>
+</div>
+<footer data-en-html="&lt;strong&gt;Learning never retires.&lt;/strong&gt;&lt;br&gt;A place for curious minds · Started in August 2026 · Still learning.&lt;br&gt;© 2026 Dr. Supakorn Buasai" data-th-html="&lt;strong&gt;Learning never retires.&lt;/strong&gt;&lt;br&gt;A place for curious minds · Started in August 2026 · Still learning.&lt;br&gt;© 2026 Dr. Supakorn Buasai">
+<strong>Learning never retires.</strong><br/>
+    A place for curious minds · Started in August 2026 · Still learning.<br/>
     © 2026 Dr. Supakorn Buasai
   </footer>
-
 </main>
-
-
 <script>
   (() => {
+    const STORAGE_KEY = "siteLanguage";
     const menu = document.querySelector(".language-menu");
     const pageUrl = document.getElementById("page-url");
     const copyButton = document.getElementById("copy-url");
     const copyStatus = document.getElementById("copy-status");
+    const languageButtons = document.querySelectorAll("[data-site-language]");
+    const translatableElements = document.querySelectorAll("[data-th-html][data-en-html]");
+
+    let siteLanguage = localStorage.getItem(STORAGE_KEY);
+    if (siteLanguage !== "en" && siteLanguage !== "th") {
+      siteLanguage = "th";
+    }
+
+    function applyLanguage(language) {
+      siteLanguage = language === "en" ? "en" : "th";
+      localStorage.setItem(STORAGE_KEY, siteLanguage);
+
+      document.documentElement.lang = siteLanguage;
+      document.documentElement.dataset.siteLanguage = siteLanguage;
+
+      translatableElements.forEach((element) => {
+        element.innerHTML =
+          siteLanguage === "en"
+            ? element.dataset.enHtml
+            : element.dataset.thHtml;
+      });
+
+      languageButtons.forEach((button) => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.siteLanguage === siteLanguage)
+        );
+      });
+
+      document.title =
+        siteLanguage === "en"
+          ? "Learning Never Retires | Dr. Supakorn Buasai"
+          : "การเรียนรู้ไม่มีวันเกษียณ | Dr. Supakorn Buasai";
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        applyLanguage(button.dataset.siteLanguage);
+      });
+    });
 
     if (pageUrl) {
       pageUrl.value = window.location.href;
@@ -1007,7 +1022,8 @@
       } catch (error) {
         pageUrl.focus();
         pageUrl.select();
-        copyStatus.textContent = "Press and hold the URL, then choose Copy · แตะค้างที่ URL แล้วเลือก Copy";
+        copyStatus.textContent =
+          "Press and hold the URL, then choose Copy · แตะค้างที่ URL แล้วเลือก Copy";
       }
 
       window.setTimeout(() => {
@@ -1030,8 +1046,9 @@
         menu.removeAttribute("open");
       }
     });
+
+    applyLanguage(siteLanguage);
   })();
 </script>
-
 </body>
 </html>
