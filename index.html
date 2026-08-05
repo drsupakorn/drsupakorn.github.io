@@ -740,28 +740,34 @@
         <summary aria-label="คำแนะนำการแปลภาษา">🌐 ภาษา · Language</summary>
 
         <div class="language-panel">
-          <h2>แปลเว็บไซต์นี้ · Translate this website</h2>
+          <h2>Translate this website · แปลเว็บไซต์นี้</h2>
+
+          <p class="language-intro" lang="en">
+            This website is primarily written in Thai. To read it in another language,
+            please use your browser’s built-in translation feature.
+          </p>
 
           <p class="language-intro">
-            เว็บไซต์ไม่สามารถสั่งให้ Chrome, Safari หรือ Edge แปลหน้าเว็บโดยอัตโนมัติได้โดยตรง
-            โปรดใช้คำสั่งแปลภาษาที่มีอยู่ในเบราว์เซอร์ของคุณ
+            เว็บไซต์นี้เขียนเป็นภาษาไทยเป็นหลัก หากต้องการอ่านภาษาอื่น โปรดใช้ระบบแปลภาษาที่มีอยู่ในเบราว์เซอร์ของคุณ
           </p>
 
           <ul class="browser-list">
             <li>
               <strong>Chrome</strong>
-              เปิดเมนู <b>⋮</b> แล้วเลือก <b>Translate</b> จากนั้นเลือกภาษาที่ต้องการ
+              <span lang="en">Open the browser menu <b>⋮</b>, choose <b>Translate</b>, then select your preferred language.</span><br>
+              เปิดเมนู <b>⋮</b> เลือก <b>Translate</b> แล้วเลือกภาษาที่ต้องการ
             </li>
 
             <li>
-              <strong>Safari บน iPhone หรือ iPad</strong>
-              แตะปุ่มเมนูหน้าเว็บในแถบที่อยู่ แล้วเลือก <b>Translate Website</b>
+              <strong>Safari on iPhone or iPad</strong>
+              <span lang="en">Tap the page menu in the address bar, then choose <b>Translate Website</b>.</span><br>
+              แตะเมนูหน้าเว็บในแถบที่อยู่ แล้วเลือก <b>Translate Website</b>
             </li>
 
             <li>
               <strong>Microsoft Edge</strong>
-              เปิดเมนูของเบราว์เซอร์ แล้วเลือก <b>Translate</b>
-              หรือแตะไอคอนแปลภาษาในแถบที่อยู่
+              <span lang="en">Open the browser menu and choose <b>Translate</b>, or tap the translation icon in the address bar.</span><br>
+              เปิดเมนูของเบราว์เซอร์แล้วเลือก <b>Translate</b> หรือแตะไอคอนแปลภาษาในแถบที่อยู่
             </li>
           </ul>
 
@@ -770,18 +776,23 @@
               class="page-url"
               id="page-url"
               type="text"
-              aria-label="ที่อยู่ของหน้าปัจจุบัน"
+              aria-label="Current page address"
               readonly
             >
             <button class="copy-button" id="copy-url" type="button">
-              คัดลอก URL
+              Copy URL
             </button>
           </div>
 
           <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
 
           <p class="translation-note">
-            <strong>หมายเหตุ:</strong>
+            <strong>Note · หมายเหตุ:</strong><br>
+            <span lang="en">
+              Automatic translation may not fully preserve the meaning of Buddhist,
+              philosophical, educational, or other specialized terms. Please refer to
+              the original Thai text when precision matters.
+            </span><br>
             การแปลอัตโนมัติอาจไม่ถ่ายทอดความหมายของศัพท์ทางพุทธศาสนา ปรัชญา การศึกษา
             หรือศัพท์เฉพาะได้ครบถ้วน โปรดอ้างอิงข้อความต้นฉบับภาษาไทยเมื่อความหมายมีความสำคัญ
           </p>
@@ -991,16 +1002,16 @@
           window.getSelection().removeAllRanges();
         }
 
-        copyStatus.textContent = "คัดลอกที่อยู่หน้าเว็บแล้ว · URL copied";
-        copyButton.textContent = "คัดลอกแล้ว";
+        copyStatus.textContent = "URL copied · คัดลอกที่อยู่หน้าเว็บแล้ว";
+        copyButton.textContent = "Copied";
       } catch (error) {
         pageUrl.focus();
         pageUrl.select();
-        copyStatus.textContent = "กรุณาแตะค้างที่ URL แล้วเลือก Copy";
+        copyStatus.textContent = "Press and hold the URL, then choose Copy · แตะค้างที่ URL แล้วเลือก Copy";
       }
 
       window.setTimeout(() => {
-        copyButton.textContent = "คัดลอก URL";
+        copyButton.textContent = "Copy URL";
       }, 2200);
     }
 
