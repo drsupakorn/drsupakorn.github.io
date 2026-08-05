@@ -1,38 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>เกี่ยวกับเว็บไซต์และผู้จัดทำ | Dr. Supakorn Buasai</title>
-  <meta name="description"
-        content="ที่มาของ Learning Journeys โดย ดร.สุภกร บัวสาย เว็บไซต์สำหรับผู้ที่ยังสนุกกับการอ่าน การตั้งคำถาม และการเรียนรู้ตลอดชีวิต">
-  <meta name="author" content="Dr. Supakorn Buasai">
-  <meta name="robots" content="index, follow">
-
-  <link rel="canonical" href="https://drsupakorn.github.io/about/">
-
-  <meta property="og:locale" content="th_TH">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="About This Website | Dr. Supakorn Buasai">
-  <meta property="og:description"
-        content="A place for curious minds—built from reading, reflection, practice, and lifelong learning.">
-  <meta property="og:url" content="https://drsupakorn.github.io/about/">
-  <meta property="og:site_name" content="Dr. Supakorn Buasai — Learning Journeys">
-  <meta property="og:image"
-        content="https://drsupakorn.github.io/images/about-bridge.jpg">
-  <meta property="og:image:alt"
-        content="Dr. Supakorn Buasai standing on a suspension bridge">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About This Website | Dr. Supakorn Buasai">
-  <meta name="twitter:description"
-        content="The story behind Learning Journeys: a place for curious minds.">
-  <meta name="twitter:image"
-        content="https://drsupakorn.github.io/images/about-bridge.jpg">
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>เกี่ยวกับเว็บไซต์และผู้จัดทำ | Dr. Supakorn Buasai</title>
+<meta content="ที่มาของ Learning Journeys โดย ดร.สุภกร บัวสาย เว็บไซต์สำหรับผู้ที่ยังสนุกกับการอ่าน การตั้งคำถาม และการเรียนรู้ตลอดชีวิต" name="description"/>
+<meta content="Dr. Supakorn Buasai" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://drsupakorn.github.io/about/" rel="canonical"/>
+<meta content="th_TH" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="profile" property="og:type"/>
+<meta content="About This Website | Dr. Supakorn Buasai" property="og:title"/>
+<meta content="A place for curious minds—built from reading, reflection, practice, and lifelong learning." property="og:description"/>
+<meta content="https://drsupakorn.github.io/about/" property="og:url"/>
+<meta content="Dr. Supakorn Buasai — Learning Journeys" property="og:site_name"/>
+<meta content="https://drsupakorn.github.io/images/about-bridge.jpg" property="og:image"/>
+<meta content="Dr. Supakorn Buasai standing on a suspension bridge" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="About This Website | Dr. Supakorn Buasai" name="twitter:title"/>
+<meta content="The story behind Learning Journeys: a place for curious minds." name="twitter:description"/>
+<meta content="https://drsupakorn.github.io/images/about-bridge.jpg" name="twitter:image"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -57,8 +47,7 @@
     }
   }
   </script>
-
-  <style>
+<style>
     :root {
       --bg: #f5f1e7;
       --paper: rgba(255,255,255,.82);
@@ -596,518 +585,552 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
-  </style>
+  
+
+    .language-help {
+      position: relative;
+      z-index: 30;
+    }
+
+    .language-help summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.68);
+      color: var(--deep);
+      font-size: .84rem;
+      font-weight: 850;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .language-help summary::-webkit-details-marker { display: none; }
+    .language-help summary::after { content: "▾"; font-size: .72rem; }
+    .language-help[open] summary::after { content: "▴"; }
+
+    .language-help summary:hover,
+    .language-help summary:focus-visible {
+      background: var(--soft);
+      outline: none;
+    }
+
+    .language-panel {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      width: min(390px, calc(100vw - 32px));
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,.96);
+      border-radius: 18px;
+      background: rgba(250,249,245,.99);
+      box-shadow: 0 18px 48px rgba(35,48,39,.20);
+    }
+
+    .language-panel h2 {
+      margin: 0 0 8px;
+      font-family: inherit;
+      font-size: 1.04rem;
+      font-weight: 850;
+      line-height: 1.35;
+    }
+
+    .language-panel p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.58;
+    }
+
+    .browser-list {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .browser-list li {
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+      font-size: .80rem;
+      line-height: 1.5;
+    }
+
+    .browser-list strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--deep);
+      font-size: .85rem;
+    }
+
+    .copy-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .page-url {
+      min-width: 0;
+      flex: 1;
+      height: 42px;
+      padding: 9px 11px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: white;
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .copy-button {
+      min-width: 92px;
+      height: 42px;
+      padding: 9px 12px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--deep);
+      color: white;
+      font-size: .80rem;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .copy-status {
+      min-height: 1.3em;
+      margin: 7px 0 0 !important;
+      color: var(--deep) !important;
+      font-size: .76rem !important;
+      font-weight: 750;
+    }
+
+    .translation-note {
+      margin-top: 12px !important;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: .76rem !important;
+    }
+
+    @media (max-width: 720px) {
+      .language-help { align-self: flex-start; }
+      .language-panel { right: auto; left: 0; }
+    }
+
+    @media (max-width: 620px) {
+      .copy-row { flex-direction: column; }
+      .copy-button { width: 100%; }
+    }
+</style>
 </head>
-
 <body>
-  <main class="page">
-
-    <div class="topbar">
-      <a class="brand" href="https://drsupakorn.github.io/">
+<main class="page">
+<div class="topbar">
+<a class="brand" href="https://drsupakorn.github.io/">
         Dr. Supakorn Buasai
       </a>
-
-      <div class="nav-area">
-        <nav class="topnav" aria-label="Main navigation">
-          <a href="https://drsupakorn.github.io/"
-             data-th-html="หน้าแรก"
-             data-en-html="Home">หน้าแรก</a>
-          <a href="#website"
-             data-th-html="ที่มา"
-             data-en-html="Why">ที่มา</a>
-          <a href="#process"
-             data-th-html="วิธีเรียนรู้"
-             data-en-html="How I Learn">วิธีเรียนรู้</a>
-          <a href="#learner"
-             data-th-html="ผู้จัดทำ"
-             data-en-html="About the Learner">ผู้จัดทำ</a>
-          <a href="#principles"
-             data-th-html="หลักการ"
-             data-en-html="My Approach">หลักการ</a>
-          <a href="#follow"
-             data-th-html="Facebook"
-             data-en-html="Facebook">Facebook</a>
-        </nav>
-
-        <div class="instant-language"
-             role="group"
-             aria-label="Switch website language">
-          <button type="button"
-                  data-site-language="th"
-                  aria-pressed="true">ไทย</button>
-          <button type="button"
-                  data-site-language="en"
-                  aria-pressed="false">English</button>
-        </div>
-      </div>
-    </div>
-
-    <header class="hero">
-      <img src="../images/about-bridge.jpg"
-           alt="Dr. Supakorn Buasai standing on a suspension bridge">
-
-      <div class="hero-copy">
-        <p class="eyebrow">About · Learning Journeys</p>
-
-        <h1 data-th-html="เกี่ยวกับเว็บไซต์นี้"
-            data-en-html="About This Website">เกี่ยวกับเว็บไซต์นี้</h1>
-
-        <p class="hero-tag">Learning Never Retires.</p>
-
-        <p class="lead-th"
-           data-th-html="เว็บไซต์นี้เริ่มจากบันทึกการเรียนรู้ส่วนตัว และค่อย ๆ เติบโตเป็นพื้นที่สำหรับผู้ที่ยังสนุกกับการอ่าน การตั้งคำถาม และการทำความเข้าใจโลก"
-           data-en-html="This website began as a collection of personal learning notes and gradually grew into a place for people who still enjoy reading, asking questions, and making sense of the world.">
+<div class="nav-area">
+<nav aria-label="Main navigation" class="topnav">
+<a data-en-html="Home" data-th-html="หน้าแรก" href="https://drsupakorn.github.io/">หน้าแรก</a>
+<a data-en-html="Why" data-th-html="ที่มา" href="#website">ที่มา</a>
+<a data-en-html="How I Learn" data-th-html="วิธีเรียนรู้" href="#process">วิธีเรียนรู้</a>
+<a data-en-html="About the Learner" data-th-html="ผู้จัดทำ" href="#learner">ผู้จัดทำ</a>
+<a data-en-html="My Approach" data-th-html="หลักการ" href="#principles">หลักการ</a>
+<a data-en-html="Facebook" data-th-html="Facebook" href="#follow">Facebook</a>
+</nav>
+<div aria-label="Switch website language" class="instant-language" role="group">
+<button aria-pressed="true" data-site-language="th" type="button">ไทย</button>
+<button aria-pressed="false" data-site-language="en" type="button">English</button>
+</div><details class="language-help"><summary aria-label="Other languages and translation help">🌐 Other languages / Help</summary><div class="language-panel">
+<h2>Other languages · ภาษาอื่น</h2>
+<p lang="en">
+    This page supports instant switching between Thai and English.
+    For other languages, please use your browser’s built-in translation feature.
+  </p>
+<p>
+    หน้านี้รองรับการสลับไทย–อังกฤษทันที
+    หากต้องการภาษาอื่น โปรดใช้ระบบแปลภาษาที่มีอยู่ในเบราว์เซอร์
+  </p>
+<ul class="browser-list">
+<li>
+<strong>Chrome</strong>
+<span lang="en">Open the browser menu <b>⋮</b>, choose <b>Translate</b>, then select your preferred language.</span><br/>
+      เปิดเมนู <b>⋮</b> เลือก <b>Translate</b> แล้วเลือกภาษาที่ต้องการ
+    </li>
+<li>
+<strong>Safari on iPhone or iPad</strong>
+<span lang="en">Tap the page menu in the address bar, then choose <b>Translate Website</b>.</span><br/>
+      แตะเมนูหน้าเว็บในแถบที่อยู่ แล้วเลือก <b>Translate Website</b>
+</li>
+<li>
+<strong>Microsoft Edge</strong>
+<span lang="en">Open the browser menu and choose <b>Translate</b>, or tap the translation icon in the address bar.</span><br/>
+      เปิดเมนูของเบราว์เซอร์แล้วเลือก <b>Translate</b> หรือแตะไอคอนแปลภาษาในแถบที่อยู่
+    </li>
+</ul>
+<div class="copy-row">
+<input aria-label="Current page address" class="page-url" id="page-url" readonly="" type="text"/>
+<button class="copy-button" id="copy-url" type="button">Copy URL</button>
+</div>
+<p aria-live="polite" class="copy-status" id="copy-status" role="status"></p>
+<p class="translation-note">
+<strong>Note · หมายเหตุ:</strong><br/>
+<span lang="en">
+      Automatic translation may not fully preserve Buddhist, philosophical,
+      educational, or other specialized terms.
+    </span><br/>
+    การแปลอัตโนมัติอาจไม่ถ่ายทอดศัพท์ทางพุทธศาสนา ปรัชญา การศึกษา
+    หรือศัพท์เฉพาะได้ครบถ้วน
+  </p>
+</div></details>
+</div>
+</div>
+<header class="hero">
+<img alt="Dr. Supakorn Buasai standing on a suspension bridge" src="../images/about-bridge.jpg"/>
+<div class="hero-copy">
+<p class="eyebrow">About · Learning Journeys</p>
+<h1 data-en-html="About This Website" data-th-html="เกี่ยวกับเว็บไซต์นี้">เกี่ยวกับเว็บไซต์นี้</h1>
+<p class="hero-tag">Learning Never Retires.</p>
+<p class="lead-th" data-en-html="This website began as a collection of personal learning notes and gradually grew into a place for people who still enjoy reading, asking questions, and making sense of the world." data-th-html="เว็บไซต์นี้เริ่มจากบันทึกการเรียนรู้ส่วนตัว และค่อย ๆ เติบโตเป็นพื้นที่สำหรับผู้ที่ยังสนุกกับการอ่าน การตั้งคำถาม และการทำความเข้าใจโลก">
           เว็บไซต์นี้เริ่มจากบันทึกการเรียนรู้ส่วนตัว
           และค่อย ๆ เติบโตเป็นพื้นที่สำหรับผู้ที่ยังสนุกกับการอ่าน
           การตั้งคำถาม และการทำความเข้าใจโลก
         </p>
-
-        <p class="lead-en"
-           data-th-html="What began as personal learning notes has gradually grown into a place for curious minds."
-           data-en-html="What began as personal learning notes has gradually grown into a place for curious minds.">
+<p class="lead-en" data-en-html="What began as personal learning notes has gradually grown into a place for curious minds." data-th-html="What began as personal learning notes has gradually grown into a place for curious minds.">
           What began as personal learning notes has gradually grown
           into a place for curious minds.
         </p>
-      </div>
-    </header>
-
-    <section class="section" id="website">
-      <div class="section-head">
-        <h2 data-th-html="<span class='heading-th'>ทำไมจึงมีเว็บไซต์นี้</span><span class='heading-en'>Why This Website?</span>"
-            data-en-html="Why This Website?">
-          <span class="heading-th">ทำไมจึงมีเว็บไซต์นี้</span>
-          <span class="heading-en">Why This Website?</span>
-        </h2>
-      </div>
-
-      <article class="content-card">
-        <p data-th-html="เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมอ่านและเรียนรู้หลังเกษียณ เมื่อมีเวลาอ่านมากขึ้น ผมเริ่มจดบันทึกเพื่อทบทวนความเข้าใจของตนเอง ต่อมาพบว่าหลายเรื่องอาจเป็นประโยชน์กับผู้อื่น จึงค่อย ๆ พัฒนาเป็นเว็บไซต์แห่งนี้"
-           data-en-html="This website began with notes on what I was reading and learning after retirement. As I had more time to read, I started writing to examine my own understanding. I later realized that some of these ideas might also be useful to others, and the notes gradually developed into this website.">
+</div>
+</header>
+<section class="section" id="website">
+<div class="section-head">
+<h2 data-en-html="Why This Website?" data-th-html="&lt;span class='heading-th'&gt;ทำไมจึงมีเว็บไซต์นี้&lt;/span&gt;&lt;span class='heading-en'&gt;Why This Website?&lt;/span&gt;">
+<span class="heading-th">ทำไมจึงมีเว็บไซต์นี้</span>
+<span class="heading-en">Why This Website?</span>
+</h2>
+</div>
+<article class="content-card">
+<p data-en-html="This website began with notes on what I was reading and learning after retirement. As I had more time to read, I started writing to examine my own understanding. I later realized that some of these ideas might also be useful to others, and the notes gradually developed into this website." data-th-html="เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมอ่านและเรียนรู้หลังเกษียณ เมื่อมีเวลาอ่านมากขึ้น ผมเริ่มจดบันทึกเพื่อทบทวนความเข้าใจของตนเอง ต่อมาพบว่าหลายเรื่องอาจเป็นประโยชน์กับผู้อื่น จึงค่อย ๆ พัฒนาเป็นเว็บไซต์แห่งนี้">
           เว็บไซต์นี้เริ่มจากบันทึกสิ่งที่ผมอ่านและเรียนรู้หลังเกษียณ
           เมื่อมีเวลาอ่านมากขึ้น ผมเริ่มจดบันทึกเพื่อทบทวนความเข้าใจของตนเอง
           ต่อมาพบว่าหลายเรื่องอาจเป็นประโยชน์กับผู้อื่น
           จึงค่อย ๆ พัฒนาเป็นเว็บไซต์แห่งนี้
         </p>
-
-        <p data-th-html="ผมเชื่อว่าความรู้จำนวนมากไม่ได้ยากเพราะเนื้อหาเพียงอย่างเดียว แต่อาจยากเพราะวิธีอธิบาย เว็บไซต์นี้จึงพยายามเรียบเรียงเรื่องซับซ้อนให้เข้าใจง่ายขึ้น โดยยังรักษาบริบท ความถูกต้อง และเปิดทางให้ผู้อ่านค้นคว้าต่อ"
-           data-en-html="I believe many subjects are difficult not only because of their content, but also because of the way they are explained. This website therefore tries to make complex ideas easier to understand while preserving context, accuracy, and opportunities for further exploration.">
+<p data-en-html="I believe many subjects are difficult not only because of their content, but also because of the way they are explained. This website therefore tries to make complex ideas easier to understand while preserving context, accuracy, and opportunities for further exploration." data-th-html="ผมเชื่อว่าความรู้จำนวนมากไม่ได้ยากเพราะเนื้อหาเพียงอย่างเดียว แต่อาจยากเพราะวิธีอธิบาย เว็บไซต์นี้จึงพยายามเรียบเรียงเรื่องซับซ้อนให้เข้าใจง่ายขึ้น โดยยังรักษาบริบท ความถูกต้อง และเปิดทางให้ผู้อ่านค้นคว้าต่อ">
           ผมเชื่อว่าความรู้จำนวนมากไม่ได้ยากเพราะเนื้อหาเพียงอย่างเดียว
           แต่อาจยากเพราะวิธีอธิบาย
           เว็บไซต์นี้จึงพยายามเรียบเรียงเรื่องซับซ้อนให้เข้าใจง่ายขึ้น
           โดยยังรักษาบริบท ความถูกต้อง และเปิดทางให้ผู้อ่านค้นคว้าต่อ
         </p>
-
-        <p data-th-html="เว็บไซต์เริ่มเผยแพร่ในเดือนสิงหาคม ๒๕๖๙ โดยใช้ภาษาไทยเป็นหลัก และค่อย ๆ เพิ่มเนื้อหาภาษาอังกฤษเมื่อพร้อม"
-           data-en-html="The website was launched in August 2026. It is primarily written in Thai, with English content added as each section becomes ready.">
+<p data-en-html="The website was launched in August 2026. It is primarily written in Thai, with English content added as each section becomes ready." data-th-html="เว็บไซต์เริ่มเผยแพร่ในเดือนสิงหาคม ๒๕๖๙ โดยใช้ภาษาไทยเป็นหลัก และค่อย ๆ เพิ่มเนื้อหาภาษาอังกฤษเมื่อพร้อม">
           เว็บไซต์เริ่มเผยแพร่ในเดือนสิงหาคม ๒๕๖๙
           โดยใช้ภาษาไทยเป็นหลัก และค่อย ๆ เพิ่มเนื้อหาภาษาอังกฤษเมื่อพร้อม
         </p>
-
-        <p class="english-copy"
-           data-th-html="The website is primarily in Thai, with English content added progressively as the collection grows."
-           data-en-html="The website is primarily in Thai, with English content added progressively as the collection grows.">
+<p class="english-copy" data-en-html="The website is primarily in Thai, with English content added progressively as the collection grows." data-th-html="The website is primarily in Thai, with English content added progressively as the collection grows.">
           The website is primarily in Thai, with English content added progressively as the collection grows.
         </p>
-      </article>
-
-      <div class="language-note">
-        <strong data-th-html="ภาษาและการแปล"
-                data-en-html="Language and Translation">ภาษาและการแปล</strong>
-
-        <span data-th-html="ปุ่ม ไทย | English ด้านบนสลับเนื้อหาหลักของหน้านี้ได้ทันที โดยใช้คำแปลที่ฝังอยู่ในเว็บไซต์ สำหรับภาษาอื่น โปรดใช้ระบบ Translate ของเบราว์เซอร์ ทั้งนี้ การแปลอัตโนมัติอาจคลาดเคลื่อนในศัพท์เฉพาะ"
-              data-en-html="Use the Thai | English switch above to change the main content instantly using translations built into this page. For other languages, please use your browser’s Translate feature. Automatic translation may be less precise for specialized terms.">
+</article>
+<div class="language-note">
+<strong data-en-html="Language and Translation" data-th-html="ภาษาและการแปล">ภาษาและการแปล</strong>
+<span data-en-html="Use the Thai | English switch above to change the main content instantly using translations built into this page. For other languages, please use your browser’s Translate feature. Automatic translation may be less precise for specialized terms." data-th-html="ปุ่ม ไทย | English ด้านบนสลับเนื้อหาหลักของหน้านี้ได้ทันที โดยใช้คำแปลที่ฝังอยู่ในเว็บไซต์ สำหรับภาษาอื่น โปรดใช้ระบบ Translate ของเบราว์เซอร์ ทั้งนี้ การแปลอัตโนมัติอาจคลาดเคลื่อนในศัพท์เฉพาะ">
           ปุ่ม ไทย | English ด้านบนสลับเนื้อหาหลักของหน้านี้ได้ทันที
           โดยใช้คำแปลที่ฝังอยู่ในเว็บไซต์ สำหรับภาษาอื่น โปรดใช้ระบบ Translate
           ของเบราว์เซอร์ ทั้งนี้ การแปลอัตโนมัติอาจคลาดเคลื่อนในศัพท์เฉพาะ
         </span>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="section-head">
-        <h2 data-th-html="<span class='heading-th'>จากความรู้สู่ปัญญา</span><span class='heading-en'>From Knowledge to Wisdom</span>"
-            data-en-html="From Knowledge to Wisdom">
-          <span class="heading-th">จากความรู้สู่ปัญญา</span>
-          <span class="heading-en">From Knowledge to Wisdom</span>
-        </h2>
-
-        <p class="section-note"
-           data-th-html="วิธีที่ผมสำรวจ ตั้งคำถาม ตรวจสอบ เชื่อมโยง ทดลอง และแบ่งปันสิ่งที่เรียนรู้"
-           data-en-html="How I explore, question, verify, connect, test, and share what I learn.">
+</div>
+</section>
+<section class="section" id="process">
+<div class="section-head">
+<h2 data-en-html="From Knowledge to Wisdom" data-th-html="&lt;span class='heading-th'&gt;จากความรู้สู่ปัญญา&lt;/span&gt;&lt;span class='heading-en'&gt;From Knowledge to Wisdom&lt;/span&gt;">
+<span class="heading-th">จากความรู้สู่ปัญญา</span>
+<span class="heading-en">From Knowledge to Wisdom</span>
+</h2>
+<p class="section-note" data-en-html="How I explore, question, verify, connect, test, and share what I learn." data-th-html="วิธีที่ผมสำรวจ ตั้งคำถาม ตรวจสอบ เชื่อมโยง ทดลอง และแบ่งปันสิ่งที่เรียนรู้">
           วิธีที่ผมสำรวจ ตั้งคำถาม ตรวจสอบ เชื่อมโยง ทดลอง
           และแบ่งปันสิ่งที่เรียนรู้
         </p>
-      </div>
-
-      <div class="figure-card">
-        <figure>
-          <img src="../images/how-i-learn.svg"
-               alt="Infographic showing Dr. Supakorn Buasai's six-part learning cycle: Explore, Question and Verify, Understand, Connect, Apply and Reflect, and Share and Learn"
-               loading="lazy"
-               decoding="async">
-
-          <figcaption data-th-html="การเรียนรู้ไม่ใช่ลำดับตายตัว แต่เป็นวงจรที่เริ่มต้นใหม่ได้จากทุกขั้น"
-                      data-en-html="Learning is not a rigid sequence. Any step can begin the next cycle.">
+</div>
+<div class="figure-card">
+<figure>
+<img alt="Infographic showing Dr. Supakorn Buasai's six-part learning cycle: Explore, Question and Verify, Understand, Connect, Apply and Reflect, and Share and Learn" decoding="async" loading="lazy" src="../images/how-i-learn.svg"/>
+<figcaption data-en-html="Learning is not a rigid sequence. Any step can begin the next cycle." data-th-html="การเรียนรู้ไม่ใช่ลำดับตายตัว แต่เป็นวงจรที่เริ่มต้นใหม่ได้จากทุกขั้น">
             การเรียนรู้ไม่ใช่ลำดับตายตัว แต่เป็นวงจรที่เริ่มต้นใหม่ได้จากทุกขั้น
           </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2 data-th-html="<span class='heading-th'>เรื่องที่กำลังเรียนรู้</span><span class='heading-en'>What You’ll Find Here</span>"
-            data-en-html="What You’ll Find Here">
-          <span class="heading-th">เรื่องที่กำลังเรียนรู้</span>
-          <span class="heading-en">What You’ll Find Here</span>
-        </h2>
-
-        <p class="section-note"
-           data-th-html="เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อหัวข้อใหม่ตกผลึก"
-           data-en-html="Beginning with completed work and expanding as new topics mature.">
+</figure>
+</div>
+</section>
+<section class="section">
+<div class="section-head">
+<h2 data-en-html="What You’ll Find Here" data-th-html="&lt;span class='heading-th'&gt;เรื่องที่กำลังเรียนรู้&lt;/span&gt;&lt;span class='heading-en'&gt;What You’ll Find Here&lt;/span&gt;">
+<span class="heading-th">เรื่องที่กำลังเรียนรู้</span>
+<span class="heading-en">What You’ll Find Here</span>
+</h2>
+<p class="section-note" data-en-html="Beginning with completed work and expanding as new topics mature." data-th-html="เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อหัวข้อใหม่ตกผลึก">
           เริ่มจากผลงานที่มีอยู่จริง และค่อย ๆ ขยายเมื่อหัวข้อใหม่ตกผลึก
         </p>
-      </div>
-
-      <div class="topic-grid">
-        <article class="topic">
-          <h3 data-th-html="พระพุทธศาสนา · Buddhism"
-              data-en-html="Buddhism">พระพุทธศาสนา · Buddhism</h3>
-          <p data-th-html="พระสูตร ประวัติศาสตร์ และพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย"
-             data-en-html="Buddhist texts, history, and philosophy for contemporary readers.">
+</div>
+<div class="topic-grid">
+<article class="topic">
+<h3 data-en-html="Buddhism" data-th-html="พระพุทธศาสนา · Buddhism">พระพุทธศาสนา · Buddhism</h3>
+<p data-en-html="Buddhist texts, history, and philosophy for contemporary readers." data-th-html="พระสูตร ประวัติศาสตร์ และพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย">
             พระสูตร ประวัติศาสตร์ และพุทธปรัชญาสำหรับผู้อ่านร่วมสมัย
           </p>
-        </article>
-
-        <article class="topic">
-          <h3 data-th-html="เต๋า · Daoism"
-              data-en-html="Daoism">เต๋า · Daoism</h3>
-          <p data-th-html="เหล่าจื่อ จวงจื่อ อู๋เว่ย และปัญญาจีนโบราณ"
-             data-en-html="Laozi, Zhuangzi, Wu Wei, and ancient Chinese wisdom.">
+</article>
+<article class="topic">
+<h3 data-en-html="Daoism" data-th-html="เต๋า · Daoism">เต๋า · Daoism</h3>
+<p data-en-html="Laozi, Zhuangzi, Wu Wei, and ancient Chinese wisdom." data-th-html="เหล่าจื่อ จวงจื่อ อู๋เว่ย และปัญญาจีนโบราณ">
             เหล่าจื่อ จวงจื่อ อู๋เว่ย และปัญญาจีนโบราณ
           </p>
-        </article>
-
-        <article class="topic">
-          <h3 data-th-html="สุขภาพ · Health"
-              data-en-html="Health">สุขภาพ · Health</h3>
-          <p data-th-html="การดูแลสุขภาพ การออกกำลังกาย การนอน และการพัฒนานิสัย"
-             data-en-html="Health, exercise, sleep, and habit development.">
+</article>
+<article class="topic">
+<h3 data-en-html="Health" data-th-html="สุขภาพ · Health">สุขภาพ · Health</h3>
+<p data-en-html="Health, exercise, sleep, and habit development." data-th-html="การดูแลสุขภาพ การออกกำลังกาย การนอน และการพัฒนานิสัย">
             การดูแลสุขภาพ การออกกำลังกาย การนอน และการพัฒนานิสัย
           </p>
-        </article>
-
-        <article class="topic">
-          <h3 data-th-html="การศึกษา · Education"
-              data-en-html="Education">การศึกษา · Education</h3>
-          <p data-th-html="การเรียนรู้ ความเสมอภาค และการปฏิรูประบบการศึกษา"
-             data-en-html="Learning, equity, and education-system reform.">
+</article>
+<article class="topic">
+<h3 data-en-html="Education" data-th-html="การศึกษา · Education">การศึกษา · Education</h3>
+<p data-en-html="Learning, equity, and education-system reform." data-th-html="การเรียนรู้ ความเสมอภาค และการปฏิรูประบบการศึกษา">
             การเรียนรู้ ความเสมอภาค และการปฏิรูประบบการศึกษา
           </p>
-        </article>
-
-        <article class="topic">
-          <h3 data-th-html="นโยบายสาธารณะ · Public Policy"
-              data-en-html="Public Policy">นโยบายสาธารณะ · Public Policy</h3>
-          <p data-th-html="ระบบสุขภาพ การศึกษา และประเด็นสังคมร่วมสมัย"
-             data-en-html="Health systems, education, and contemporary social issues.">
+</article>
+<article class="topic">
+<h3 data-en-html="Public Policy" data-th-html="นโยบายสาธารณะ · Public Policy">นโยบายสาธารณะ · Public Policy</h3>
+<p data-en-html="Health systems, education, and contemporary social issues." data-th-html="ระบบสุขภาพ การศึกษา และประเด็นสังคมร่วมสมัย">
             ระบบสุขภาพ การศึกษา และประเด็นสังคมร่วมสมัย
           </p>
-        </article>
-
-        <article class="topic">
-          <h3 data-th-html="ข่าวต่างประเทศ · International News"
-              data-en-html="International News">ข่าวต่างประเทศ · International News</h3>
-          <p data-th-html="เหตุการณ์สำคัญของโลกที่ควรทำความเข้าใจให้ลึกกว่าพาดหัวข่าว"
-             data-en-html="Important world events examined beyond the headlines.">
+</article>
+<article class="topic">
+<h3 data-en-html="International News" data-th-html="ข่าวต่างประเทศ · International News">ข่าวต่างประเทศ · International News</h3>
+<p data-en-html="Important world events examined beyond the headlines." data-th-html="เหตุการณ์สำคัญของโลกที่ควรทำความเข้าใจให้ลึกกว่าพาดหัวข่าว">
             เหตุการณ์สำคัญของโลกที่ควรทำความเข้าใจให้ลึกกว่าพาดหัวข่าว
           </p>
-        </article>
-
-        <article class="topic">
-          <h3 data-th-html="สุขภาวะทางปัญญา · Spiritual Well-being"
-              data-en-html="Spiritual Well-being">สุขภาวะทางปัญญา · Spiritual Well-being</h3>
-          <p data-th-html="ความหมาย การใคร่ครวญ และการเติบโตภายใน"
-             data-en-html="Meaning, reflection, and inner growth.">
+</article>
+<article class="topic">
+<h3 data-en-html="Spiritual Well-being" data-th-html="สุขภาวะทางปัญญา · Spiritual Well-being">สุขภาวะทางปัญญา · Spiritual Well-being</h3>
+<p data-en-html="Meaning, reflection, and inner growth." data-th-html="ความหมาย การใคร่ครวญ และการเติบโตภายใน">
             ความหมาย การใคร่ครวญ และการเติบโตภายใน
           </p>
-        </article>
-
-        <article class="topic">
-          <h3 data-th-html="การถ่ายภาพ · Photography"
-              data-en-html="Photography">การถ่ายภาพ · Photography</h3>
-          <p data-th-html="การสังเกตโลกผ่านภาพ การเดินทาง และชีวิตประจำวัน"
-             data-en-html="Observing the world through images, travel, and everyday life.">
+</article>
+<article class="topic">
+<h3 data-en-html="Photography" data-th-html="การถ่ายภาพ · Photography">การถ่ายภาพ · Photography</h3>
+<p data-en-html="Observing the world through images, travel, and everyday life." data-th-html="การสังเกตโลกผ่านภาพ การเดินทาง และชีวิตประจำวัน">
             การสังเกตโลกผ่านภาพ การเดินทาง และชีวิตประจำวัน
           </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="learner">
-      <div class="section-head">
-        <h2 data-th-html="<span class='heading-th'>รู้จักผู้ร่วมเดินทาง</span><span class='heading-en'>About the Learner</span>"
-            data-en-html="About the Learner">
-          <span class="heading-th">รู้จักผู้ร่วมเดินทาง</span>
-          <span class="heading-en">About the Learner</span>
-        </h2>
-      </div>
-
-      <div class="learner-card">
-        <aside class="learner-aside">
-          <h3>Dr. Supakorn Buasai</h3>
-          <p>Doctor and policy analyst</p>
-          <p>Former rural physician</p>
-          <p>Lifelong learner</p>
-
-          <p class="quote">
+</article>
+</div>
+</section>
+<section class="section" id="learner">
+<div class="section-head">
+<h2 data-en-html="About the Learner" data-th-html="&lt;span class='heading-th'&gt;รู้จักผู้ร่วมเดินทาง&lt;/span&gt;&lt;span class='heading-en'&gt;About the Learner&lt;/span&gt;">
+<span class="heading-th">รู้จักผู้ร่วมเดินทาง</span>
+<span class="heading-en">About the Learner</span>
+</h2>
+</div>
+<div class="learner-card">
+<aside class="learner-aside">
+<h3>Dr. Supakorn Buasai</h3>
+<p>Doctor and policy analyst</p>
+<p>Former rural physician</p>
+<p>Lifelong learner</p>
+<p class="quote">
             I learn not to know more, but to understand better,
             live wisely, and contribute to others.
           </p>
-        </aside>
-
-        <article class="learner-body">
-          <p data-th-html="ผมเป็นอดีตแพทย์ชนบท และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ และการปฏิรูปการศึกษาของประเทศไทย"
-             data-en-html="I am a former rural physician who later had the opportunity to work on health-system development and education reform in Thailand.">
+</aside>
+<article class="learner-body">
+<p data-en-html="I am a former rural physician who later had the opportunity to work on health-system development and education reform in Thailand." data-th-html="ผมเป็นอดีตแพทย์ชนบท และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ และการปฏิรูปการศึกษาของประเทศไทย">
             ผมเป็นอดีตแพทย์ชนบท
             และเคยมีโอกาสทำงานด้านการพัฒนาระบบสุขภาพ
             และการปฏิรูปการศึกษาของประเทศไทย
           </p>
-
-          <p data-th-html="ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ การเดินออกกำลังกาย การทำสวน การถ่ายภาพ การเรียนรู้เรื่องใหม่ ๆ และการแลกเปลี่ยนความคิดกับเพื่อนฝูง"
-             data-en-html="Today, I spend much of my time reading, walking for exercise, gardening, taking photographs, learning new subjects, and exchanging ideas with friends.">
+<p data-en-html="Today, I spend much of my time reading, walking for exercise, gardening, taking photographs, learning new subjects, and exchanging ideas with friends." data-th-html="ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ การเดินออกกำลังกาย การทำสวน การถ่ายภาพ การเรียนรู้เรื่องใหม่ ๆ และการแลกเปลี่ยนความคิดกับเพื่อนฝูง">
             ปัจจุบันผมใช้เวลาส่วนใหญ่กับการอ่านหนังสือ
             การเดินออกกำลังกาย การทำสวน การถ่ายภาพ
             การเรียนรู้เรื่องใหม่ ๆ
             และการแลกเปลี่ยนความคิดกับเพื่อนฝูง
           </p>
-
-          <p data-th-html="ระหว่างทาง เครื่องมือดิจิทัลและ AI ช่วยให้ผมสำรวจข้อมูล เปรียบเทียบมุมมอง เชื่อมโยงความคิด และเรียบเรียงงานได้มีประสิทธิภาพขึ้น อย่างไรก็ตาม การประเมินหลักฐาน การตีความ การตัดสินใจ และความรับผิดชอบต่อสิ่งที่เผยแพร่ ยังคงเป็นของผู้เขียน"
-             data-en-html="Digital tools and AI help me explore information, compare perspectives, connect ideas, and write more effectively. The evaluation of evidence, interpretation, judgment, and responsibility for what is published remain my own.">
+<p data-en-html="Digital tools and AI help me explore information, compare perspectives, connect ideas, and write more effectively. The evaluation of evidence, interpretation, judgment, and responsibility for what is published remain my own." data-th-html="ระหว่างทาง เครื่องมือดิจิทัลและ AI ช่วยให้ผมสำรวจข้อมูล เปรียบเทียบมุมมอง เชื่อมโยงความคิด และเรียบเรียงงานได้มีประสิทธิภาพขึ้น อย่างไรก็ตาม การประเมินหลักฐาน การตีความ การตัดสินใจ และความรับผิดชอบต่อสิ่งที่เผยแพร่ ยังคงเป็นของผู้เขียน">
             ระหว่างทาง เครื่องมือดิจิทัลและ AI ช่วยให้ผมสำรวจข้อมูล
             เปรียบเทียบมุมมอง เชื่อมโยงความคิด และเรียบเรียงงานได้มีประสิทธิภาพขึ้น
             อย่างไรก็ตาม การประเมินหลักฐาน การตีความ การตัดสินใจ
             และความรับผิดชอบต่อสิ่งที่เผยแพร่ ยังคงเป็นของผู้เขียน
           </p>
-
-          <p data-th-html="ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทางของผู้ที่เชื่อว่า <strong>“การเรียนรู้ไม่มีวันเกษียณ”</strong>"
-             data-en-html="I hope this small website can accompany others who believe that <strong>“learning never retires.”</strong>">
+<p data-en-html="I hope this small website can accompany others who believe that &lt;strong&gt;“learning never retires.”&lt;/strong&gt;" data-th-html="ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทางของผู้ที่เชื่อว่า &lt;strong&gt;“การเรียนรู้ไม่มีวันเกษียณ”&lt;/strong&gt;">
             ผมหวังว่าเว็บไซต์เล็ก ๆ แห่งนี้จะเป็นเพื่อนร่วมทาง
             ของผู้ที่เชื่อว่า <strong>“การเรียนรู้ไม่มีวันเกษียณ”</strong>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="principles">
-      <div class="section-head">
-        <h2 data-th-html="<span class='heading-th'>วิธีทำงานและหลักการเรียบเรียง</span><span class='heading-en'>My Approach</span>"
-            data-en-html="My Approach">
-          <span class="heading-th">วิธีทำงานและหลักการเรียบเรียง</span>
-          <span class="heading-en">My Approach</span>
-        </h2>
-      </div>
-
-      <div class="practice-grid">
-        <article class="practice">
-          <h3>Explore widely</h3>
-          <p data-th-html="อ่านข้ามศาสตร์อย่างใคร่รู้ โดยไม่จำกัดตนเองอยู่กับกรอบความคิดเดิม"
-             data-en-html="Read across disciplines with curiosity, without being confined by familiar frameworks.">
+</p>
+</article>
+</div>
+</section>
+<section class="section" id="principles">
+<div class="section-head">
+<h2 data-en-html="My Approach" data-th-html="&lt;span class='heading-th'&gt;วิธีทำงานและหลักการเรียบเรียง&lt;/span&gt;&lt;span class='heading-en'&gt;My Approach&lt;/span&gt;">
+<span class="heading-th">วิธีทำงานและหลักการเรียบเรียง</span>
+<span class="heading-en">My Approach</span>
+</h2>
+</div>
+<div class="practice-grid">
+<article class="practice">
+<h3>Explore widely</h3>
+<p data-en-html="Read across disciplines with curiosity, without being confined by familiar frameworks." data-th-html="อ่านข้ามศาสตร์อย่างใคร่รู้ โดยไม่จำกัดตนเองอยู่กับกรอบความคิดเดิม">
             อ่านข้ามศาสตร์อย่างใคร่รู้ โดยไม่จำกัดตนเองอยู่กับกรอบความคิดเดิม
           </p>
-        </article>
-
-        <article class="practice">
-          <h3>Question assumptions</h3>
-          <p data-th-html="ไม่รับข้อสรุปทันที แต่ตรวจสอบหลักฐานและมองหาข้อมูลที่อาจขัดแย้ง"
-             data-en-html="Do not accept conclusions immediately; examine the evidence and look for information that may challenge them.">
+</article>
+<article class="practice">
+<h3>Question assumptions</h3>
+<p data-en-html="Do not accept conclusions immediately; examine the evidence and look for information that may challenge them." data-th-html="ไม่รับข้อสรุปทันที แต่ตรวจสอบหลักฐานและมองหาข้อมูลที่อาจขัดแย้ง">
             ไม่รับข้อสรุปทันที แต่ตรวจสอบหลักฐานและมองหาข้อมูลที่อาจขัดแย้ง
           </p>
-        </article>
-
-        <article class="practice">
-          <h3>Seek clarity</h3>
-          <p data-th-html="แยกข้อเท็จจริง การตีความ และสิ่งที่ยังไม่แน่นอนออกจากกัน"
-             data-en-html="Distinguish facts, interpretations, and remaining uncertainties.">
+</article>
+<article class="practice">
+<h3>Seek clarity</h3>
+<p data-en-html="Distinguish facts, interpretations, and remaining uncertainties." data-th-html="แยกข้อเท็จจริง การตีความ และสิ่งที่ยังไม่แน่นอนออกจากกัน">
             แยกข้อเท็จจริง การตีความ และสิ่งที่ยังไม่แน่นอนออกจากกัน
           </p>
-        </article>
-
-        <article class="practice">
-          <h3>Connect with humility</h3>
-          <p data-th-html="เชื่อมโยงแนวคิดข้ามศาสตร์ โดยไม่ฝืนให้ทุกอย่างเข้ากับภาพที่ตนต้องการ"
-             data-en-html="Connect ideas across disciplines without forcing everything to fit a preferred narrative.">
+</article>
+<article class="practice">
+<h3>Connect with humility</h3>
+<p data-en-html="Connect ideas across disciplines without forcing everything to fit a preferred narrative." data-th-html="เชื่อมโยงแนวคิดข้ามศาสตร์ โดยไม่ฝืนให้ทุกอย่างเข้ากับภาพที่ตนต้องการ">
             เชื่อมโยงแนวคิดข้ามศาสตร์ โดยไม่ฝืนให้ทุกอย่างเข้ากับภาพที่ตนต้องการ
           </p>
-        </article>
-
-        <article class="practice">
-          <h3>Test and reflect</h3>
-          <p data-th-html="ทดลองสิ่งที่เหมาะสม สังเกตผล และเรียนรู้ทั้งจากสิ่งที่ได้ผลและไม่ได้ผล"
-             data-en-html="Test what is appropriate, observe the results, and learn from both success and failure.">
+</article>
+<article class="practice">
+<h3>Test and reflect</h3>
+<p data-en-html="Test what is appropriate, observe the results, and learn from both success and failure." data-th-html="ทดลองสิ่งที่เหมาะสม สังเกตผล และเรียนรู้ทั้งจากสิ่งที่ได้ผลและไม่ได้ผล">
             ทดลองสิ่งที่เหมาะสม สังเกตผล และเรียนรู้ทั้งจากสิ่งที่ได้ผลและไม่ได้ผล
           </p>
-        </article>
-
-        <article class="practice">
-          <h3>Share and learn</h3>
-          <p data-th-html="เขียน สนทนา และแบ่งปัน พร้อมเรียนรู้ต่อจากคำทักท้วงและข้อเสนอแนะ"
-             data-en-html="Write, discuss, and share while continuing to learn from criticism and suggestions.">
+</article>
+<article class="practice">
+<h3>Share and learn</h3>
+<p data-en-html="Write, discuss, and share while continuing to learn from criticism and suggestions." data-th-html="เขียน สนทนา และแบ่งปัน พร้อมเรียนรู้ต่อจากคำทักท้วงและข้อเสนอแนะ">
             เขียน สนทนา และแบ่งปัน พร้อมเรียนรู้ต่อจากคำทักท้วงและข้อเสนอแนะ
           </p>
-        </article>
-
-        <article class="practice">
-          <h3>Revise when needed</h3>
-          <p data-th-html="พร้อมทบทวน ละทิ้ง หรือแก้ไขความเข้าใจเดิม เมื่อพบหลักฐานที่ดีกว่า"
-             data-en-html="Be ready to reconsider, abandon, or revise earlier views when better evidence appears.">
+</article>
+<article class="practice">
+<h3>Revise when needed</h3>
+<p data-en-html="Be ready to reconsider, abandon, or revise earlier views when better evidence appears." data-th-html="พร้อมทบทวน ละทิ้ง หรือแก้ไขความเข้าใจเดิม เมื่อพบหลักฐานที่ดีกว่า">
             พร้อมทบทวน ละทิ้ง หรือแก้ไขความเข้าใจเดิม เมื่อพบหลักฐานที่ดีกว่า
           </p>
-        </article>
-
-        <article class="practice">
-          <h3>Take responsibility</h3>
-          <p data-th-html="รับผิดชอบต่อการตีความ การตัดสินใจ และสิ่งที่เลือกเผยแพร่"
-             data-en-html="Take responsibility for interpretation, judgment, and what is chosen for publication.">
+</article>
+<article class="practice">
+<h3>Take responsibility</h3>
+<p data-en-html="Take responsibility for interpretation, judgment, and what is chosen for publication." data-th-html="รับผิดชอบต่อการตีความ การตัดสินใจ และสิ่งที่เลือกเผยแพร่">
             รับผิดชอบต่อการตีความ การตัดสินใจ และสิ่งที่เลือกเผยแพร่
           </p>
-        </article>
-      </div>
-
-      <div class="note-card" style="margin-top:18px;">
-        <p data-th-html="ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ"
-           data-en-html="I believe knowledge becomes meaningful when it is connected with practice. For health-related topics, I usually try things myself before sharing what appears both useful in my own experience and supported by evidence.">
+</article>
+</div>
+<div class="note-card" style="margin-top:18px;">
+<p data-en-html="I believe knowledge becomes meaningful when it is connected with practice. For health-related topics, I usually try things myself before sharing what appears both useful in my own experience and supported by evidence." data-th-html="ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ">
           ผมเชื่อว่าความรู้จะมีคุณค่าเมื่อเชื่อมโยงกับการปฏิบัติ
           สำหรับเรื่องสุขภาพ ผมมักทดลองกับตัวเองก่อน
           แล้วจึงแบ่งปันสิ่งที่ทั้งได้ผลกับตัวเองและมีหลักฐานรองรับ
         </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="note-card">
-        <h2 style="font-size:1.8rem; margin-bottom:12px;">
+</div>
+</section>
+<section class="section">
+<div class="note-card">
+<h2 style="font-size:1.8rem; margin-bottom:12px;">
           AI as Learning Companion
         </h2>
-
-        <p data-th-html="เครื่องมือดิจิทัลสมัยใหม่ รวมถึง AI ช่วยขยายขอบเขตการสำรวจ เปรียบเทียบมุมมอง เชื่อมโยงความคิด และช่วยในการเรียบเรียง แต่การเลือกหัวข้อ การประเมินแหล่งข้อมูล การตีความ การตัดสินใจ และความรับผิดชอบต่อการเผยแพร่ ยังคงเป็นของผู้เขียน"
-           data-en-html="Modern digital tools, including AI, broaden exploration, help compare perspectives, connect ideas, and support writing. Topic selection, source evaluation, interpretation, judgment, and responsibility for publication remain my own.">
+<p data-en-html="Modern digital tools, including AI, broaden exploration, help compare perspectives, connect ideas, and support writing. Topic selection, source evaluation, interpretation, judgment, and responsibility for publication remain my own." data-th-html="เครื่องมือดิจิทัลสมัยใหม่ รวมถึง AI ช่วยขยายขอบเขตการสำรวจ เปรียบเทียบมุมมอง เชื่อมโยงความคิด และช่วยในการเรียบเรียง แต่การเลือกหัวข้อ การประเมินแหล่งข้อมูล การตีความ การตัดสินใจ และความรับผิดชอบต่อการเผยแพร่ ยังคงเป็นของผู้เขียน">
           เครื่องมือดิจิทัลสมัยใหม่ รวมถึง AI
           ช่วยขยายขอบเขตการสำรวจ เปรียบเทียบมุมมอง เชื่อมโยงความคิด
           และช่วยในการเรียบเรียง แต่การเลือกหัวข้อ การประเมินแหล่งข้อมูล
           การตีความ การตัดสินใจ และความรับผิดชอบต่อการเผยแพร่
           ยังคงเป็นของผู้เขียน
         </p>
-      </div>
-    </section>
-
-    <section class="publishing-ecosystem" id="follow">
-      <div class="section-head">
-        <h2 data-th-html="<span class='heading-th'>สองพื้นที่สำหรับความคิด</span><span class='heading-en'>Two Spaces for Ideas</span>"
-            data-en-html="Two Spaces for Ideas">
-          <span class="heading-th">สองพื้นที่สำหรับความคิด</span>
-          <span class="heading-en">Two Spaces for Ideas</span>
-        </h2>
-
-        <p class="section-note"
-           data-th-html="งานที่ผ่านการเรียบเรียงแล้วอยู่ที่นี่ ส่วนความคิดที่กำลังเคลื่อนไหวอยู่บน Facebook"
-           data-en-html="Refined work lives here; developing ideas and current reflections appear on Facebook.">
+</div>
+</section>
+<section class="publishing-ecosystem" id="follow">
+<div class="section-head">
+<h2 data-en-html="Two Spaces for Ideas" data-th-html="&lt;span class='heading-th'&gt;สองพื้นที่สำหรับความคิด&lt;/span&gt;&lt;span class='heading-en'&gt;Two Spaces for Ideas&lt;/span&gt;">
+<span class="heading-th">สองพื้นที่สำหรับความคิด</span>
+<span class="heading-en">Two Spaces for Ideas</span>
+</h2>
+<p class="section-note" data-en-html="Refined work lives here; developing ideas and current reflections appear on Facebook." data-th-html="งานที่ผ่านการเรียบเรียงแล้วอยู่ที่นี่ ส่วนความคิดที่กำลังเคลื่อนไหวอยู่บน Facebook">
           งานที่ผ่านการเรียบเรียงแล้วอยู่ที่นี่
           ส่วนความคิดที่กำลังเคลื่อนไหวอยู่บน Facebook
         </p>
-      </div>
-
-      <div class="channel-grid">
-        <article class="channel-card">
-          <h3>🌐 Website</h3>
-          <p class="channel-kicker">A curated knowledge library.</p>
-          <p data-th-html="งานที่ผ่านการคัดเลือก เรียบเรียง ตรวจทาน และจัดหมวดหมู่แล้ว เพื่อเก็บรักษาแนวคิดที่ยังมีคุณค่าเหนือกาลเวลา"
-             data-en-html="Selected, edited, reviewed, and organized work intended to preserve ideas with lasting value.">
+</div>
+<div class="channel-grid">
+<article class="channel-card">
+<h3>🌐 Website</h3>
+<p class="channel-kicker">A curated knowledge library.</p>
+<p data-en-html="Selected, edited, reviewed, and organized work intended to preserve ideas with lasting value." data-th-html="งานที่ผ่านการคัดเลือก เรียบเรียง ตรวจทาน และจัดหมวดหมู่แล้ว เพื่อเก็บรักษาแนวคิดที่ยังมีคุณค่าเหนือกาลเวลา">
             งานที่ผ่านการคัดเลือก เรียบเรียง ตรวจทาน และจัดหมวดหมู่แล้ว
             เพื่อเก็บรักษาแนวคิดที่ยังมีคุณค่าเหนือกาลเวลา
           </p>
-          <a class="channel-link" href="https://drsupakorn.github.io/">
+<a class="channel-link" href="https://drsupakorn.github.io/">
             → Explore the Website
           </a>
-        </article>
-
-        <article class="channel-card">
-          <h3>📘 Facebook</h3>
-          <p class="channel-kicker">A living journal of ideas.</p>
-          <p data-th-html="บันทึกการอ่าน ความคิด และบทวิเคราะห์ข่าวต่างประเทศ ตลอดจนเหตุการณ์ร่วมสมัยที่กำลังคลี่คลายไปพร้อมกับโลก"
-             data-en-html="Reading notes, reflections, international-news analysis, and contemporary events as they unfold.">
+</article>
+<article class="channel-card">
+<h3>📘 Facebook</h3>
+<p class="channel-kicker">A living journal of ideas.</p>
+<p data-en-html="Reading notes, reflections, international-news analysis, and contemporary events as they unfold." data-th-html="บันทึกการอ่าน ความคิด และบทวิเคราะห์ข่าวต่างประเทศ ตลอดจนเหตุการณ์ร่วมสมัยที่กำลังคลี่คลายไปพร้อมกับโลก">
             บันทึกการอ่าน ความคิด และบทวิเคราะห์ข่าวต่างประเทศ
             ตลอดจนเหตุการณ์ร่วมสมัยที่กำลังคลี่คลายไปพร้อมกับโลก
           </p>
-          <a class="channel-link"
-             href="https://www.facebook.com/SupakornBuasai"
-             target="_blank"
-             rel="noopener noreferrer">
+<a class="channel-link" href="https://www.facebook.com/SupakornBuasai" rel="noopener noreferrer" target="_blank">
             → Read on Facebook
           </a>
-        </article>
-      </div>
-
-      <p class="ecosystem-summary"
-         data-th-html="<strong>Website</strong> คือพื้นที่สำหรับงานที่ได้รับการเรียบเรียงและจัดหมวดหมู่แล้ว ส่วน <strong>Facebook</strong> คือบันทึกที่ยังมีชีวิตสำหรับความคิด บันทึกการอ่าน และการวิเคราะห์เหตุการณ์ที่กำลังเกิดขึ้น—พื้นที่หนึ่งเก็บรักษา enduring wisdom อีกพื้นที่ติดตาม emerging ideas."
-         data-en-html="<strong>Website</strong> is the home of refined and organized work. <strong>Facebook</strong> is a living journal for ideas, reading notes, and analysis of events as they unfold—one preserves enduring wisdom, while the other follows emerging ideas.">
-        <strong>Website</strong> คือพื้นที่สำหรับงานที่ได้รับการเรียบเรียงและจัดหมวดหมู่แล้ว
+</article>
+</div>
+<p class="ecosystem-summary" data-en-html="&lt;strong&gt;Website&lt;/strong&gt; is the home of refined and organized work. &lt;strong&gt;Facebook&lt;/strong&gt; is a living journal for ideas, reading notes, and analysis of events as they unfold—one preserves enduring wisdom, while the other follows emerging ideas." data-th-html="&lt;strong&gt;Website&lt;/strong&gt; คือพื้นที่สำหรับงานที่ได้รับการเรียบเรียงและจัดหมวดหมู่แล้ว ส่วน &lt;strong&gt;Facebook&lt;/strong&gt; คือบันทึกที่ยังมีชีวิตสำหรับความคิด บันทึกการอ่าน และการวิเคราะห์เหตุการณ์ที่กำลังเกิดขึ้น—พื้นที่หนึ่งเก็บรักษา enduring wisdom อีกพื้นที่ติดตาม emerging ideas.">
+<strong>Website</strong> คือพื้นที่สำหรับงานที่ได้รับการเรียบเรียงและจัดหมวดหมู่แล้ว
         ส่วน <strong>Facebook</strong> คือบันทึกที่ยังมีชีวิตสำหรับความคิด
         บันทึกการอ่าน และการวิเคราะห์เหตุการณ์ที่กำลังเกิดขึ้น—พื้นที่หนึ่งเก็บรักษา
         enduring wisdom อีกพื้นที่ติดตาม emerging ideas.
       </p>
-    </section>
-
-    <section class="invitation">
-      <strong>Learning Never Retires.</strong>
-
-      <p data-th-html="หากเว็บไซต์นี้ช่วยให้คุณค้นพบแนวคิดใหม่หนึ่งเรื่อง ตั้งคำถามได้ดีขึ้นหนึ่งข้อ หรือมองเรื่องที่คุ้นเคยจากมุมใหม่ เว็บไซต์นี้ก็ได้ทำหน้าที่ของมันแล้ว"
-         data-en-html="If this website helps you discover one new idea, ask one better question, or see a familiar topic from a different perspective, it has already served its purpose.">
+</section>
+<section class="invitation">
+<strong>Learning Never Retires.</strong>
+<p data-en-html="If this website helps you discover one new idea, ask one better question, or see a familiar topic from a different perspective, it has already served its purpose." data-th-html="หากเว็บไซต์นี้ช่วยให้คุณค้นพบแนวคิดใหม่หนึ่งเรื่อง ตั้งคำถามได้ดีขึ้นหนึ่งข้อ หรือมองเรื่องที่คุ้นเคยจากมุมใหม่ เว็บไซต์นี้ก็ได้ทำหน้าที่ของมันแล้ว">
         หากเว็บไซต์นี้ช่วยให้คุณค้นพบแนวคิดใหม่หนึ่งเรื่อง
         ตั้งคำถามได้ดีขึ้นหนึ่งข้อ
         หรือมองเรื่องที่คุ้นเคยจากมุมใหม่
         เว็บไซต์นี้ก็ได้ทำหน้าที่ของมันแล้ว
       </p>
-
-      <div class="actions" style="justify-content:center;">
-        <a class="button" href="https://drsupakorn.github.io/">
+<div class="actions" style="justify-content:center;">
+<a class="button" href="https://drsupakorn.github.io/">
           Home
         </a>
-        <a class="button-secondary"
-           href="https://drsupakorn.github.io/the-best-of-dao/">
+<a class="button-secondary" href="https://drsupakorn.github.io/the-best-of-dao/">
           The Best of Dao
         </a>
-        <a class="button-secondary"
-           href="https://drsupakorn.github.io/the-best-of-buddhism/">
+<a class="button-secondary" href="https://drsupakorn.github.io/the-best-of-buddhism/">
           The Best of Buddhism
         </a>
-        <a class="button-secondary"
-           href="https://drsupakorn.github.io/buddhist-cosmology/">
+<a class="button-secondary" href="https://drsupakorn.github.io/buddhist-cosmology/">
           Buddhist Cosmology
         </a>
-        <a class="button-secondary"
-           href="https://www.facebook.com/SupakornBuasai"
-           target="_blank"
-           rel="noopener noreferrer">
+<a class="button-secondary" href="https://www.facebook.com/SupakornBuasai" rel="noopener noreferrer" target="_blank">
           Facebook · Supakorn Buasai
         </a>
-      </div>
-    </section>
-
-    <footer>
-      <strong>Learning never retires.</strong><br>
-      A place for curious minds · Started in August 2026.<br>
+</div>
+</section>
+<footer>
+<strong>Learning never retires.</strong><br/>
+      A place for curious minds · Started in August 2026.<br/>
       © 2026 Dr. Supakorn Buasai
     </footer>
-
-  </main>
-
-  <script>
+</main>
+<script>
     (() => {
       const STORAGE_KEY = "siteLanguage";
       const languageButtons = document.querySelectorAll("[data-site-language]");
       const translatableElements =
         document.querySelectorAll("[data-th-html][data-en-html]");
+      const languageHelp = document.querySelector(".language-help");
+      const pageUrl = document.getElementById("page-url");
+      const copyButton = document.getElementById("copy-url");
+      const copyStatus = document.getElementById("copy-status");
 
       let siteLanguage = localStorage.getItem(STORAGE_KEY);
 
@@ -1148,8 +1171,55 @@
         });
       });
 
+      if (pageUrl) {
+        pageUrl.value = window.location.href;
+      }
+
+      async function copyCurrentUrl() {
+        const url = window.location.href;
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(url);
+          } else {
+            pageUrl.focus();
+            pageUrl.select();
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+          }
+
+          copyStatus.textContent = "URL copied · คัดลอกที่อยู่หน้าเว็บแล้ว";
+          copyButton.textContent = "Copied";
+        } catch (error) {
+          pageUrl.focus();
+          pageUrl.select();
+          copyStatus.textContent =
+            "Press and hold the URL, then choose Copy · แตะค้างที่ URL แล้วเลือก Copy";
+        }
+
+        window.setTimeout(() => {
+          copyButton.textContent = "Copy URL";
+        }, 2200);
+      }
+
+      if (copyButton) {
+        copyButton.addEventListener("click", copyCurrentUrl);
+      }
+
+      document.addEventListener("click", (event) => {
+        if (languageHelp && languageHelp.open && !languageHelp.contains(event.target)) {
+          languageHelp.removeAttribute("open");
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && languageHelp) {
+          languageHelp.removeAttribute("open");
+        }
+      });
+
       applyLanguage(siteLanguage);
     })();
-  </script>
+</script>
 </body>
 </html>
